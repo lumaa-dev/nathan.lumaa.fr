@@ -1,0 +1,56 @@
+name: Build Nuxt.js
+on: [push]
+
+jobs:
+  build-nuxtjs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm install
+      - name: Build the project
+        run: |
+          cd ${{ github.workspace }}
+          FILE="./app/utils/constants.ts"
+          COMMIT_HASH=$(git log --pretty=format:'%h' -n 1)
+
+          sed -i "s/export const APP_COMMIT = \"unknown\"/export const APP_COMMIT = \"$COMMIT_HASH\"/" "$FILE"
+          echo "✅ Commit hash implemented to $FILE"
+
+          npm run build
+      - name: Upload .output folder
+        uses: actions/upload-artifact@v4
+        with:
+          name: nuxt-output
+          path: ${{ github.workspace }}/.output
+          if-no-files-found: error
+          include-hidden-files: true
+  package:
+    needs: build-nuxtjs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download .output from nuxt-output
+        uses: actions/download-artifact@v4
+        with:
+          name: nuxt-output
+          path: .output
+      - name: Delete nuxt-output
+        uses: geekyeggo/delete-artifact@v5
+        with:
+          name: nuxt-output
+      - name: Create RecordLink.zip
+        run: |
+          mkdir package
+          cp -r .output/nitro.json package/
+          cp -r .output/public package/
+          cp -r .output/server package/
+      - name: Upload zip
+        uses: actions/upload-artifact@v4
+        with:
+          name: nathan_lumaa_fr
+          path: package/
