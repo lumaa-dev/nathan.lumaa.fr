@@ -5,7 +5,7 @@
             <a :href="url.link" v-for="url in links" :key="url.link">
                 {{ url.title }}
             </a>
-            <span class="credit">
+            <span class="inline">
                 <img src="/assets/hero.svg" draggable="false">
                 © Nathan 2025
             </span>
@@ -13,13 +13,27 @@
         <div class="row">
             <p class="title">Lumaa</p>
             <a :href="url.link" v-for="url in lumaa" :key="url.link">
-                {{ url.title }}
+                <span class="inline" v-if="url.title == 'Cider Collective'">
+                    <img src="/assets/cc.svg" />
+                    {{ url.title }}
+                </span>
+                <p v-else>{{ url.title }}</p>
             </a>
         </div>
         <div class="row">
             <p class="title">Socials</p>
             <a :href="url.link" v-for="url in socials" :key="url.link">
                 {{ url.title }}
+            </a>
+        </div>
+        <div class="row">
+            <p class="title">Build</p>
+            <a :href="`https://github.com/lumaa-dev/nathan.lumaa.fr/tree/${APP_COMMIT}`">Version {{ APP_COMMIT }}</a>
+            <a href="https://nuxt.com/">
+                <span class="inline">
+                    <img src="/assets/nuxt.svg" />
+                    Built with Nuxt
+                </span>
             </a>
         </div>
     </div>
@@ -30,8 +44,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background: linear-gradient(to top, #ffffff30, transparent), linear-gradient(to top, #00000030, transparent), linear-gradient(to top, #00000030, transparent);
-    padding: 120px 15vw 80px 15vw;
+    background: linear-gradient(to top, #ffffff30, transparent);
+    padding: 100px 15vw;
 }
 
 .row {
@@ -50,7 +64,7 @@
     height: 1.1em;
 }
 
-.row span.credit {
+.row span.inline {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -91,7 +105,7 @@ const links = [
     },
     {
         title: "Vinyl",
-        link: "https://vinyl.lumaa.fr/"
+        link: "https://vinyl.lumaa.fr/?l=en"
     }
 ]
 
