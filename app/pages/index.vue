@@ -1,5 +1,5 @@
 <template>
-    <span class="paged">
+    <div class="paged">
         <div class="presentation">
             <img src="/assets/hero.svg" draggable="false" />
             <p class="word">Nathan</p>
@@ -11,7 +11,7 @@
             <img src="" draggable="false"/>
             <img src="" draggable="false"/>
         </span>
-    </span>
+    </div>
 </template>
 
 <script setup>
@@ -65,6 +65,11 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.paged {
+    display: block;
+    height: calc(100vh - 100px - 3em);
+}
+
 .presentation {
     position: absolute;
     top: 0;
@@ -73,10 +78,8 @@ onMounted(() => {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    max-width: 100vw;
-    max-height: 100vh;
     font-size: 6em;
     font-weight: 700;
     gap: 4vw;
@@ -93,7 +96,7 @@ onMounted(() => {
     display: inline-block;
     position: absolute;
     bottom: 50px;
-    left: calc(50vw-20vw);
+    left: calc(50vw - 10vw);
     text-align: center;
     width: 20vw;
     font-size: 24px;
