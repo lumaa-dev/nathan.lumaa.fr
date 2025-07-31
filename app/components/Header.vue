@@ -61,7 +61,9 @@ header > * {
 header[compact="true"] > :not(.keeper) {
     opacity: 0;
     transform: translateX(-120px);
-    filter: blur(15px)
+    filter: blur(15px);
+    pointer-events: none;
+    user-select: none;
 }
 
 header span {
