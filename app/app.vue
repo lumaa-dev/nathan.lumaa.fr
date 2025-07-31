@@ -1,10 +1,9 @@
 <template>
   <Header :is-compact="false" v-on:scroll="console.log(scroll)"/>
   <NuxtLayout>
-    <span class="web">
-      <NuxtPage />
-    </span>
+    <NuxtPage />
   </NuxtLayout>
+  <Footer />
 </template>
 
 <script setup>
@@ -43,10 +42,5 @@ onMounted(() => {
 body {
   background: #1e1e1e;
   color: #fff;
-}
-
-.web {
-  display: block;
-  padding: 0.5em 1em;
 }
 </style>
