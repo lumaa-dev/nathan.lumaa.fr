@@ -33,6 +33,10 @@ onMounted(() => {
 </script>
 
 <style>
+:root {
+  --brand: #1688c5;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -42,5 +46,6 @@ onMounted(() => {
 body {
   background: #1e1e1e;
   color: #fff;
+  font-family: system-ui, "SF Pro", "SF Pro Text", "SF Pro Display", "SF Compact", "SF Compact Text", "SF Compact Display", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 </style>

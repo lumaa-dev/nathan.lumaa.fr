@@ -81,7 +81,7 @@ a:hover {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .footer {
         flex-direction: column;
         gap: 70px;

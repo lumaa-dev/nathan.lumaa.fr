@@ -12,10 +12,76 @@
             <img src="" draggable="false"/>
         </span>
     </div>
+    <div class="leftright">
+        <span>
+            <p class="big">Who am I?</p>
+            <motion.p
+                :initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
+                :whileInView="{ filter: 'blur(0px)', translateY: 0, opacity: 1 }"
+                :transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }"
+            >I am <b>Nathan</b>, indie developer and music lover. I'm French and live in Angers. I am deeply passionate about Apple software, music and making fully-fleshed projects like <a href="https://apps.lumaa.fr/app/fraca">Fraca</a> or <a href="https://record.lumaa.fr/">Record Link</a>.</motion.p>
+        </span>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Angers_OSM_01.png" alt="Angers on a map" draggable="false" />
+    </div>
+    <div class="txt fontless">
+        <p class="big">Project Highlight</p>
+        <Pill class="highlight" src="/assets/icons/global_icon.png">
+            <h2><a href="https://record.lumaa.fr/">Record Link</a> (BETA)</h2>
+            <p>Record Link is an upcoming service that allows linking songs, albums or playlists through whatever music streaming platform your friends, family or community use! Built using Nuxt, Record Link will be available for everyone on the web, and later-on on iOS and Android. The linking feature is available for <a href="https://spotify.com/">Spotify</a>®, <a href="https://apple.com/music">Apple Music</a>® and <a href="https://cider.sh/">Cider</a>. Record Link is not affiliated with any music streaming platform, artists or music labels.</p>
+        </Pill>
+        <motion.a href="/projects" class="pill"
+            :initial="{ scale: 1.0, boxShadow: '0 0 0px #fff', zIndex: 1 }"
+            :transition="{ default: { type: 'spring', duration: 0.85, bounce: 0.5 } }"
+            :whileHover="{ scale: 1.3, boxShadow: '0 0 15px #fff', zIndex: 999 }" 
+        >View more projects</motion.a>
+    </div>
+    <div class="txt bg">
+        <p class="big">Schools</p>
+        <span class="schools">
+            <Timeline name="Lycée privé Saint-Benoît" date="2022-2023">
+                Seconde Générale (Section européenne)
+            </Timeline>
+            <Timeline name="Lycée Chevrollier" date="2023-2026" :finished="false">
+                Sciences et Technologies de l’Industrie et du Développement Durable (Système d’Information et Numérique)
+            </Timeline>
+            <Timeline name="Université d'Angers" date="2026" :finished=false>
+                License Informatique (Bac +1 à 3)
+                <br />License professionelle Informatique (Bac +3) ?
+                <br />Master Informatique (Bac +4 à 5) ?
+            </Timeline>
+        </span>
+    </div>
+    <div class="txt">
+        <p class="big">Interests</p>
+        <p class="badge">Coding</p>
+        <motion.p
+            :initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
+            :whileInView="{ filter: 'blur(0px)', translateY: 0, opacity: 1 }"
+            :transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }"
+        >In 2021, I started making Discord bots in JavaScript using <a href="https://discord.js.org">discord.js</a>, then I made a few websites in native HTML, CSS and JavaScript. After making websites, I made a few <a href="https://fabricmc.net/">Minecraft Fabric</a> in Java and I started making iOS apps using <a href="https://developer.apple.com/documentation/swiftui">SwiftUI</a> in 2022. I am heavily interested in iOS development & web dev...<br /><br />Most of these projects can be found on <a href="https://github.com/lumaa-dev?tab=repositories">my GitHub profile</a>.</motion.p>
+        <p class="badge" style="margin-top: 3em">Music</p>
+        <motion.p
+            :initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
+            :whileInView="{ filter: 'blur(0px)', translateY: 0, opacity: 1 }"
+            :transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }"
+        >I often compare music to my day-to-day life support. I've been listening to many many different genres of music since 2018, and lately I've been mainly focused on rock and alternative music with a little bit of US rap.
+        <br />
+        <br />Also, recently, I started buying vinyl of albums while listing them on <a href="https://d.lumaa.fr/vinyl">my Discogs account</a> and on <a href="https://vinyl.lumaa.fr/?l=en">my vinyl website</a> which also includes my wish list for future vinyl.</motion.p>    
+        <p class="badge" style="margin-top: 3em">Editing</p>
+        <motion.p
+            :initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
+            :whileInView="{ filter: 'blur(0px)', translateY: 0, opacity: 1 }"
+            :transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }"
+        >For a few of my projects, I produce trailer videos which depict main features or newly added features. I make them using Adobe After Effects and/or with Final Cut Pro, while syncing a copyrighted song that are available in <a href="https://music.apple.com/playlist/pl.u-yZyVE3XIdW3rXm2">this playlist</a>.
+        <br />
+        <br />They always end up on <a href="https://youtube.com/@Lumaa_PRO">YouTube</a>, sometimes on <a href="https://twitter.com/lumaa_dev">Twitter</a>, sometimes they end up as <a href="https://instagram.com/@lumaa_dev">Instagram Reels</a>. But they're always available.</motion.p>
+    </div>
 </template>
 
 <script setup>
+import { motion } from 'motion-v';
 import { onMounted } from 'vue';
+import Timeline from '~/components/Timeline.vue';
 
 const overviews = ["global_icon.png", "dttd.png", "B-Side-dark.png", "Fraca-dark.png", "Solong-dark.png"];
 
@@ -65,9 +131,26 @@ onMounted(() => {
 </script>
 
 <style scoped>
+a {
+    color: var(--brand);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a.pill {
+    color: #000;
+    background: #c5c5c5;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 100px;
+}
+
 .paged {
     display: block;
-    height: calc(100vh - 100px - 3em);
+    height: 90vh;
 }
 
 .presentation {
@@ -127,7 +210,6 @@ onMounted(() => {
     display: none;
 }
 
-
 .overview > img:nth-child(1) {
     animation: overview1 3.4s ease-in-out infinite alternate;
     transform: rotate(30deg);
@@ -146,6 +228,65 @@ onMounted(() => {
 .overview > img:nth-child(4) {
     animation: overview4 3.7s ease-in-out infinite alternate;
     transform: rotate(25deg);
+}
+
+.leftright {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 1.5em 7em;
+    gap: 15vw;
+}
+
+.leftright img {
+    width: 15em;
+    border-radius: 50%;
+}
+
+.txt.bg {
+    background: #50505050;
+}
+
+.txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5em;
+    margin: 3em 0;
+    padding: 1.6em 6em;
+    gap: 1em;
+}
+
+.txt.fontless {
+    font-size: unset;
+}
+
+.txt .big, .leftright .big {
+    font-size: 4em;
+    font-weight: 700;
+}
+
+.txt .badge {
+    font-size: 0.8em;
+    font-weight: 700;
+    text-align: center;
+    border: #ffffff30 1px solid;
+    padding: 0.3em 0.7em;
+    width: fit-content;
+    border-radius: 100px;
+}
+
+.highlight {
+    margin: 20px 0;
+}
+
+.schools {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 @keyframes arrowJump {
@@ -202,7 +343,7 @@ onMounted(() => {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .presentation {
         flex-direction: column;
         font-size: 4em;
@@ -216,6 +357,32 @@ onMounted(() => {
 
     .overview {
         display: none;
+    }
+
+    .leftright {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .leftright img {
+        width: 350px;
+    }
+
+    .txt {
+        padding: 1.6em 3em;
+    }
+
+    .txt, .leftright {
+        padding: 0.75em 0.9em;
+    }
+
+    .txt .big, .leftright .big {
+        font-size: 2.5em;
+    }
+
+    .schools {
+        width: 90%;
+        font-size: 0.7em;
     }
 }
 </style>
