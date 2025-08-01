@@ -37,6 +37,7 @@
     </div>
     <div class="txt bg">
         <p class="big">Schools</p>
+        <p style="text-align: center;">Enjoy the pleasure of 🇫🇷 French schools</p>
         <span class="schools">
             <Timeline name="Lycée privé Saint-Benoît" date="2022-2023">
                 Seconde Générale (Section européenne)
