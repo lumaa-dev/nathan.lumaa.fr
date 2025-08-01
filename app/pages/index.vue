@@ -26,7 +26,7 @@
     <div class="txt fontless">
         <p class="big">Project Highlight</p>
         <Pill class="highlight" src="/assets/icons/global_icon.png">
-            <h2><a href="https://record.lumaa.fr/">Record Link</a> (BETA)</h2>
+            <h2><a href="https://record.lumaa.fr/">Record Link</a> (ALPHA)</h2>
             <p>Record Link is an upcoming service that allows linking songs, albums or playlists through whatever music streaming platform your friends, family or community use! Built using Nuxt, Record Link will be available for everyone on the web, and later-on on iOS and Android. The linking feature is available for <a href="https://spotify.com/">Spotify</a>®, <a href="https://apple.com/music">Apple Music</a>® and <a href="https://cider.sh/">Cider</a>. Record Link is not affiliated with any music streaming platform, artists or music labels.</p>
         </Pill>
         <motion.a href="/projects" class="pill"
@@ -45,10 +45,12 @@
             <Timeline name="Lycée Chevrollier" date="2023-2026" :finished="false">
                 Sciences et Technologies de l’Industrie et du Développement Durable (Système d’Information et Numérique)
             </Timeline>
-            <Timeline name="Université d'Angers" date="2026" :finished=false>
-                License Informatique (Bac +1 à 3)
-                <br />License professionelle Informatique (Bac +3) ?
-                <br />Master Informatique (Bac +4 à 5) ?
+            <Timeline name="Université d'Angers" date="2026-20??" :finished=false>
+                <span style="filter: blur(10px); user-select: none;">
+                    There is nothing to discover here
+                    <br />Just the name of the school
+                    <br />And the year I'm entering (hopefully)
+                </span>
             </Timeline>
         </span>
     </div>
@@ -76,6 +78,23 @@
         >For a few of my projects, I produce trailer videos which depict main features or newly added features. I make them using Adobe After Effects and/or with Final Cut Pro, while syncing a copyrighted song that are available in <a href="https://music.apple.com/playlist/pl.u-yZyVE3XIdW3rXm2">this playlist</a>.
         <br />
         <br />They always end up on <a href="https://youtube.com/@Lumaa_PRO">YouTube</a>, sometimes on <a href="https://twitter.com/lumaa_dev">Twitter</a>, sometimes they end up as <a href="https://instagram.com/@lumaa_dev">Instagram Reels</a>. But they're always available.</motion.p>
+    </div>
+    <div class="txt">
+        <p class="big">Contact</p>
+        <div class="platforms">
+            <a href="https://discordapp.com/users/474231265059405845">
+                <span class="discord">
+                    <img src="/assets/discord.svg" />
+                    @lumaa_dev
+                </span>
+            </a>
+            <a href="mailto:lumaa@lumaa.fr">
+                <span class="email">
+                    <img src="/assets/envelope.svg" />
+                    lumaa@lumaa.fr
+                </span>
+            </a>
+        </div>
     </div>
 </template>
 
@@ -128,6 +147,15 @@ onMounted(() => {
         let img = document.querySelector(`.overview > img:nth-child(${i + 1})`)
         img.src = `/assets/icons/${src}`;
     }
+})
+
+useSeoMeta({
+    title: "I'm Nathan",
+    ogTitle: "I'm Nathan",
+    twitterTitle: "I'm Nathan",
+    description: "I am Nathan, indie developer and music lover. I'm French and live in Angers. I am deeply passionate about Apple software, music and making fully-fleshed projects like Fraca or Record Link.",
+    ogDescription: "I am Nathan, indie developer and music lover. I'm French and live in Angers. I am deeply passionate about Apple software, music and making fully-fleshed projects like Fraca or Record Link.",
+    twitterDescription: "I am Nathan, indie developer and music lover. I'm French and live in Angers. I am deeply passionate about Apple software, music and making fully-fleshed projects like Fraca or Record Link."
 })
 </script>
 
@@ -290,6 +318,31 @@ a.pill {
     gap: 10px;
 }
 
+.platforms {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    width: 100%;
+}
+
+.platforms img {
+    width: 1.2em;
+}
+
+.platforms span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+}
+
+.platforms a {
+    color: inherit;
+    text-decoration: none !important;
+}
+
 @keyframes arrowJump {
     from {
         transform: translateY(0px)
@@ -382,7 +435,7 @@ a.pill {
     }
 
     .schools {
-        width: 90%;
+        width: 100%;
         font-size: 0.7em;
     }
 }

@@ -36,7 +36,7 @@ const props = defineProps({
 
 @media screen and (max-width: 1000px) {
     .pill {
-        border-radius: 60px;
+        border-radius: 30px;
         padding: 2em 1em;
         margin: 0 0.6em;
         gap: 20px;

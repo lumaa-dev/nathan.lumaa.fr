@@ -1,15 +1,20 @@
 <template>
-  <Header :is-compact="false" v-on:scroll="console.log(scroll)"/>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
-  <Footer />
+  <LockCountdown :time="openDate"/>
+  <template v-if="openDate <= new Date()">
+    <Header :is-compact="false" v-on:scroll="console.log(scroll)"/>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+    <Footer />
+  </template>
 </template>
 
 <script setup>
 import { onMounted } from 'vue';
 import { useScroll, useMotionValueEvent, animate } from 'motion-v';
 const scroll = useScroll();
+
+const openDate = new Date('Thursday, August 7, 2025 12:00:00 AM GMT+02:00');
 
 var lastScroll = 0.0;
 var lastCompact = false;
@@ -29,6 +34,12 @@ useMotionValueEvent(scroll.scrollY, "change", (latest) => {
 
 onMounted(() => {
   window.scroll(0, 0)
+})
+
+useSeoMeta({
+  ogImage: "/assets/og/banner.png",
+  twitterImage: "/assets/og/banner.png",
+  twitterCard: "summary_large_image"
 })
 </script>
 

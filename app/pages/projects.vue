@@ -2,7 +2,7 @@
     <h1 class="head">Projects</h1>
     <span class="projects">
         <Pill src="/assets/icons/global_icon.png">
-            <h2><a href="https://record.lumaa.fr/">Record Link</a> (BETA)</h2>
+            <h2><a href="https://record.lumaa.fr/">Record Link</a> (ALPHA)</h2>
             <p>Record Link is an upcoming service that allows linking songs, albums or playlists through whatever music streaming platform your friends, family or community use! Built using Nuxt, Record Link will be available for everyone on the web, and later-on on iOS and Android. The linking feature is available for <a href="https://spotify.com/">Spotify</a>®, <a href="https://apple.com/music">Apple Music</a>® and <a href="https://cider.sh/">Cider</a>. Record Link is not affiliated with any music streaming platform, artists or music labels.</p>
         </Pill>
         <Pill src="/assets/icons/Fraca-dark.png">
@@ -16,8 +16,17 @@
     </span>
 </template>
 
-<script>
+<script setup>
 import Pill from '~/components/Pill.vue';
+
+useSeoMeta({
+    title: "Nathan's Projects",
+    ogTitle: "Nathan's Projects",
+    twitterTitle: "Nathan's Projects",
+    description: "View my current, past and potentially future projects with an additional description.",
+    ogDescription: "View my current, past and potentially future projects with an additional description.",
+    twitterDescription: "View my current, past and potentially future projects with an additional description."
+})
 </script>
 
 <style scoped>

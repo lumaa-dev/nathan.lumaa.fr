@@ -54,6 +54,14 @@
 .title {
     font-weight: 700;
 }
+
+@media screen and (max-width: 1000px) {
+    .timeline .time {
+        width: 7em;
+        font-size: 0.8em;
+        margin-top: 0.2em
+    }
+}
 </style>
 
 <script setup>

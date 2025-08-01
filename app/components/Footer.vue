@@ -100,10 +100,6 @@ const links = [
         link: "/projects"
     },
     {
-        title: "Contact",
-        link: "/contact"
-    },
-    {
         title: "Vinyl",
         link: "https://vinyl.lumaa.fr/?l=en"
     }
@@ -136,10 +132,6 @@ const socials = [
     {
         title: "Bluesky",
         link: "https://bsky.app/profile/lumaa.fr"
-    },
-    {
-        title: "GitHub",
-        link: "https://github.com/lumaa-dev"
     },
     {
         title: "YouTube",
