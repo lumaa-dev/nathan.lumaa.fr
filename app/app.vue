@@ -36,11 +36,13 @@ onMounted(() => {
   window.scroll(0, 0)
 })
 
-useSeoMeta({
-  ogImage: "/assets/og/banner.png",
-  twitterImage: "/assets/og/banner.png",
-  twitterCard: "summary_large_image"
-})
+if (openDate <= new Date()) {
+  useSeoMeta({
+    ogImage: "/assets/og/banner.png",
+    twitterImage: "/assets/og/banner.png",
+    twitterCard: "summary_large_image"
+  })
+}
 </script>
 
 <style>
