@@ -1,5 +1,5 @@
 <template>
-  <Header :is-compact="false" v-on:scroll="console.log(scroll)"/>
+  <Header :is-compact="false"/>
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
@@ -31,13 +31,11 @@ onMounted(() => {
   window.scroll(0, 0)
 })
 
-if (openDate <= new Date()) {
-  useSeoMeta({
-    ogImage: "/assets/og/banner.png",
-    twitterImage: "/assets/og/banner.png",
-    twitterCard: "summary_large_image"
-  })
-}
+useSeoMeta({
+  ogImage: "/assets/og/banner.png",
+  twitterImage: "/assets/og/banner.png",
+  twitterCard: "summary_large_image"
+})
 </script>
 
 <style>
