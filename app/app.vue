@@ -1,20 +1,15 @@
 <template>
-  <LockCountdown :time="openDate"/>
-  <template v-if="openDate <= new Date()">
-    <Header :is-compact="false" v-on:scroll="console.log(scroll)"/>
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
-    <Footer />
-  </template>
+  <Header :is-compact="false" v-on:scroll="console.log(scroll)"/>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
+  <Footer />
 </template>
 
 <script setup>
 import { onMounted } from 'vue';
 import { useScroll, useMotionValueEvent, animate } from 'motion-v';
 const scroll = useScroll();
-
-const openDate = new Date('Thursday, August 7, 2025 12:00:00 AM GMT+02:00');
 
 var lastScroll = 0.0;
 var lastCompact = false;
