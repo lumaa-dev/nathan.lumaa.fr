@@ -101,7 +101,7 @@ const links = [
     },
     {
         title: "Vinyl",
-        link: "https://vinyl.lumaa.fr/?l=en"
+        link: "/vinyl"
     }
 ]
 

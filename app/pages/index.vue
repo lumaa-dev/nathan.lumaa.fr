@@ -69,7 +69,7 @@
             :transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }"
         >I often compare music to my day-to-day life support. I've been listening to many many different genres of music since 2018, and lately I've been mainly focused on rock and alternative music with a little bit of US rap.
         <br />
-        <br />Also, recently, I started buying vinyl of albums while listing them on <a href="https://d.lumaa.fr/vinyl">my Discogs account</a> and on <a href="https://vinyl.lumaa.fr/?l=en">my vinyl website</a> which also includes my wish list for future vinyl.</motion.p>    
+        <br />Also, recently, I started buying vinyl of albums while listing them on <a href="https://d.lumaa.fr/vinyl">my Discogs account</a> and on the <a href="/vinyl">vinyl tab</a> of this site which also includes my wish list for future vinyl.</motion.p>    
         <p class="badge" style="margin-top: 3em">Editing</p>
         <motion.p
             :initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
@@ -103,7 +103,7 @@ import { motion } from 'motion-v';
 import { onMounted } from 'vue';
 import Timeline from '~/components/Timeline.vue';
 
-const overviews = ["global_icon.png", "dttd.png", "B-Side-dark.png", "Fraca-dark.png", "Solong-dark.png"];
+const overviews = ["/assets/icons/global_icon.png", "/assets/icons/B-Side-dark.png", "/assets/icons/Fraca-dark.png", "/assets/icons/Solong-dark.png", "/assets/vinyl/dttd.png", "/assets/vinyl/alpha.png"];
 
 onMounted(() => {
     const word = document.querySelector(".word");
@@ -145,7 +145,7 @@ onMounted(() => {
         
 
         let img = document.querySelector(`.overview > img:nth-child(${i + 1})`)
-        img.src = `/assets/icons/${src}`;
+        img.src = src;
     }
 })
 

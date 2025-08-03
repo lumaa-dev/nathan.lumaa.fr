@@ -109,6 +109,10 @@ export default {
     data() {
         return [
             {
+                title: "Vinyl",
+                path: "/vinyl"
+            },
+            {
                 title: "Projects",
                 path: "/projects"
             }
