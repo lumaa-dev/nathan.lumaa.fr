@@ -1,6 +1,29 @@
 {
     "owned": [
         {
+            "name": "Amours (Live / 2023)",
+            "artist": "Louise Attaque",
+            "img": "amours.webp",
+            "ownDate": "2025-08-04T00:00:00.000Z",
+            "discogs": "https://www.discogs.com/release/32412543-Louise-Attaque-Amours",
+            "available": {
+                "official": "https://louise-attaque.store/products/double-vinyle-noir-amours-album-live",
+                "fnac": "https://www.fnac.com/a20877123/Louise-Attaque-Amours-Edition-Limitee-Vinyle-album"
+            }
+        },
+        {
+            "name": "From Zero",
+            "artist": "Linkin Park",
+            "img": "from_zero.jpg",
+            "ownDate": "2025-08-04T00:00:00.000Z",
+            "discogs": "https://www.discogs.com/release/32285475-Linkin-Park-From-Zero",
+            "available": {
+                "official": "https://www.linkinparkstore.fr/products/vinyle-standard-from-zero",
+                "amazon": "https://www.amazon.fr/Z%C3%A9ro-Linkin-Park/dp/B0DFX3Q4JY",
+                "fnac": "https://www.fnac.com/a20819519/Linkin-Park-From-Zero-Vinyle-Bleu-Vinyle-album"
+            }
+        },
+        {
             "name": "Are We There Yet?",
             "artist": "James Marriott",
             "img": "awty.png",
