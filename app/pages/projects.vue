@@ -13,6 +13,10 @@
             <h2>B-Side</h2>
             <p>B-Side is a little and simple SwiftUI app made to display the currently playing vinyl, with optionally additional information about the track and the lyrics on the screen if you want to read or sing along. B-Side uses <a href="https://shazam.com/">Shazam</a>® to identify the playing song, <a href="https://apple.com/music">Apple Music</a>® for the song's primary information and album cover color scheme and <a href="https://discogs.com/">Discogs</a> for vinyl information.</p>
         </Pill>
+        <Pill src="/assets/icons/Solong-dark.png">
+            <h2>Solong</h2>
+            <p>In the simplest way possible: Block specific numbers from calling you.<br />Longer explanation: There are often huge waves of scam calls about car insurance, solar panels, or whatever scam is going on. Solong allows you to block a number from calling you through the share sheet, or you can manually write phone numbers. All this natively.</p>
+        </Pill>
     </span>
 </template>
 
