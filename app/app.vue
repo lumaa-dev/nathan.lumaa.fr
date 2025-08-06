@@ -1,15 +1,21 @@
 <template>
-  <Header :is-compact="false"/>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
-  <Footer />
+  <LockCountdown :time="openDate" v-if="openDate > Date.now()"/>
+  <template v-else>
+    <Header :is-compact="false"/>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+    <Footer />
+  </template>
 </template>
 
 <script setup>
 import { onMounted } from 'vue';
 import { useScroll, useMotionValueEvent, animate } from 'motion-v';
+import LockCountdown from './components/LockCountdown.vue';
+
 const scroll = useScroll();
+const openDate = new Date('Thursday, August 7, 2025 12:00:00 AM GMT+02:00');
 
 var lastScroll = 0.0;
 var lastCompact = false;
@@ -31,11 +37,13 @@ onMounted(() => {
   window.scroll(0, 0)
 })
 
-useSeoMeta({
-  ogImage: "/assets/og/banner.png",
-  twitterImage: "/assets/og/banner.png",
-  twitterCard: "summary_large_image"
-})
+if (openDate < Date.now()) {
+  useSeoMeta({
+    ogImage: "/assets/og/banner.png",
+    twitterImage: "/assets/og/banner.png",
+    twitterCard: "summary_large_image"
+  })
+}
 </script>
 
 <style>

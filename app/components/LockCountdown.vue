@@ -4,7 +4,10 @@
             :time="props.time.getTime() - Date.now()"
             v-slot="{ days, hours, minutes, seconds }"
         >
-            {{ days }} days, {{ hours }} hours, {{ minutes }} minutes, {{ seconds }} seconds
+            <span v-if="days > 0">{{ days }} days,</span>
+            <span v-if="hours > 0">{{ hours }} hours,</span>
+            <span v-if="minutes > 0">{{ minutes }} minutes,</span>
+            <span v-if="seconds > 0">{{ seconds }} seconds</span>
         </Countdown>
     </div>
 </template>
@@ -29,14 +32,25 @@ const props = defineProps({
     z-index: 9999999;
     background: #1e1e1e;
     font-size: 2em;
+    font-weight: 700;
     user-select: none;
     pointer-events: none;
     text-align: center;
 }
 
+.countdown > div {
+    display: flex;
+    flex-direction: row;
+    gap: 0.4em;
+}
+
 @media screen and (max-width: 1000px) {
     .countdown {
-        font-size: 1.7em;
+        font-size: 2.6em;
+    }
+
+    .countdown > div {
+        flex-direction: column;
     }
 }
 </style>
