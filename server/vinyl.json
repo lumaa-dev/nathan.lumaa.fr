@@ -1,5 +1,18 @@
 {
     "owned": [
+         {
+            "name": "The Bends",
+            "artist": "Radiohead",
+            "img": "the_bends.jpg",
+            "ownDate": "2025-08-08T00:00:00.000Z",
+            "discogs": "https://www.discogs.com/release/23449382-Radiohead-The-Bends",
+            "available": {
+                "fnac": "https://www.fnac.com/a9716452/Radiohead-The-Bends-Vinyle-album",
+                "amazon": "https://www.amazon.com/Bends-180g-Radiohead/dp/B01F0XLQZE",
+                "official": "https://store-eu.wasteheadquarters.com/products/the-bends-cd?variant=15378659311690"
+            },
+            "stream": "https://album.link/i/1097862703"
+        },
         {
             "name": "Amours (Live / 2023)",
             "artist": "Louise Attaque",
@@ -195,20 +208,6 @@
                 "official": "https://www.hellomerch.com/products/who-really-cares-12-blue-pink-splatter-vinyl"
             },
             "stream": "https://album.link/i/1623924742"
-        },
-        {
-            "name": "The Bends",
-            "artist": "Radiohead",
-            "img": "the_bends.jpg",
-            "wishDate": "2025-01-25T00:00:00.000Z",
-            "discogs": "https://www.discogs.com/master/17008-Radiohead-The-Bends?format=Vinyl",
-            "priority": 4,
-            "available": {
-                "fnac": "https://www.fnac.com/a9716452/Radiohead-The-Bends-Vinyle-album",
-                "amazon": "https://www.amazon.com/Bends-180g-Radiohead/dp/B01F0XLQZE",
-                "official": "https://store-eu.wasteheadquarters.com/products/the-bends-cd?variant=15378659311690"
-            },
-            "stream": "https://album.link/i/1097862703"
         },
         {
             "name": "Whiplash Soundtrack",
