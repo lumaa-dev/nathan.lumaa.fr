@@ -1,12 +1,9 @@
 <template>
-  <LockCountdown :time="openDate" v-if="openDate > Date.now()"/>
-  <template v-else>
-    <Header :is-compact="false"/>
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
-    <Footer />
-  </template>
+  <Header :is-compact="false"/>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
+  <Footer />
 </template>
 
 <script setup>
