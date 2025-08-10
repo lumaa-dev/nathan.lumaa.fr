@@ -1,6 +1,19 @@
 {
 	"owned": [
 		{
+			"name": "Who Really Cares",
+			"artist": "TV Girl",
+			"img": "who_really_cares.webp",
+			"wishDate": "2025-09-01T00:00:00.000Z",
+			"discogs": "https://www.discogs.com/release/33316476-TV-Girl-Who-Really-Cares",
+			"available": {
+				"amazon": "https://www.amazon.fr/Who-Really-Cares-LP-Vinyl/dp/B0DYZ2XQFD",
+				"fnac": "https://www.fnac.com/a21390414/TV-Girl-Who-Really-Cares-Vinyle-album",
+				"official": "https://www.hellomerch.com/products/who-really-cares-12-blue-pink-splatter-vinyl"
+			},
+			"stream": "https://album.link/i/1623924742"
+		},
+		{
             "name": "Thriller",
             "artist": "Michael Jackson",
             "img": "thriller.jpg",
@@ -226,20 +239,6 @@
 			},
 			"priority": 8,
 			"stream": "https://album.link/i/739831644"
-		},
-		{
-			"name": "Who Really Cares",
-			"artist": "TV Girl",
-			"img": "who_really_cares.webp",
-			"wishDate": "2024-10-11T00:00:00.000Z",
-			"priority": 3,
-			"discogs": "https://www.discogs.com/master/974361-TV-Girl-Who-Really-Cares?format=Vinyl",
-			"available": {
-				"amazon": "https://www.amazon.fr/Who-Really-Cares-LP-Vinyl/dp/B0DYZ2XQFD",
-				"fnac": "https://www.fnac.com/a21390414/TV-Girl-Who-Really-Cares-Vinyle-album",
-				"official": "https://www.hellomerch.com/products/who-really-cares-12-blue-pink-splatter-vinyl"
-			},
-			"stream": "https://album.link/i/1623924742"
 		},
 		{
 			"name": "Whiplash Soundtrack",
