@@ -38,7 +38,7 @@ useSeoMeta({
     background: #ffffff10;
     border-radius: 100px;
     font-variation-settings: "wdth" 80;
-    margin: 1em 0;
+    margin: 1em 30px;
 }
 
 .list, .c {

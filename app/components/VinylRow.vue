@@ -10,6 +10,7 @@
                     :whileHover="{ fontVariationSettings: '\'wdth\' 144' }"
                     >{{ vinyl.name }}</motion.a>
                     <p class="artist">{{ vinyl.artist }}</p>
+                    <p class="badge" v-if="vinyl.badge" :class="vinyl.badge.color">{{ vinyl.badge.text }}</p>
                     <p class="date" v-if="!!(vinyl.ownDate ?? vinyl.wishDate)">{{ new Date(vinyl.ownDate ?? vinyl.wishDate).toLocaleDateString("fr") }}</p>
                 </div>
             </div>
@@ -58,6 +59,10 @@ interface Vinyl {
         official?: string
         fnac?: string
         amazon?: string
+    }
+    badge?: {
+        text: string
+        color: string
     }
 }
 
@@ -126,6 +131,25 @@ a.inline {
     font-size: 1.9em;
     font-weight: 700;
     overflow-wrap: break-word;
+}
+
+.vinyl .badge {
+    font-weight: 300;
+    width: fit-content;
+    padding: 0.3em 0.7em;
+    margin: 0.5em 0;
+    border-radius: 100px;
+    border: 1px solid #ffffff50;
+}
+
+.vinyl .badge.red {
+    background: #de4545;
+    border: 1px solid #f87e7e80;
+}
+
+.vinyl .badge.pink {
+    background: #da6fd1;
+    border: 1px solid #f0b7eb80;
 }
 
 .vinyl .date {
