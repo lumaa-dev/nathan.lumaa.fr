@@ -13,6 +13,20 @@
 			},
 			"stream": "https://album.link/i/1623924742"
 		},
+
+		{
+			"name": "Kid A",
+			"artist": "Radiohead",
+			"img": "kid_a.jpg",
+			"ownDate": "2025-08-19T00:00:00.000Z",
+			"discogs": "https://www.discogs.com/release/26373128-Radiohead-Kid-A",
+			"available": {
+				"fnac": "https://www.fnac.com/a10001386/Radiohead-Kid-A-Vinyle-album",
+				"amazon": "https://www.amazon.fr/Kid-Radiohead/dp/B01I2E32W8",
+				"official": "https://store-eu.wasteheadquarters.com/products/kid-a-cd?variant=15378656788554"
+			},
+			"stream": "https://album.link/i/1097862870"
+		},
 		{
             "name": "Thriller",
             "artist": "Michael Jackson",
@@ -266,20 +280,6 @@
 				"official": "https://shop.xlrecordings.com/release/346538-radiohead-pablo-honey?lang=fr"
 			},
 			"stream": "https://album.link/i/1097862062"
-		},
-		{
-			"name": "Kid A Mnesia",
-			"artist": "Radiohead",
-			"img": "kid_amnesia.webp",
-			"wishDate": "2025-01-25T00:00:00.000Z",
-			"discogs": "https://www.discogs.com/master/2363104-Radiohead-Kid-A-Mnesia?format=Vinyl",
-			"priority": 8,
-			"available": {
-				"fnac": "https://www.fnac.com/a16253924/Radiohead-Kid-A-Mnesia-Vinyle-album",
-				"amazon": "https://www.amazon.fr/Kid-Mnesia-Radiohead/dp/B09DWX7BJ6",
-				"official": "https://merch-us.kida-mnesia.com/products/kid-a-mnesia-standard-triple-vinyl-kaa"
-			},
-			"stream": "https://album.link/i/1581785974"
 		},
 		{
 			"name": "Currents",
