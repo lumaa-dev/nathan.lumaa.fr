@@ -9,7 +9,6 @@
 <script setup>
 import { onMounted } from 'vue';
 import { useScroll, useMotionValueEvent, animate } from 'motion-v';
-import LockCountdown from './components/LockCountdown.vue';
 
 const scroll = useScroll();
 const openDate = new Date('Thursday, August 7, 2025 12:00:00 AM GMT+02:00');
