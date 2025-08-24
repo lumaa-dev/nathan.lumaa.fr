@@ -251,8 +251,18 @@
 				"official": "https://c418.bandcamp.com/album/minecraft-volume-beta",
 				"fnac": "https://www.fnac.com/a14908524/C418-Minecraft-Volume-Beta-Vinyle-album"
 			},
-			"priority": 8,
+			"priority": 7,
 			"stream": "https://album.link/i/739831644"
+		},
+		{
+			"name": "Omori Soundtrack",
+			"artist": "Pedro Silva, Jami Lynne, and bo en",
+			"img": "omori.png",
+			"wishDate": "2025-08-24T00:00:00.000Z",
+			"available": {
+				"official": "https://www.omocat-shop.com/collections/omori/products/omori-original-sountrack-vinyl-2-lp"
+			},
+			"priority": 3
 		},
 		{
 			"name": "Whiplash Soundtrack",
@@ -260,7 +270,7 @@
 			"img": "whiplash.jpg",
 			"wishDate": "2025-07-18T00:00:00.000Z",
 			"discogs": "https://www.discogs.com/master/825455-Various-Whiplash-Original-Motion-Picture-Soundtrack?format=Vinyl",
-			"priority": 6,
+			"priority": 4,
 			"available": {
 				"amazon": "https://www.amazon.fr/Whiplash-S-T-S-T/dp/B0C5JQ4ZL5",
 				"fnac": "https://www.fnac.com/a18254633/Collectif-Whiplash-Edition-Deluxe-Vinyle-album"
@@ -273,7 +283,7 @@
 			"img": "pablo_honey.jpg",
 			"wishDate": "2025-07-20T00:00:00.000Z",
 			"discogs": "https://www.discogs.com/master/13344-Radiohead-Pablo-Honey?format=Vinyl",
-			"priority": 7,
+			"priority": 5,
 			"available": {
 				"amazon": "https://amazon.fr/Pablo-Honey-Radiohead/dp/B01F0XPBG4/261-4873903-6957845",
 				"fnac": "https://www.fnac.com/a9716447/Radiohead-Pablo-Honey-Vinyle-album",
@@ -287,7 +297,7 @@
 			"img": "currents.webp",
 			"wishDate": "2025-08-02T00:00:00.000Z",
 			"discogs": "https://www.discogs.com/master/861083-Tame-Impala-Currents",
-			"priority": 5,
+			"priority": 6,
 			"available": {
 				"fnac": "https://www.fnac.com/a8634140/Tame-Impala-Currents-2LP-carte-de-telechargement-Vinyle-album",
 				"amazon": "https://www.amazon.fr/Currents-2-Vinyles-Code-t%C3%A9l%C3%A9chargement/dp/B00XBWBWL0"
