@@ -9,7 +9,8 @@
 			"available": {
 				"official": "https://golfwang.com/products/cherry-bomb-cartoon-mask-vinyl",
 				"fnac": "https://www.fnac.com/a21535162/Tyler-The-Creator-Cherry-Bomb-Vinyle-Bleu-Translucide-Vinyle-album"
-			}
+			},
+			"stream": "https://album.link/i/983056044"
 		},
 		{
 			"name": "Who Really Cares",
@@ -273,6 +274,10 @@
 			"available": {
 				"official": "https://www.omocat-shop.com/collections/omori/products/omori-original-sountrack-vinyl-2-lp"
 			},
+			"badge": {
+                "text": "Pre-order",
+                "color": "blue"
+            },
 			"priority": 3
 		},
 		{

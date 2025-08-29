@@ -147,6 +147,11 @@ a.inline {
     border: 1px solid #f87e7e80;
 }
 
+.vinyl .badge.blue {
+    background: #3d74ce;
+    border: 1px solid #7ea1f880;
+}
+
 .vinyl .badge.pink {
     background: #da6fd1;
     border: 1px solid #f0b7eb80;
