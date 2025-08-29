@@ -11,7 +11,6 @@ import { onMounted } from 'vue';
 import { useScroll, useMotionValueEvent, animate } from 'motion-v';
 
 const scroll = useScroll();
-const openDate = new Date('Thursday, August 7, 2025 12:00:00 AM GMT+02:00');
 
 var lastScroll = 0.0;
 var lastCompact = false;
@@ -33,13 +32,11 @@ onMounted(() => {
   window.scroll(0, 0)
 })
 
-if (openDate < Date.now()) {
-  useSeoMeta({
-    ogImage: "/assets/og/banner.png",
-    twitterImage: "/assets/og/banner.png",
-    twitterCard: "summary_large_image"
-  })
-}
+useSeoMeta({
+  ogImage: "/assets/og/banner.png",
+  twitterImage: "/assets/og/banner.png",
+  twitterCard: "summary_large_image"
+})
 </script>
 
 <style>
