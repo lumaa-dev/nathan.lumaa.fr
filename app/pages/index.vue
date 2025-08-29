@@ -17,18 +17,6 @@
         </span>
         <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Angers_OSM_01.png" alt="Angers on a map" draggable="false" />
     </div>
-    <div class="txt fontless">
-        <p class="big">Project Highlight</p>
-        <Pill class="highlight" src="/assets/icons/global_icon.png">
-            <h2><a href="https://record.lumaa.fr/">Record Link</a> (ALPHA)</h2>
-            <p>Record Link is an upcoming service that allows linking songs, albums or playlists through whatever music streaming platform your friends, family or community use! Built using Nuxt, Record Link will be available for everyone on the web, and later-on on iOS and Android. The linking feature is available for <a href="https://spotify.com/">Spotify</a>®, <a href="https://apple.com/music">Apple Music</a>® and <a href="https://cider.sh/">Cider</a>. Record Link is not affiliated with any music streaming platform, artists or music labels.</p>
-        </Pill>
-        <motion.a href="/projects" class="pill"
-            :initial="{ scale: 1.0, boxShadow: '0 0 0px #fff', zIndex: 1 }"
-            :transition="{ default: { type: 'spring', duration: 0.85, bounce: 0.5 } }"
-            :whileHover="{ scale: 1.3, boxShadow: '0 0 15px #fff', zIndex: 999 }" 
-        >View more projects</motion.a>
-    </div>
     <div class="txt bg">
         <p class="big">Schools</p>
         <p style="text-align: center;">Enjoy the pleasure of 🇫🇷 French schools</p>
