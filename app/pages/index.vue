@@ -5,12 +5,6 @@
             <p class="word">Nathan</p>
             <span class="indicator">&#8595;</span>
         </div>
-        <span class="overview">
-            <img src="" draggable="false"/>
-            <img src="" draggable="false"/>
-            <img src="" draggable="false"/>
-            <img src="" draggable="false"/>
-        </span>
     </div>
     <div class="leftright">
         <span>
@@ -103,8 +97,6 @@ import { motion } from 'motion-v';
 import { onMounted } from 'vue';
 import Timeline from '~/components/Timeline.vue';
 
-const overviews = ["/assets/icons/global_icon.png", "/assets/icons/B-Side-dark.png", "/assets/icons/Fraca-dark.png", "/assets/icons/Solong-dark.png", "/assets/vinyl/dttd.png", "/assets/vinyl/alpha.png"];
-
 onMounted(() => {
     const word = document.querySelector(".word");
     const parentElm = word.parentElement;
@@ -136,17 +128,6 @@ onMounted(() => {
     }
 
     parentElm.replaceChild(div, word);
-
-    var cop = overviews;
-    for (let i = 0; i < 4; i++) {
-        let j = Math.round(Math.random() * (cop.length - 1))
-        const src = cop[j];
-        cop.splice(j, 1);
-        
-
-        let img = document.querySelector(`.overview > img:nth-child(${i + 1})`)
-        img.src = src;
-    }
 })
 
 useSeoMeta({
