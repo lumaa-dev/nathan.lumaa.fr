@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
-  modules: ["motion-v/nuxt", "nuxt-countdown"],
+  modules: ["motion-v/nuxt"],
   app: {
     head: {
       link: [
