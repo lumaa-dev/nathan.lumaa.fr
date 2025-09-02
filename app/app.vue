@@ -1,9 +1,11 @@
 <template>
-  <Header :is-compact="false"/>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
-  <Footer />
+  <div v-if="hasLoaded">
+    <Header :is-compact="isCompact" :lang="lang" />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+    <Footer :lang="lang" />
+  </div>
 </template>
 
 <script setup>
@@ -15,7 +17,9 @@ const scroll = useScroll();
 var lastScroll = 0.0;
 var lastCompact = false;
 
-var isCompact = false
+var isCompact = false;
+var lang = ref("en");
+var hasLoaded = ref(false);
 
 useMotionValueEvent(scroll.scrollY, "change", (latest) => {
   isCompact = latest > lastScroll;
@@ -29,7 +33,24 @@ useMotionValueEvent(scroll.scrollY, "change", (latest) => {
 })
 
 onMounted(() => {
-  window.scroll(0, 0)
+  console.log("onMounted triggered");
+  try {
+    const route = useRoute()
+    window.scroll(0, 0);
+
+    if (route.path.startsWith("/fr")) {
+      document.documentElement.setAttribute("lang", "fr");
+      lang.value = "fr";
+    } else {
+      document.documentElement.setAttribute("lang", "en");
+      lang.value = "en";
+    }
+    console.log(`LANG: ${lang.value}`);
+    hasLoaded.value = true; // This should trigger the template to render
+    console.log(`hasLoaded set to: ${hasLoaded.value}`);
+  } catch (error) {
+    console.error("Error in onMounted:", error);
+  }
 })
 
 useSeoMeta({

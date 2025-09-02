@@ -1,10 +1,12 @@
 <template>
     <div class="timeline">
         <div class="l row">
-            <span class="time" :style="!finished ? 'background: #ffffff30' : 'background: var(--brand)'">
+            <span class="time" :style="completion <= 0.0 ? 'background: #ffffff30' : 'background: var(--brand)'">
                 {{ date }}
             </span>
-            <div class="bar" :style="!finished ? 'background: #ffffff30' : 'background: var(--brand)'"></div>
+            <div class="bar" :style="!finished ? 'background: #ffffff30' : 'background: var(--brand)'">
+                <div class="completion" :style="`background: var(--brand); height: ${completion * 100}%;`" v-if="completion >= 0.0"></div>
+            </div>
         </div>
         <div class="r row">
             <p class="title">{{ name }}</p>
@@ -45,6 +47,11 @@
     flex: 1;
 }
 
+.timeline .bar .completion {
+    width: 3px;
+    border-radius: 100px;
+}
+
 .timeline .r {
     margin-top: 0.3em;
     width: 100%;
@@ -64,7 +71,7 @@
 }
 </style>
 
-<script setup>
+<script lang="ts" setup>
 const props = defineProps({
     date: {
         type: String,
@@ -74,10 +81,12 @@ const props = defineProps({
         type: String,
         required: true
     },
-    finished: {
-        type: Boolean,
+    completion: {
+        type: Number,
         required: false,
-        default: true
+        default: 1.0
     }
 })
+
+const finished: boolean = props.completion >= 1.0;
 </script>

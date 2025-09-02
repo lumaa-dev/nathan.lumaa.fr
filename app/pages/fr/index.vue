@@ -1,20 +1,26 @@
 <template>
 	<div class="paged">
 		<div class="presentation bg">
-      <span class="pill">
-        <div class="badge busy"></div>
-        Currently busy with school</span>
-      <span class="name">
-        <img src="/assets/hero.svg" draggable="false" />
-        <p class="word">Nathan</p>
-      </span>
-      <p>🇫🇷 18 year old French student at <a href="#schools">Lycée Chevrollier</a> (Angers) in Terminale STI2D SIN, also an indie iOS and web developer passionate about music and <a href="#vinyl">vinyl</a></p>
+			<span class="pill">
+				<div class="badge busy"></div>
+				Occupé par les études</span
+			>
+			<span class="name">
+				<img src="/assets/hero.svg" draggable="false" />
+				<p class="word">Nathan</p>
+			</span>
+			<p>
+				🇫🇷 Étudiant de 18 ans au
+				<a href="#schools">Lycée Chevrollier</a> (Angers) en Terminale STI2D
+				SIN, aussi développeur iOS et web indépendant passionné de musique et de
+				<a href="#vinyl">vinyles</a>
+			</p>
 		</div>
-    <span class="indicator">&#8595;</span>
+		<span class="indicator">&#8595;</span>
 	</div>
 	<div class="leftright" id="whois">
 		<span>
-			<p class="big">Who am I?</p>
+			<p class="big">Qui suis-je ?</p>
 			<motion.p
 				:initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
 				:whileInView="{ filter: 'blur(0px)', translateY: 0, opacity: 1 }"
@@ -25,21 +31,21 @@
 					mass: 3.4,
 				}"
 			>
-				I am <b>Nathan</b>, an 18 year old indie developer and music lover. I'm French and live
-				in Angers. I am deeply passionate about Apple software, music and making
-				fully-fleshed projects like
-				<a href="https://apps.apple.com/us/app/fraca/id6480592078">Fraca</a> or
+				Je suis <b>Nathan</b>, un développeur indépendant et amoureux de musique
+				de 18 ans. Je suis français et j'habite à Angers. Je suis passionné par
+				les logiciels Apple, la musique et la création de projets complets comme
+				<a href="https://apps.apple.com/app/fraca/id6480592078">Fraca</a> ou
 				<a href="https://apps.lumaa.fr/app/recordlink">Record Link</a>.
 			</motion.p>
 		</span>
 		<img
 			src="https://upload.wikimedia.org/wikipedia/commons/0/02/Angers_OSM_01.png"
-			alt="Angers on a map"
+			alt="Angers sur une carte"
 			draggable="false"
 		/>
 	</div>
 	<div class="txt" id="projects">
-		<p class="big">Best Projects</p>
+		<p class="big">Projets préférés</p>
 		<div class="grid">
 			<motion.a
 				href="https://cider.sh/remote"
@@ -56,7 +62,7 @@
 			>
 				<ProjectBox
 					name="Cider Remote"
-					description="Control your Cider device away from your computer, using your iPhone or iPad. Built using SwiftUI and Socket.IO"
+					description="Contrôlez Cider à distance depuis votre iPhone ou iPad. Fait avec SwiftUI et Socket.IO"
 					img="https://cider.sh/og-remote.png"
 				/>
 			</motion.a>
@@ -75,7 +81,7 @@
 			>
 				<ProjectBox
 					name="Fraca"
-					description="The quickest conversion tool from any French unit to any Canadian unit, back and forth, for free on all Apple devices."
+					description="L'application de conversion de toutes les unités françaises et canadiennes, sur tous les appareils Apple."
 					img="/assets/projects/fraca.jpg"
 				/>
 			</motion.a>
@@ -94,7 +100,7 @@
 			>
 				<ProjectBox
 					name="Bubble for Mastodon"
-					description="A slick looking native iOS Mastodon client, that concentrates Mastodon's core features at reach."
+					description="Un client Mastodon natif iOS élégant, qui concentre les fonctionnalités principales de Mastodon à portée de main."
 					img="/assets/projects/bubble_v2.png"
 				/>
 			</motion.a>
@@ -113,15 +119,14 @@
 			>
 				<ProjectBox
 					name="Record Link"
-					description="A platform to allow sharing any music content to all music streaming platforms, for no cost."
+					description="Une plateforme pour partager tout contenu musical sur toutes les plateformes de streaming, gratuitement."
 					img="/assets/projects/rl.jpg"
 				/>
 			</motion.a>
 		</div>
 	</div>
 	<div class="txt bg" id="schools">
-		<p class="big">Schools</p>
-		<p style="text-align: center">Enjoy the pleasure of 🇫🇷 French schools</p>
+		<p class="big">Écoles</p>
 		<span class="schools">
 			<Timeline name="Lycée privé Saint-Benoît" date="2022-2023">
 				Seconde Générale (Section européenne)
@@ -138,74 +143,75 @@
 						pointer-events: none !important;
 					"
 				>
-					There is nothing to discover here.
-          <br />Just the name of the school.
-          <br />And the year I'm entering (hopefully)
+					Il n'y a rien à découvrir ici.
+					<br />Juste le nom de l'école. <br />Et l'année d'entrée (j'espère)
 				</span>
 			</Timeline>
 		</span>
 	</div>
 	<div class="txt" id="interests">
-		<p class="big">Interests</p>
-		<p class="badge">Coding</p>
+		<p class="big">Passions</p>
+		<p class="badge">Programmation</p>
 		<motion.p
 			:initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
 			:whileInView="{ filter: 'blur(0px)', translateY: 0, opacity: 1 }"
 			:transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }"
 		>
-			In 2021, I started making Discord bots in JavaScript using
-			<a href="https://discord.js.org">discord.js</a>, then I made a few
-			websites in native HTML, CSS and JavaScript. After making websites, I made
-			a few <a href="https://fabricmc.net/">Minecraft Fabric</a> mods in Java
-			and I started making iOS apps using
-			<a href="https://developer.apple.com/documentation/SwiftUI">SwiftUI</a> in
-			2022. I am heavily interested in iOS development & web dev... Most of
-			these projects can be found on
+			En 2021, j'ai commencé à créer des bots Discord en JavaScript avec
+			<a href="https://discord.js.org">discord.js</a>, puis j'ai réalisé
+			quelques sites web en HTML, CSS et JavaScript natifs. Après les sites web,
+			j'ai créé quelques mods
+			<a href="https://fabricmc.net/">Minecraft Fabric</a> en Java et j'ai
+			commencé à créer des applications iOS avec
+			<a href="https://developer.apple.com/documentation/SwiftUI">SwiftUI</a> en
+			2022. Je m'intéresse beaucoup au développement iOS et web... La plupart de
+			ces projets sont disponibles sur
 			<a href="https://github.com/lumaa-dev?tab=repositories"
-				>my GitHub profile</a
+				>mon profil GitHub</a
 			>.
 		</motion.p>
-		<p class="badge" style="margin-top: 3em">Music</p>
+		<p class="badge" style="margin-top: 3em">Musique</p>
 		<motion.p
 			:initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
 			:whileInView="{ filter: 'blur(0px)', translateY: 0, opacity: 1 }"
 			:transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }"
 		>
-			I often compare music to my day-to-day life support. I've been listening
-			to many different genres of music since 2018, and lately I've been mainly
-			focused on rock and alternative music with a little bit of US rap.
+			Je compare souvent la musique à ma perfusion. J'écoute de nombreux genres
+			musicaux différents depuis 2018, et dernièrement je me concentre surtout
+			sur le rock, la musique alternative et un peu de rap américain.
 			<br />
-			<br />Also, recently, I started buying vinyl of albums while listing them
-			on
+			<br />Aussi, récemment, j'ai commencé à acheter des vinyles d'albums tout
+			en les listant sur
 			<a href="https://discogs.com/user/nthnos/collection"
-				>my Discogs account</a
+				>mon compte Discogs</a
 			>
-			and on the <a href="/vinyl">vinyl tab</a> of this site which also includes
-			my wish list for future vinyl.
+			et sur l'onglet <a href="/fr/vinyles">vinyles</a> de ce site qui inclut aussi
+			ma liste de souhaits pour de futurs vinyles.
 		</motion.p>
-		<p class="badge" style="margin-top: 3em">Editing</p>
+		<p class="badge" style="margin-top: 3em">Montage</p>
 		<motion.p
 			:initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
 			:whileInView="{ filter: 'blur(0px)', translateY: 0, opacity: 1 }"
 			:transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }"
 		>
-			For a few of my projects, I produce trailer videos which depict main
-			features or newly added features. I make them using Adobe After Effects
-			and/or with Final Cut Pro, while syncing a copyrighted song that are
-			available in
+			Pour quelques-uns de mes projets, je produis des bande-annonces qui
+			montrent les principales fonctionnalités ou les nouveautés de certains de
+			mes projets. Je les monte avec Adobe After Effects et/ou Final Cut Pro,
+			sur le rythme d'une musique sous copyright disponible dans
 			<a href="https://music.apple.com/playlist/ad-aptable/pl.u-yZyVE3XIdW3rXm2"
-				>this playlist</a
+				>cette playlist</a
 			>.
 			<br />
-			<br />They always end up on
-			<a href="https://youtube.com/@Lumaa_PRO">YouTube</a>, sometimes on
-			<a href="https://x.com/lumaa_dev">&#120143; (Twitter)</a>, sometimes they
-			end up as <a href="https://instagram.com/@lumaa_dev">Instagram Reels</a>.
-			But they're always available.
+			<br />Elles finissent toujours sur
+			<a href="https://youtube.com/@Lumaa_PRO">YouTube</a>, parfois sur
+			<a href="https://x.com/lumaa_dev">&#120143; (Twitter)</a>, parfois elles
+			finissent en tant que
+			<a href="https://instagram.com/@lumaa_dev">Reels Instagram</a>. Mais elles
+			sont toujours disponibles.
 		</motion.p>
 	</div>
 	<div class="txt" id="vinyl">
-		<p class="big">Recent Vinyl</p>
+		<p class="big">Derniers vinyles</p>
 		<div class="vgrid">
 			<template v-for="(v, i) in vinyl.owned" :key="v.name">
 				<motion.a
@@ -224,21 +230,28 @@
 					<span>
 						<img
 							:src="`/assets/vinyl/${v.img}`"
-							:alt="v.name + ' album cover'"
+							:alt="'Pochette d\'album de ' + v.name"
 						/>
 						<span>
 							<p class="name">{{ v.name }}</p>
-							<p class="alt">{{ v.artist }}<br />{{ new Date(v.ownDate).toLocaleDateString("fr") }}</p>
+							<p class="alt">
+								{{ v.artist }}<br />{{
+									new Date(v.ownDate).toLocaleDateString("fr")
+								}}
+							</p>
 						</span>
 					</span>
 				</motion.a>
 			</template>
 		</div>
-    <motion.a class="pill" href="/vinyl"
-      :initial="{ scale: 1.0, boxShadow: '0 0 0px #fff', zIndex: 1 }"
-      :transition="{ default: { type: 'spring', duration: 0.85, bounce: 0.5 } }"
-      :whileHover="{ scale: 1.3, boxShadow: '0 0 15px #fff', zIndex: 999 }" 
-    >All vinyl</motion.a>
+		<motion.a
+			class="pill"
+			href="/fr/vinyles"
+			:initial="{ scale: 1.0, boxShadow: '0 0 0px #fff', zIndex: 1 }"
+			:transition="{ default: { type: 'spring', duration: 0.85, bounce: 0.5 } }"
+			:whileHover="{ scale: 1.3, boxShadow: '0 0 15px #fff', zIndex: 999 }"
+			>Tous les vinyles</motion.a
+		>
 	</div>
 	<div class="txt" id="contact">
 		<p class="big">Contact</p>
@@ -340,10 +353,10 @@ a.pill {
 	text-decoration: none;
 	padding: 5px 10px;
 	border-radius: 100px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5em;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.5em;
 }
 
 .paged {
@@ -372,54 +385,54 @@ a.pill {
 	left: 10%;
 	width: 80%;
 	height: 80%;
-  display: flex;
-  flex-direction: column;
-  gap: 70px;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	flex-direction: column;
+	gap: 70px;
+	align-items: center;
+	justify-content: center;
 	z-index: 10;
 	overflow: hidden hidden !important;
-  background: #ff000050;
-  border-radius: 40px;
-  font-size: 1.5em;
+	background: #ff000050;
+	border-radius: 40px;
+	font-size: 1.5em;
 }
 
 .presentation > p {
-  padding: 0 4em;
-  text-align: center;
+	padding: 0 4em;
+	text-align: center;
 }
 
 .presentation .pill {
-  display: flex;
-  flex-direction: row;
-  gap: 0.5em;
-  font-size: 0.8em;
+	display: flex;
+	flex-direction: row;
+	gap: 0.5em;
+	font-size: 0.8em;
 }
 
 .presentation .pill .badge {
-  display: block;
-  width: 1.2em;
-  height: 1.2em;
-  border-radius: 100px;
+	display: block;
+	width: 1.2em;
+	height: 1.2em;
+	border-radius: 100px;
 }
 
 .presentation .pill .badge.active {
-    background: #45de45;
-    border: 1px solid #8cf87e80;
+	background: #45de45;
+	border: 1px solid #8cf87e80;
 }
 
 .presentation .pill .badge.busy {
-  background: #de4545;
-  border: 1px solid #f87e7e80;
+	background: #de4545;
+	border: 1px solid #f87e7e80;
 }
 
 .presentation .name {
-  display: flex;
+	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-  gap: 4vw;
-  font-size: 6em;
+	gap: 4vw;
+	font-size: 6em;
 	font-weight: 700;
 }
 
@@ -443,7 +456,8 @@ a.pill {
 	border-radius: 50%;
 }
 
-.txt.bg, .presentation.bg {
+.txt.bg,
+.presentation.bg {
 	background: #50505050;
 }
 
@@ -467,7 +481,8 @@ a.pill {
 	font-weight: 700;
 }
 
-.txt .badge, :not(a).pill {
+.txt .badge,
+:not(a).pill {
 	font-size: 0.8em;
 	font-weight: 700;
 	text-align: center;

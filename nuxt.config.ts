@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: ["motion-v/nuxt"],
+
   app: {
     head: {
       link: [
