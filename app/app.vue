@@ -55,4 +55,10 @@ body {
   color: #fff;
   font-family: system-ui, "SF Pro", "SF Pro Text", "SF Pro Display", "SF Compact", "SF Compact Text", "SF Compact Display", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+a.nostyle {
+  font-weight: inherit !important;
+  color: inherit !important;
+  text-decoration: none !important;
+}
 </style>
