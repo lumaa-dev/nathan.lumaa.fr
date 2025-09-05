@@ -56,7 +56,8 @@ onMounted(() => {
 useSeoMeta({
   ogImage: "/assets/og/banner.png",
   twitterImage: "/assets/og/banner.png",
-  twitterCard: "summary_large_image"
+  twitterCard: "summary_large_image",
+  themeColor: "#1e1e1e"
 })
 </script>
 
