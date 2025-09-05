@@ -48,7 +48,7 @@
 				}"
 				:whileHover="{ scale: 1.3, boxShadow: '0 0 15px #fff', zIndex: 999 }"
 			>
-				{{ link.title[lang] }}
+				{{ link.title[lang as 'en' | 'fr'] }}
 			</motion.a>
 		</span>
 	</motion.header>
