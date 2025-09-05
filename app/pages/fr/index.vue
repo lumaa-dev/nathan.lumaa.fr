@@ -367,16 +367,20 @@ a.pill {
 .paged .indicator {
 	display: inline-block;
 	position: absolute;
-	bottom: 50px;
-	left: calc(50vw - 10vw);
+	bottom: 120px;
+	left: calc(50vw - 28px / 2);
 	text-align: center;
-	width: 20vw;
+	width: 28px;
 	font-size: 24px;
 	font-weight: 400;
 	color: #ffffff40;
+	background: #00000040;
+	border-radius: 50%;
+	box-shadow: 0 0 15px #00000070;
 	animation: arrowJump 0.8s ease-in-out infinite alternate;
 	pointer-events: none;
 	user-select: none;
+	z-index: 10;
 }
 
 .presentation {
