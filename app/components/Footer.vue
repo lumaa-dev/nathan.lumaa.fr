@@ -3,7 +3,7 @@
 		<div class="footer">
 			<div class="row">
 				<p class="title">Nathan</p>
-				<a :href="url.link" v-for="url in links" :key="url.link">
+				<a :href="url.link[lang] ?? url.link" v-for="url in links" :key="url.link">
 					{{ url.title[lang] ?? url.title }}
 				</a>
 				<span class="inline">
@@ -145,14 +145,20 @@ const links = [
 			en: "Home",
 			fr: "Accueil"
 		},
-		link: "/",
+		link: {
+			en: "/",
+			fr: "/fr"
+		},
 	},
 	{
 		title: {
 			en: "Vinyl",
 			fr: "Vinyles"
 		},
-		link: "./vinyl",
+		link: {
+			en: "/vinyl",
+			fr: "/fr/vinyles"	
+		}
 	},
 ];
 
