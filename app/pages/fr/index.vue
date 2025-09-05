@@ -325,15 +325,15 @@ onMounted(() => {
 });
 
 useSeoMeta({
-	title: "I'm Nathan",
-	ogTitle: "I'm Nathan",
-	twitterTitle: "I'm Nathan",
+	title: "Je suis Nathan",
+	ogTitle: "Je suis Nathan",
+	twitterTitle: "Je suis Nathan",
 	description:
-		"I am Nathan, indie developer and music lover. I'm French and live in Angers. I am deeply passionate about Apple software, music and making fully-fleshed projects like Fraca or Record Link.",
+		"Je suis Nathan, un développeur indépendant et amoureux de musique de 18 ans. Je suis français et j'habite à Angers. Je suis passionné par les logiciels Apple, la musique et la création de projets complets comme Fraca ou Record Link.",
 	ogDescription:
-		"I am Nathan, indie developer and music lover. I'm French and live in Angers. I am deeply passionate about Apple software, music and making fully-fleshed projects like Fraca or Record Link.",
+		"Je suis Nathan, un développeur indépendant et amoureux de musique de 18 ans. Je suis français et j'habite à Angers. Je suis passionné par les logiciels Apple, la musique et la création de projets complets comme Fraca ou Record Link.",
 	twitterDescription:
-		"I am Nathan, indie developer and music lover. I'm French and live in Angers. I am deeply passionate about Apple software, music and making fully-fleshed projects like Fraca or Record Link.",
+		"Je suis Nathan, un développeur indépendant et amoureux de musique de 18 ans. Je suis français et j'habite à Angers. Je suis passionné par les logiciels Apple, la musique et la création de projets complets comme Fraca ou Record Link.",
 });
 </script>
 
@@ -581,13 +581,21 @@ a.pill {
 @media screen and (max-width: 1000px) {
 	.presentation {
 		flex-direction: column;
-		font-size: 4em;
 		gap: 35px;
 	}
 
 	.presentation img {
 		width: 170px;
 		height: 170px;
+	}
+
+	.presentation > p {
+		padding: 0 1.0em;
+	}
+
+	.presentation .name {
+		font-size: 4em;
+		flex-direction: column;
 	}
 
 	.overview {
