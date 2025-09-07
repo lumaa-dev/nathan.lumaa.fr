@@ -397,6 +397,7 @@ a.pill {
 	z-index: 10;
 	overflow: hidden hidden !important;
 	background: #ff000050;
+	backdrop-filter: blur(0.7em);
 	border-radius: 40px;
 	font-size: 1.5em;
 }
@@ -584,22 +585,32 @@ a.pill {
 
 @media screen and (max-width: 1000px) {
 	.presentation {
+		top: 15%;
 		flex-direction: column;
 		gap: 35px;
 	}
 
 	.presentation > p {
+		font-size: 0.7em;
 		padding: 0 1.0em;
 	}
 
 	.presentation .name {
-		font-size: 4em;
+		font-size: 2.5em;
 		flex-direction: column;
 	}
 
 	.presentation img {
 		width: 170px;
 		height: 170px;
+	}
+
+	.presentation .pill {
+		font-size: 0.6em;
+	}
+
+	.paged .indicator {
+		bottom: 0px;
 	}
 
 	.overview {
@@ -639,6 +650,19 @@ a.pill {
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
+	}
+
+	.vinyl .name {
+		font-size: 1.15em;
+	}
+
+	.vinyl .alt {
+		font-size: 0.7em;
+	}
+
+	.vinyl img {
+		width: 5em;
+		height: 5em;
 	}
 }
 </style>

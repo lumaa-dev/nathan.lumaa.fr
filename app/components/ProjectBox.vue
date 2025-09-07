@@ -55,4 +55,15 @@ const props = defineProps({
   object-fit: cover;
   margin-top: 0.4em;
 }
+
+@media screen and (max-width: 1000px) {
+  .pbox {
+    width: calc(300px + 1.0em);
+  }
+
+  .pbox img {
+    width: 300px;
+    height: 167px;
+  }
+}
 </style>
