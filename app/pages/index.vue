@@ -1,16 +1,22 @@
 <template>
 	<div class="paged">
 		<div class="presentation bg">
-      <span class="pill">
-        <div class="badge busy"></div>
-        Currently busy with school</span>
-      <span class="name">
-        <img src="/assets/hero.svg" draggable="false" />
-        <p class="word">Nathan</p>
-      </span>
-      <p>🇫🇷 18 year old French student at <a href="#schools">Lycée Chevrollier</a> (Angers) in Terminale STI2D SIN, also an indie iOS and web developer passionate about music and <a href="#vinyl">vinyl</a></p>
+			<span class="pill">
+				<div class="badge busy"></div>
+				Currently busy with school</span
+			>
+			<span class="name">
+				<img src="/assets/hero.svg" draggable="false" />
+				<p class="word">Nathan</p>
+			</span>
+			<p>
+				🇫🇷 18 year old French student at
+				<a href="#schools">Lycée Chevrollier</a> (Angers) in Terminale STI2D
+				SIN, also an indie iOS and web developer passionate about music and
+				<a href="#vinyl">vinyl</a>
+			</p>
 		</div>
-    <span class="indicator">&#8595;</span>
+		<span class="indicator">&#8595;</span>
 	</div>
 	<div class="leftright" id="whois">
 		<span>
@@ -25,9 +31,9 @@
 					mass: 3.4,
 				}"
 			>
-				I am <b>Nathan</b>, an 18 year old indie developer and music lover. I'm French and live
-				in Angers. I am deeply passionate about Apple software, music and making
-				fully-fleshed projects like
+				I am <b>Nathan</b>, an 18 year old indie developer and music lover. I'm
+				French and live in Angers. I am deeply passionate about Apple software,
+				music and making fully-fleshed projects like
 				<a href="https://apps.apple.com/us/app/fraca/id6480592078">Fraca</a> or
 				<a href="https://apps.lumaa.fr/app/recordlink">Record Link</a>.
 			</motion.p>
@@ -139,8 +145,8 @@
 					"
 				>
 					There is nothing to discover here.
-          <br />Just the name of the school.
-          <br />And the year I'm entering (hopefully)
+					<br />Just the name of the school. <br />And the year I'm entering
+					(hopefully)
 				</span>
 			</Timeline>
 		</span>
@@ -228,17 +234,24 @@
 						/>
 						<span>
 							<p class="name">{{ v.name }}</p>
-							<p class="alt">{{ v.artist }}<br />{{ new Date(v.ownDate).toLocaleDateString("fr") }}</p>
+							<p class="alt">
+								{{ v.artist }}<br />{{
+									new Date(v.ownDate).toLocaleDateString("fr")
+								}}
+							</p>
 						</span>
 					</span>
 				</motion.a>
 			</template>
 		</div>
-    <motion.a class="pill" href="/vinyl"
-      :initial="{ scale: 1.0, boxShadow: '0 0 0px #fff', zIndex: 1 }"
-      :transition="{ default: { type: 'spring', duration: 0.85, bounce: 0.5 } }"
-      :whileHover="{ scale: 1.3, boxShadow: '0 0 15px #fff', zIndex: 999 }" 
-    >All vinyl</motion.a>
+		<motion.a
+			class="pill"
+			href="/vinyl"
+			:initial="{ scale: 1.0, boxShadow: '0 0 0px #fff', zIndex: 1 }"
+			:transition="{ default: { type: 'spring', duration: 0.85, bounce: 0.5 } }"
+			:whileHover="{ scale: 1.3, boxShadow: '0 0 15px #fff', zIndex: 999 }"
+			>All vinyl</motion.a
+		>
 	</div>
 	<div class="txt" id="contact">
 		<p class="big">Contact</p>
@@ -340,10 +353,10 @@ a.pill {
 	text-decoration: none;
 	padding: 5px 10px;
 	border-radius: 100px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5em;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.5em;
 }
 
 .paged {
@@ -354,16 +367,20 @@ a.pill {
 .paged .indicator {
 	display: inline-block;
 	position: absolute;
-	bottom: 50px;
-	left: calc(50vw - 10vw);
+	bottom: 120px;
+	left: calc(50vw - 28px / 2);
 	text-align: center;
-	width: 20vw;
+	width: 28px;
 	font-size: 24px;
 	font-weight: 400;
 	color: #ffffff40;
+	background: #00000040;
+	border-radius: 50%;
+	box-shadow: 0 0 15px #00000070;
 	animation: arrowJump 0.8s ease-in-out infinite alternate;
 	pointer-events: none;
 	user-select: none;
+	z-index: 10;
 }
 
 .presentation {
@@ -372,54 +389,55 @@ a.pill {
 	left: 10%;
 	width: 80%;
 	height: 80%;
-  display: flex;
-  flex-direction: column;
-  gap: 70px;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	flex-direction: column;
+	gap: 70px;
+	align-items: center;
+	justify-content: center;
 	z-index: 10;
 	overflow: hidden hidden !important;
-  background: #ff000050;
-  border-radius: 40px;
-  font-size: 1.5em;
+	background: #ff000050;
+	backdrop-filter: blur(0.7em);
+	border-radius: 40px;
+	font-size: 1.5em;
 }
 
 .presentation > p {
-  padding: 0 4em;
-  text-align: center;
+	padding: 0 4em;
+	text-align: center;
 }
 
 .presentation .pill {
-  display: flex;
-  flex-direction: row;
-  gap: 0.5em;
-  font-size: 0.8em;
+	display: flex;
+	flex-direction: row;
+	gap: 0.5em;
+	font-size: 0.8em;
 }
 
 .presentation .pill .badge {
-  display: block;
-  width: 1.2em;
-  height: 1.2em;
-  border-radius: 100px;
+	display: block;
+	width: 1.2em;
+	height: 1.2em;
+	border-radius: 100px;
 }
 
 .presentation .pill .badge.active {
-    background: #45de45;
-    border: 1px solid #8cf87e80;
+	background: #45de45;
+	border: 1px solid #8cf87e80;
 }
 
 .presentation .pill .badge.busy {
-  background: #de4545;
-  border: 1px solid #f87e7e80;
+	background: #de4545;
+	border: 1px solid #f87e7e80;
 }
 
 .presentation .name {
-  display: flex;
+	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-  gap: 4vw;
-  font-size: 6em;
+	gap: 4vw;
+	font-size: 6em;
 	font-weight: 700;
 }
 
@@ -443,7 +461,8 @@ a.pill {
 	border-radius: 50%;
 }
 
-.txt.bg, .presentation.bg {
+.txt.bg,
+.presentation.bg {
 	background: #50505050;
 }
 
@@ -467,7 +486,8 @@ a.pill {
 	font-weight: 700;
 }
 
-.txt .badge, :not(a).pill {
+.txt .badge,
+:not(a).pill {
 	font-size: 0.8em;
 	font-weight: 700;
 	text-align: center;
@@ -565,14 +585,32 @@ a.pill {
 
 @media screen and (max-width: 1000px) {
 	.presentation {
+		top: 15%;
 		flex-direction: column;
-		font-size: 4em;
 		gap: 35px;
+	}
+
+	.presentation > p {
+		font-size: 0.7em;
+		padding: 0 1.0em;
+	}
+
+	.presentation .name {
+		font-size: 2.5em;
+		flex-direction: column;
 	}
 
 	.presentation img {
 		width: 170px;
 		height: 170px;
+	}
+
+	.presentation .pill {
+		font-size: 0.6em;
+	}
+
+	.paged .indicator {
+		bottom: 0px;
 	}
 
 	.overview {
@@ -612,6 +650,19 @@ a.pill {
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
+	}
+
+	.vinyl .name {
+		font-size: 1.15em;
+	}
+
+	.vinyl .alt {
+		font-size: 0.7em;
+	}
+
+	.vinyl img {
+		width: 5em;
+		height: 5em;
 	}
 }
 </style>

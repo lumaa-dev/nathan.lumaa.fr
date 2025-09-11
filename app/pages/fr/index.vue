@@ -325,15 +325,15 @@ onMounted(() => {
 });
 
 useSeoMeta({
-	title: "I'm Nathan",
-	ogTitle: "I'm Nathan",
-	twitterTitle: "I'm Nathan",
+	title: "Je suis Nathan",
+	ogTitle: "Je suis Nathan",
+	twitterTitle: "Je suis Nathan",
 	description:
-		"I am Nathan, indie developer and music lover. I'm French and live in Angers. I am deeply passionate about Apple software, music and making fully-fleshed projects like Fraca or Record Link.",
+		"Je suis Nathan, un développeur indépendant et amoureux de musique de 18 ans. Je suis français et j'habite à Angers. Je suis passionné par les logiciels Apple, la musique et la création de projets complets comme Fraca ou Record Link.",
 	ogDescription:
-		"I am Nathan, indie developer and music lover. I'm French and live in Angers. I am deeply passionate about Apple software, music and making fully-fleshed projects like Fraca or Record Link.",
+		"Je suis Nathan, un développeur indépendant et amoureux de musique de 18 ans. Je suis français et j'habite à Angers. Je suis passionné par les logiciels Apple, la musique et la création de projets complets comme Fraca ou Record Link.",
 	twitterDescription:
-		"I am Nathan, indie developer and music lover. I'm French and live in Angers. I am deeply passionate about Apple software, music and making fully-fleshed projects like Fraca or Record Link.",
+		"Je suis Nathan, un développeur indépendant et amoureux de musique de 18 ans. Je suis français et j'habite à Angers. Je suis passionné par les logiciels Apple, la musique et la création de projets complets comme Fraca ou Record Link.",
 });
 </script>
 
@@ -367,16 +367,20 @@ a.pill {
 .paged .indicator {
 	display: inline-block;
 	position: absolute;
-	bottom: 50px;
-	left: calc(50vw - 10vw);
+	bottom: 120px;
+	left: calc(50vw - 28px / 2);
 	text-align: center;
-	width: 20vw;
+	width: 28px;
 	font-size: 24px;
 	font-weight: 400;
 	color: #ffffff40;
+	background: #00000040;
+	border-radius: 50%;
+	box-shadow: 0 0 15px #00000070;
 	animation: arrowJump 0.8s ease-in-out infinite alternate;
 	pointer-events: none;
 	user-select: none;
+	z-index: 10;
 }
 
 .presentation {
@@ -393,6 +397,7 @@ a.pill {
 	z-index: 10;
 	overflow: hidden hidden !important;
 	background: #ff000050;
+	backdrop-filter: blur(0.7em);
 	border-radius: 40px;
 	font-size: 1.5em;
 }
@@ -580,14 +585,32 @@ a.pill {
 
 @media screen and (max-width: 1000px) {
 	.presentation {
+		top: 15%;
 		flex-direction: column;
-		font-size: 4em;
 		gap: 35px;
+	}
+
+	.presentation > p {
+		font-size: 0.7em;
+		padding: 0 1.0em;
+	}
+
+	.presentation .name {
+		font-size: 2.5em;
+		flex-direction: column;
 	}
 
 	.presentation img {
 		width: 170px;
 		height: 170px;
+	}
+
+	.presentation .pill {
+		font-size: 0.6em;
+	}
+
+	.paged .indicator {
+		bottom: 0px;
 	}
 
 	.overview {
@@ -627,6 +650,19 @@ a.pill {
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
+	}
+
+	.vinyl .name {
+		font-size: 1.15em;
+	}
+
+	.vinyl .alt {
+		font-size: 0.7em;
+	}
+
+	.vinyl img {
+		width: 5em;
+		height: 5em;
 	}
 }
 </style>
