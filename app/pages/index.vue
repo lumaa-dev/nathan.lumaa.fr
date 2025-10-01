@@ -133,8 +133,8 @@
 				Seconde Générale (Section européenne)
 			</Timeline>
 			<Timeline name="Lycée Chevrollier" date="2023-2026" :completion="0.7">
-				Sciences et Technologies de l’Industrie et du Développement Durable
-				(Système d’Information et Numérique)
+				Sciences et Technologies de l'Industrie et du Développement Durable
+				(Système d'Information et Numérique)
 			</Timeline>
 			<Timeline name="Université d'Angers" date="2026-20??" :completion="0.0">
 				<span
