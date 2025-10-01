@@ -50,8 +50,8 @@
 			<motion.a
 				href="https://cider.sh/remote"
 				class="nostyle"
-				:initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
-				:whileInView="{ filter: 'blur(0px)', translateY: 0, opacity: 1 }"
+				:initial="{ translateY: -50, opacity: 0 }"
+				:whileInView="{ translateY: 0, opacity: 1 }"
 				:transition="{
 					type: 'spring',
 					stiffness: 567,
@@ -69,8 +69,8 @@
 			<motion.a
 				href="https://d.lumaa.fr/fraca"
 				class="nostyle"
-				:initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
-				:whileInView="{ filter: 'blur(0px)', translateY: 0, opacity: 1 }"
+				:initial="{ translateY: -50, opacity: 0 }"
+				:whileInView="{ translateY: 0, opacity: 1 }"
 				:transition="{
 					type: 'spring',
 					stiffness: 567,
@@ -88,8 +88,8 @@
 			<motion.a
 				href="https://apps.lumaa.fr/app/bubble"
 				class="nostyle"
-				:initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
-				:whileInView="{ filter: 'blur(0px)', translateY: 0, opacity: 1 }"
+				:initial="{ translateY: -50, opacity: 0 }"
+				:whileInView="{ translateY: 0, opacity: 1 }"
 				:transition="{
 					type: 'spring',
 					stiffness: 567,
@@ -107,8 +107,8 @@
 			<motion.a
 				href="https://apps.lumaa.fr/app/recordlink"
 				class="nostyle"
-				:initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
-				:whileInView="{ filter: 'blur(0px)', translateY: 0, opacity: 1 }"
+				:initial="{ translateY: -50, opacity: 0 }"
+				:whileInView="{ translateY: 0, opacity: 1 }"
 				:transition="{
 					type: 'spring',
 					stiffness: 567,
@@ -230,7 +230,8 @@
 					<span>
 						<img
 							:src="`/assets/vinyl/${v.img}`"
-							:alt="'Pochette d\'album de ' + v.name"
+							:alt="'Pochette de ' + v.name"
+							draggable="false"
 						/>
 						<span>
 							<p class="name">{{ v.name }}</p>

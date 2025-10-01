@@ -1,6 +1,20 @@
 {
 	"owned": [
 		{
+			"name": "One Simple Trick",
+			"artist": "Lovejoy",
+			"img": "ost.png",
+			"ownDate": "2025-10-03T00:00:00.000Z",
+			"available": {
+				"official": "https://shop-uk.lvjyonline.com/products/one-simple-trick-vinyl"
+			},
+			"stream": "https://album.link/i/1834233309",
+			"badge": {
+                "text": "Pre-ordered",
+                "color": "blue"
+            }
+		},
+		{
 			"name": "Cherry Bomb",
 			"artist": "Tyler, The Creator",
 			"img": "cherry_bomb.jpg",
