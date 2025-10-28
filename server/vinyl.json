@@ -1,6 +1,17 @@
 {
 	"owned": [
 		{
+			"name": "Chromakopia +",
+			"artist": "Tyler, The Creator",
+			"img": "chromakopia.jpg",
+			"ownDate": "2025-10-30T00:00:00.000Z",
+            "badge": {
+				"text": "Pre-ordered",
+                "color": "blue"
+            },
+			"stream": "https://album.link/i/1848185473",
+		},
+		{
 			"name": "One Simple Trick",
 			"artist": "Lovejoy",
 			"img": "ost.png",
@@ -240,18 +251,6 @@
 		}
 	],
 	"wish": [
-		{
-			"name": "Chromakopia",
-			"artist": "Tyler, The Creator",
-			"img": "chromakopia.jpg",
-			"wishDate": "2024-10-28T00:00:00.000Z",
-			"priority": 1,
-			"stream": "https://album.link/i/1776500452",
-            "badge": {
-                "text": "Unreleased",
-                "color": "red"
-            }
-		},
 		{
 			"name": "Don't Tap The Glass",
 			"artist": "Tyler, The Creator",
