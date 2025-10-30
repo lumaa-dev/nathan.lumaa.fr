@@ -3,7 +3,10 @@
 		<div class="footer">
 			<div class="row">
 				<p class="title">Nathan</p>
-				<a :href="url.link[lang] ?? url.link" v-for="url in links" :key="url.link">
+				<a
+					:href="url.link[lang] ?? url.link"
+					v-for="url in links"
+					:key="url.link">
 					{{ url.title[lang] ?? url.title }}
 				</a>
 				<span class="inline">
@@ -41,7 +44,7 @@
 				</a>
 			</div>
 		</div>
-		<div class="langs">
+		<div class="langs picker dark">
 			<a href="/" :class="lang == 'en' ? 'selected' : ''">English</a>
 			<a href="/fr" :class="lang == 'fr' ? 'selected' : ''">Français</a>
 		</div>
@@ -88,29 +91,6 @@ footer {
 	gap: 0.5em;
 }
 
-.langs {
-	background: #1e1e1e;
-	display: flex;
-	flex-direction: row;
-	padding: 0.6em 1em;
-	border-radius: 100px;
-	gap: 0.6em;
-}
-
-.langs a {
-	padding: 0.6em 1.2em;
-	border-radius: 100px;
-	text-decoration: none !important;
-}
-
-.langs a.selected {
-	background: #505050ab;
-}
-
-.langs a:not(.selected):hover {
-	background: #50505050;
-}
-
 p,
 a {
 	color: #fff;
@@ -143,22 +123,22 @@ const links = [
 	{
 		title: {
 			en: "Home",
-			fr: "Accueil"
+			fr: "Accueil",
 		},
 		link: {
 			en: "/",
-			fr: "/fr"
+			fr: "/fr",
 		},
 	},
 	{
 		title: {
 			en: "Vinyl",
-			fr: "Vinyles"
+			fr: "Vinyles",
 		},
 		link: {
 			en: "/vinyl",
-			fr: "/fr/vinyles"	
-		}
+			fr: "/fr/vinyles",
+		},
 	},
 ];
 
@@ -166,14 +146,14 @@ const lumaa = [
 	{
 		title: {
 			en: "About",
-			fr: "À propos"
+			fr: "À propos",
 		},
 		link: "https://lumaa.fr/",
 	},
 	{
 		title: {
 			en: "Apps",
-			fr: "Applis"
+			fr: "Applis",
 		},
 		link: "https://apps.lumaa.fr/",
 	},

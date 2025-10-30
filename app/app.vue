@@ -1,16 +1,16 @@
 <template>
-  <div v-if="hasLoaded">
-    <Header :is-compact="isCompact" :lang="lang" />
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
-    <Footer :lang="lang" />
-  </div>
+	<div v-if="hasLoaded">
+		<Header :is-compact="isCompact" :lang="lang" />
+		<NuxtLayout>
+			<NuxtPage />
+		</NuxtLayout>
+		<Footer :lang="lang" />
+	</div>
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
-import { useScroll, useMotionValueEvent, animate } from 'motion-v';
+import { onMounted } from "vue";
+import { useScroll, useMotionValueEvent, animate } from "motion-v";
 
 const scroll = useScroll();
 
@@ -22,65 +22,126 @@ var lang = ref("en");
 var hasLoaded = ref(false);
 
 useMotionValueEvent(scroll.scrollY, "change", (latest) => {
-  isCompact = latest > lastScroll;
-  lastScroll = latest;
+	isCompact = latest > lastScroll;
+	lastScroll = latest;
 
-  if (isCompact !== lastCompact) {
-    animate("header", { width: isCompact ? 100 : 1000 }, { type: "spring", stiffness: 249, damping: 63, mass: 3.4, bounce: 0.0 })
-    document.querySelector("header").setAttribute("compact", isCompact ? "true" : "false");
-    lastCompact = isCompact;
-  }
-})
+	if (isCompact !== lastCompact) {
+		animate(
+			"header",
+			{ width: isCompact ? 100 : 1000 },
+			{ type: "spring", stiffness: 249, damping: 63, mass: 3.4, bounce: 0.0 }
+		);
+		document
+			.querySelector("header")
+			.setAttribute("compact", isCompact ? "true" : "false");
+		lastCompact = isCompact;
+	}
+});
 
 onMounted(() => {
-  console.log("onMounted triggered");
-  try {
-    const route = useRoute()
-    window.scroll(0, 0);
+	console.log("onMounted triggered");
+	try {
+		const route = useRoute();
+		window.scroll(0, 0);
 
-    if (route.path.startsWith("/fr")) {
-      document.documentElement.setAttribute("lang", "fr");
-      lang.value = "fr";
-    } else {
-      document.documentElement.setAttribute("lang", "en");
-      lang.value = "en";
-    }
-    console.log(`LANG: ${lang.value}`);
-    hasLoaded.value = true; // This should trigger the template to render
-    console.log(`hasLoaded set to: ${hasLoaded.value}`);
-  } catch (error) {
-    console.error("Error in onMounted:", error);
-  }
-})
+		if (route.path.startsWith("/fr")) {
+			document.documentElement.setAttribute("lang", "fr");
+			lang.value = "fr";
+		} else {
+			document.documentElement.setAttribute("lang", "en");
+			lang.value = "en";
+		}
+		console.log(`LANG: ${lang.value}`);
+		hasLoaded.value = true; // This should trigger the template to render
+		console.log(`hasLoaded set to: ${hasLoaded.value}`);
+	} catch (error) {
+		console.error("Error in onMounted:", error);
+	}
+});
 
 useSeoMeta({
-  ogImage: "/assets/og/banner.png",
-  twitterImage: "/assets/og/banner.png",
-  twitterCard: "summary_large_image",
-  themeColor: "#1e1e1e"
-})
+	ogImage: "/assets/og/banner.png",
+	twitterImage: "/assets/og/banner.png",
+	twitterCard: "summary_large_image",
+	themeColor: "#1e1e1e",
+});
 </script>
 
 <style>
 :root {
-  --brand: #1688c5;
+	--brand: #1688c5;
 }
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 body {
-  background: #1e1e1e;
-  color: #fff;
-  font-family: system-ui, "SF Pro", "SF Pro Text", "SF Pro Display", "SF Compact", "SF Compact Text", "SF Compact Display", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	background: #1e1e1e;
+	color: #fff;
+	font-family: system-ui, "SF Pro", "SF Pro Text", "SF Pro Display",
+		"SF Compact", "SF Compact Text", "SF Compact Display", -apple-system,
+		BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+		"Open Sans", "Helvetica Neue", sans-serif;
+	overflow: hidden scroll;
 }
 
 a.nostyle {
-  font-weight: inherit !important;
-  color: inherit !important;
-  text-decoration: none !important;
+	font-weight: inherit !important;
+	color: inherit !important;
+	text-decoration: none !important;
+}
+
+.picker.dark {
+	background: #1e1e1e;
+}
+
+.picker {
+	background: #101010;
+	display: flex;
+	flex-direction: row;
+	padding: 0.6em 1em;
+	border-radius: 100px;
+	gap: 0.6em;
+}
+
+.picker a,
+.picker button {
+	padding: 0.6em 1.2em;
+	border-radius: 100px;
+	text-decoration: none !important;
+	font-size: 1.1em;
+	color: #fff;
+	background: transparent;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+.picker a.selected,
+.picker button.selected {
+	background: #505050ab;
+}
+
+.picker a:not(.selected):hover,
+.picker button:not(.selected):hover {
+	background: #50505050;
+}
+
+@media screen and (max-width: 1000px) {
+	.picker.small {
+		flex-direction: column;
+		align-items: center;
+		border-radius: 25px;
+		padding: 0.6em 1em;
+		font-size: 0.8em;
+	}
+
+	.picker.small a,
+	.picker.small button {
+		width: fit-content;
+	}
 }
 </style>
