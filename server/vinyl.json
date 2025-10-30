@@ -1,14 +1,19 @@
 {
 	"owned": [
 		{
-			"name": "Chromakopia +",
+			"name": "Chromakopia",
 			"artist": "Tyler, The Creator",
-			"img": "chromakopia.jpg",
+			"img": "chromakopia.png",
 			"ownDate": "2025-10-30T00:00:00.000Z",
-            "badge": {
+			"discColor": "White",
+			"badge": {
 				"text": "Pre-ordered",
-                "color": "blue"
-            },
+				"color": "blue"
+			},
+			"available": {
+				"official": "https://uk.golfwang.com/products/chromakopia-white-double-vinyl",
+				"fnac": "https://www.fnac.com/a22194190/Tyler-The-Creator-CHROMAKOPIA-Vinyle-Blanc-Opaque-Vinyle-album"
+			},
 			"stream": "https://album.link/i/1848185473"
 		},
 		{
@@ -17,6 +22,7 @@
 			"img": "ost.png",
 			"ownDate": "2025-10-17T00:00:00.000Z",
 			"discogs": "https://www.discogs.com/release/35277988-Lovejoy-One-Simple-Trick",
+			"discColor": "White",
 			"available": {
 				"official": "https://shop-uk.lvjyonline.com/products/one-simple-trick-vinyl"
 			},
@@ -28,6 +34,7 @@
 			"img": "cherry_bomb.jpg",
 			"ownDate": "2025-08-26T00:00:00.000Z",
 			"discogs": "https://www.discogs.com/release/34890434-TylerCreator-Cherry-Bomb",
+			"discColor": "Blue Translucent",
 			"available": {
 				"official": "https://golfwang.com/products/cherry-bomb-cartoon-mask-vinyl",
 				"fnac": "https://www.fnac.com/a21535162/Tyler-The-Creator-Cherry-Bomb-Vinyle-Bleu-Translucide-Vinyle-album"
@@ -40,6 +47,7 @@
 			"img": "who_really_cares.webp",
 			"ownDate": "2025-08-23T00:00:00.000Z",
 			"discogs": "https://www.discogs.com/release/33316476-TV-Girl-Who-Really-Cares",
+			"discColor": "Blue & Pink Splatter",
 			"available": {
 				"amazon": "https://www.amazon.fr/Who-Really-Cares-LP-Vinyl/dp/B0DYZ2XQFD",
 				"fnac": "https://www.fnac.com/a21390414/TV-Girl-Who-Really-Cares-Vinyle-album",
@@ -54,6 +62,7 @@
 			"img": "kid_a.jpg",
 			"ownDate": "2025-08-19T00:00:00.000Z",
 			"discogs": "https://www.discogs.com/release/26373128-Radiohead-Kid-A",
+			"discColor": "Black",
 			"available": {
 				"fnac": "https://www.fnac.com/a10001386/Radiohead-Kid-A-Vinyle-album",
 				"amazon": "https://www.amazon.fr/Kid-Radiohead/dp/B01I2E32W8",
@@ -62,27 +71,29 @@
 			"stream": "https://album.link/i/1097862870"
 		},
 		{
-            "name": "Thriller",
-            "artist": "Michael Jackson",
-            "img": "thriller.jpg",
-            "ownDate": "2025-08-10T00:00:00.000Z",
-            "discogs": "https://www.discogs.com/release/33488300-Michael-Jackson-Thriller",
-            "available": {
-                "fnac": "https://www.fnac.com/a9491231/Michael-Jackson-Thriller-Vinyle-album",
-                "amazon": "https://amazon.fr/Thriller-Multi-Artistes/dp/B01B2M9H76/261-4873903-6957845"
-            },
-            "stream": "https://album.link/i/269572838",
-            "badge": {
-                "text": "Birthday",
-                "color": "pink"
-            }
-        },
+			"name": "Thriller",
+			"artist": "Michael Jackson",
+			"img": "thriller.jpg",
+			"ownDate": "2025-08-10T00:00:00.000Z",
+			"discogs": "https://www.discogs.com/release/33488300-Michael-Jackson-Thriller",
+			"discColor": "Black",
+			"available": {
+				"fnac": "https://www.fnac.com/a9491231/Michael-Jackson-Thriller-Vinyle-album",
+				"amazon": "https://amazon.fr/Thriller-Multi-Artistes/dp/B01B2M9H76/261-4873903-6957845"
+			},
+			"stream": "https://album.link/i/269572838",
+			"badge": {
+				"text": "Birthday",
+				"color": "pink"
+			}
+		},
 		{
 			"name": "The Bends",
 			"artist": "Radiohead",
 			"img": "the_bends.jpg",
 			"ownDate": "2025-08-08T00:00:00.000Z",
 			"discogs": "https://www.discogs.com/release/23449382-Radiohead-The-Bends",
+			"discColor": "Black",
 			"available": {
 				"fnac": "https://www.fnac.com/a9716452/Radiohead-The-Bends-Vinyle-album",
 				"amazon": "https://www.amazon.com/Bends-180g-Radiohead/dp/B01F0XLQZE",
@@ -96,32 +107,34 @@
 			"img": "amours.webp",
 			"ownDate": "2025-08-04T00:00:00.000Z",
 			"discogs": "https://www.discogs.com/release/32412543-Louise-Attaque-Amours",
+			"discColor": "Black",
 			"available": {
 				"official": "https://louise-attaque.store/products/double-vinyle-noir-amours-album-live",
 				"fnac": "https://www.fnac.com/a20877123/Louise-Attaque-Amours-Edition-Limitee-Vinyle-album"
 			},
 			"stream": "https://album.link/i/1768787869",
-            "badge": {
-                "text": "Birthday",
-                "color": "pink"
-            }
+			"badge": {
+				"text": "Birthday",
+				"color": "pink"
+			}
 		},
 		{
 			"name": "From Zero",
 			"artist": "Linkin Park",
-			"img": "from_zero.jpg",
+			"img": "from_zero.webp",
 			"ownDate": "2025-08-04T00:00:00.000Z",
 			"discogs": "https://www.discogs.com/release/32285475-Linkin-Park-From-Zero",
+			"discColor": "Transparent Petrol",
 			"available": {
 				"official": "https://www.linkinparkstore.fr/products/vinyle-standard-from-zero",
 				"amazon": "https://www.amazon.fr/Z%C3%A9ro-Linkin-Park/dp/B0DFX3Q4JY",
 				"fnac": "https://www.fnac.com/a20819519/Linkin-Park-From-Zero-Vinyle-Bleu-Vinyle-album"
 			},
 			"stream": "https://album.link/i/1766137049",
-            "badge": {
-                "text": "Birthday",
-                "color": "pink"
-            }
+			"badge": {
+				"text": "Birthday",
+				"color": "pink"
+			}
 		},
 		{
 			"name": "Are We There Yet?",
@@ -129,6 +142,7 @@
 			"img": "awty.png",
 			"ownDate": "2024-09-11T00:00:00.000Z",
 			"discogs": "https://www.discogs.com/release/30490723-James-Marriott-Are-We-There-Yet",
+			"discColor": "Black",
 			"stream": "https://album.link/i/1822380334"
 		},
 		{
@@ -141,6 +155,7 @@
 				"official": "https://c418.bandcamp.com/album/minecraft-volume-alpha"
 			},
 			"discogs": "https://www.discogs.com/release/19894393-C418-Minecraft-Volume-Alpha",
+			"discColor": "Green Translucent",
 			"stream": "https://album.link/i/424968465"
 		},
 		{
@@ -149,6 +164,7 @@
 			"img": "dttd.png",
 			"ownDate": "2025-06-14T00:00:00.000Z",
 			"discogs": "https://www.discogs.com/release/34247254-James-Marriott-Dont-Tell-The-Dog",
+			"discColor": "Blue Translucent",
 			"available": {
 				"official": "https://jamesmarriottmusic.com/products/james-marriott-don-t-tell-the-dog-standard-vinyl",
 				"fnac": "https://www.fnac.com/a21790618/James-Marriott-Don-t-Tell-The-Dog-Vinyle-album"
@@ -161,6 +177,7 @@
 			"img": "ok_computer.jpg",
 			"ownDate": "2024-10-05T00:00:00.000Z",
 			"discogs": "https://www.discogs.com/release/8690850-Radiohead-OK-Computer",
+			"discColor": "Black",
 			"available": {
 				"fnac": "https://www.fnac.com/a9716450/Radiohead-Ok-Computer-Vinyle-album",
 				"official": "https://store-eu.wasteheadquarters.com/products/ok-computer-cd?variant=15378650071114"
@@ -173,6 +190,7 @@
 			"img": "nevermind.jpg",
 			"ownDate": "2024-10-11T00:00:00.000Z",
 			"discogs": "https://www.discogs.com/release/7097051-Nirvana-Nevermind",
+			"discColor": "Black",
 			"available": {
 				"fnac": "https://www.fnac.com/a1794240/Nirvana-Nevermind-Vinyle-album",
 				"amazon": "https://amazon.fr/Nevermind-Kurt-Cobain/dp/B0000088DC",
@@ -186,6 +204,7 @@
 			"img": "in_utero.jpg",
 			"ownDate": "2024-12-25T00:00:00.000Z",
 			"discogs": "https://www.discogs.com/release/28714897-Nirvana-In-Utero",
+			"discColor": "Black",
 			"available": {
 				"amazon": "https://amazon.com/Utero-30th-Anniversary-LP-inch/dp/B0C3WFW9G6",
 				"official": "https://shop.nirvana.com/collections/in-utero-30th-anniversary/products/in-utero-30th-anniversary-1lp-10"
@@ -198,6 +217,7 @@
 			"img": "in_rainbows.jpg",
 			"ownDate": "2024-12-26T00:00:00.000Z",
 			"discogs": "https://www.discogs.com/release/8605874-Radiohead-In-Rainbows",
+			"discColor": "Black",
 			"available": {
 				"fnac": "https://www.fnac.com/a2175285/Radiohead-In-rainbows-Vinyle-album",
 				"official": "https://store-eu.wasteheadquarters.com/products/in-rainbows?variant=15378641158218"
@@ -210,6 +230,7 @@
 			"img": "igor.jpg",
 			"ownDate": "2024-12-26T00:00:00.000Z",
 			"discogs": "https://www.discogs.com/release/14210644-TylerCreator-Igor",
+			"discColor": "Black",
 			"available": {
 				"fnac": "https://www.fnac.com/a13710812/Tyler-The-Creator-Igor-Vinyle-album"
 			},
@@ -221,6 +242,7 @@
 			"img": "cmiygl.jpg",
 			"ownDate": "2025-01-25T00:00:00.000Z",
 			"discogs": "https://www.discogs.com/release/22786961-TylerCreator-Call-Me-If-You-Get-Lost",
+			"discColor": "Black",
 			"available": {
 				"fnac": "https://www.fnac.com/a16390466/Tyler-The-Creator-Call-Me-If-You-Get-Lost-Vinyle-album"
 			},
@@ -232,6 +254,7 @@
 			"img": "safad.jpg",
 			"ownDate": "2025-01-25T00:00:00.000Z",
 			"discogs": "https://www.discogs.com/release/28985836-Feldup-Stared-At-From-A-Distance",
+			"discColor": "Black",
 			"available": {
 				"fnac": "https://www.fnac.com/a18823547/Feldup-Stared-At-From-A-Distance-Vinyle-album",
 				"official": "https://feldup.bandcamp.com/album/stared-at-from-a-distance-2"
@@ -244,6 +267,7 @@
 			"img": "tcats.jpg",
 			"ownDate": "2025-01-31T00:00:00.000Z",
 			"discogs": "https://www.discogs.com/release/7082120-Foo-Fighters-The-Colour-And-The-Shape",
+			"discColor": "Black",
 			"available": {
 				"fnac": "https://www.fnac.com/a8237882/Foo-Fighters-The-colour-and-the-shape-Vinyle-album"
 			},
@@ -258,10 +282,10 @@
 			"wishDate": "2025-07-21T00:00:00.000Z",
 			"priority": 2,
 			"stream": "https://album.link/i/1827715784",
-            "badge": {
-                "text": "Unreleased",
-                "color": "red"
-            }
+			"badge": {
+				"text": "Unreleased",
+				"color": "red"
+			}
 		},
 		{
 			"name": "Minecraft Volume Beta",
@@ -285,23 +309,24 @@
 				"official": "https://www.omocat-shop.com/collections/omori/products/omori-original-sountrack-vinyl-2-lp"
 			},
 			"badge": {
-                "text": "Pre-order",
-                "color": "blue"
-            },
+				"text": "Sold out",
+				"color": "red"
+			},
+			"stream": "https://album.link/i/1581679496",
 			"priority": 3
 		},
 		{
-			"name": "Whiplash Soundtrack",
-			"artist": "Justin Hurwitz",
-			"img": "whiplash.jpg",
-			"wishDate": "2025-07-18T00:00:00.000Z",
-			"discogs": "https://www.discogs.com/master/825455-Various-Whiplash-Original-Motion-Picture-Soundtrack?format=Vinyl",
+			"name": "Requiem for a Dream Soundtrack",
+			"artist": "Clint Mansell, Kronos Quartet",
+			"img": "requiem.jpg",
+			"wishDate": "2025-10-07T00:00:00.000Z",
+			"discogs": "https://www.discogs.com/master/503-Clint-Mansell-Featuring-Kronos-Quartet-Requiem-For-A-Dream?format=Vinyl",
 			"priority": 4,
 			"available": {
-				"amazon": "https://www.amazon.fr/Whiplash-S-T-S-T/dp/B0C5JQ4ZL5",
-				"fnac": "https://www.fnac.com/a18254633/Collectif-Whiplash-Edition-Deluxe-Vinyle-album"
+				"amazon": "https://www.amazon.fr/Requiem-Dream-allemand-Clint-Mansell/dp/B01D5I3AW8",
+				"fnac": "https://www.fnac.com/a15159367/Clint-Mansell-Requiem-For-A-Dream-Vinyle-album"
 			},
-			"stream": "https://album.link/i/1572919347"
+			"stream": "https://album.link/i/41228773"
 		},
 		{
 			"name": "Pablo Honey",
