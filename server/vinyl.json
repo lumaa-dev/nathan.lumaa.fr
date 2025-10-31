@@ -1,6 +1,37 @@
 {
 	"owned": [
 		{
+			"name": "Deadbeat",
+			"artist": "Tame Impala",
+			"img": "deadbeat.jpg",
+			"ownDate": "2025-12-25T00:00:00.000Z",
+			"discogs": "https://www.discogs.com/release/35407495-Tame-Impala-Deadbeat",
+			"discColor": "Black",
+			"available": {
+				"official": "https://tameimpala.fr/products/vinyle-deadbeat?variant=51437755564370",
+				"fnac": "https://www.fnac.com/a21992722/Tame-Impala-Deadbeat-Vinyle-album"
+			},
+			"badge": {
+				"text": "Christmas",
+				"color": "green"
+			},
+			"stream": "https://album.link/i/1836226516"
+		},
+		{
+			"name": "Scum Fuck Flower Boy",
+			"artist": "Tyler, The Creator",
+			"img": "flowerboy.png",
+			"ownDate": "2025-10-31T00:00:00.000Z",
+			"discogs": "https://www.discogs.com/release/11316793-TylerCreator-Scum-Fuck-Flower-Boy",
+			"discColor": "Black",
+			"available": {
+				"official": "https://store.sonymusic.fr/products/tyler-the-creator-flower-boy-2lp",
+				"fnac": "https://www.fnac.com/a11080440/Tyler-The-Creator-Flower-Boy-Vinyle-album",
+				"amazon": "https://www.amazon.fr/Flower-Boy-Multi-Artistes/dp/B075B6S1GD"
+			},
+			"stream": "https://album.link/i/1254572564"
+		},
+		{
 			"name": "Chromakopia",
 			"artist": "Tyler, The Creator",
 			"img": "chromakopia.png",
