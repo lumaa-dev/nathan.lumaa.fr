@@ -18,8 +18,7 @@
 			translateY: { duration: 0.8, delay: 0.2 },
 			opacity: { duration: 0.8, delay: 0.2 },
 			width: { type: 'spring', stiffness: 567, damping: 132, mass: 3.4 },
-		}"
-	>
+		}">
 		<span class="keeper">
 			<motion.a class="img" :href="lang == 'fr' ? '/fr' : '/'">
 				<motion.img
@@ -32,23 +31,21 @@
 					:whileHover="{
 						filter: 'drop-shadow(0 0 7px #ffffff55)',
 						zIndex: 999,
-					}"
-				/>
+					}" />
 			</motion.a>
 		</span>
 
 		<span class="central">
 			<motion.a
-				v-for="link in links"
+				v-for="link in links.reverse()"
 				:href="link.path"
 				:key="link.path"
 				:initial="{ scale: 1.0, boxShadow: '0 0 0px #fff', zIndex: 1 }"
 				:transition="{
 					default: { type: 'spring', duration: 0.85, bounce: 0.5 },
 				}"
-				:whileHover="{ scale: 1.3, boxShadow: '0 0 15px #fff', zIndex: 999 }"
-			>
-				{{ link.title[lang as 'en' | 'fr'] }}
+				:whileHover="{ scale: 1.3, boxShadow: '0 0 15px #fff', zIndex: 999 }">
+				{{ link.title[lang as "en" | "fr"] }}
 			</motion.a>
 		</span>
 	</motion.header>
@@ -137,9 +134,16 @@ const links = [
 	{
 		title: {
 			en: "Vinyl",
-			fr: "Vinyles"
+			fr: "Vinyles",
 		},
 		path: props.lang == "fr" ? "/fr/vinyles" : "/vinyl",
+	},
+	{
+		title: {
+			en: "Insights",
+			fr: "Réflexions",
+		},
+		path: props.lang == "fr" ? "/fr/reflexions" : "/insights",
 	},
 ];
 </script>

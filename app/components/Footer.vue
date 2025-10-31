@@ -140,6 +140,16 @@ const links = [
 			fr: "/fr/vinyles",
 		},
 	},
+	{
+		title: {
+			en: "Insights",
+			fr: "Réflexions",
+		},
+		link: {
+			en: "/insights",
+			fr: "/fr/reflexions",
+		},
+	},
 ];
 
 const lumaa = [
