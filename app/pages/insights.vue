@@ -148,12 +148,15 @@ onMounted(() => {
 });
 
 function select(project: any) {
-	selectedProject.value = project["_src"];
-	if (window.innerWidth >= 1000) {
-		setTimeout(() => {
-			makeScroll();
-		}, 10);
-	}
+	selectedProject.value = "";
+	setTimeout(() => {
+		selectedProject.value = project["_src"];
+		if (window.innerWidth >= 1000) {
+			setTimeout(() => {
+				makeScroll();
+			}, 10);
+		}
+	}, 10);
 }
 
 function makeScroll() {
