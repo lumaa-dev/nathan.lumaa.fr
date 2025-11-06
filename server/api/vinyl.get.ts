@@ -7,6 +7,7 @@ export enum VinylSelector {
 	wish = "w",
 	color = "colored",
 	black = "black",
+	available = "av",
 }
 
 export namespace VinylSelector {
@@ -16,9 +17,17 @@ export namespace VinylSelector {
 		VinylSelector.wish,
 		VinylSelector.color,
 		VinylSelector.black,
+		VinylSelector.available,
 	];
 
-	export const allCasesString: string[] = ["a", "o", "w", "colored", "black"];
+	export const allCasesString: string[] = [
+		"a",
+		"o",
+		"w",
+		"colored",
+		"black",
+		"av",
+	];
 }
 
 export default defineEventHandler(async (event) => {
@@ -53,6 +62,17 @@ export default defineEventHandler(async (event) => {
 
 			case VinylSelector.color:
 				return o.filter((v) => v.discColor.toLowerCase() !== "black");
+
+			case VinylSelector.available:
+				let ow = o.filter(
+					(v) =>
+						Object.keys((v.available as object) ?? {}).length > 0 && v.discogs
+				);
+				let wi = w.filter(
+					(v) =>
+						Object.keys((v.available as object) ?? {}).length > 0 && v.discogs
+				);
+				return { owned: ow, wished: wi };
 		}
 	} else {
 		return { owned: o, wish: w };
