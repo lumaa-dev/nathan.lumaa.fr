@@ -78,6 +78,21 @@
 						>Fnac</motion.a
 					>
 					<motion.a
+						:href="vinyl.available.cultura"
+						v-if="vinyl.available.cultura"
+						style="background: #033878"
+						:initial="{ scale: 1.0, boxShadow: '0 0 0px #033878', zIndex: 1 }"
+						:transition="{
+							default: { type: 'spring', duration: 0.85, bounce: 0.5 },
+						}"
+						:whileHover="{
+							scale: 1.2,
+							boxShadow: '0 0 15px #033878',
+							zIndex: 999,
+						}"
+						>Cultura</motion.a
+					>
+					<motion.a
 						:href="vinyl.available.amazon"
 						v-if="vinyl.available.amazon"
 						style="background: #0578ff"
