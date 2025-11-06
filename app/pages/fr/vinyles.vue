@@ -43,7 +43,7 @@ enum VinylFilter {
 	wish = "Souhaités",
 	color = "Disques colorés",
 	black = "Disques noirs",
-	available = "Disponible",
+	available = "Disponibles",
 }
 
 const { data } = await useAsyncData("vinyl", () => $fetch("/api/vinyl"));
