@@ -43,6 +43,7 @@ enum VinylFilter {
 	wish = "Souhaités",
 	color = "Disques colorés",
 	black = "Disques noirs",
+	available = "Disponible",
 }
 
 const { data } = await useAsyncData("vinyl", () => $fetch("/api/vinyl"));
@@ -93,9 +94,16 @@ function filter(type: VinylFilter) {
 		);
 		wishes.value = [];
 		return;
+	} else if (type == VinylFilter.available) {
+		owned.value = defOwned.filter(
+			(v: any) =>
+				Object.keys((v.available as object) ?? {}).length > 0 && v.discogs
+		);
+		wishes.value = defWishes.filter(
+			(v: any) =>
+				Object.keys((v.available as object) ?? {}).length > 0 && v.discogs
+		);
 	}
-
-	console.log("man shut yo");
 }
 
 namespace VinylFilter {
@@ -103,6 +111,7 @@ namespace VinylFilter {
 		VinylFilter.all,
 		VinylFilter.owned,
 		VinylFilter.wish,
+		VinylFilter.available,
 		VinylFilter.color,
 		VinylFilter.black,
 	];
