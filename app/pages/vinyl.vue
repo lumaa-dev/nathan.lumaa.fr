@@ -110,8 +110,6 @@ function filter(type: VinylFilter) {
 				Object.keys((v.available as object) ?? {}).length > 0 && v.discogs
 		);
 	}
-
-	console.log("man shut yo");
 }
 
 namespace VinylFilter {
