@@ -238,6 +238,12 @@ a.inline {
 	border: 1px solid #f0b7eb80;
 }
 
+.vinyl .badge.yellow {
+	background: #edcc12;
+	border: 1px solid #63410280;
+	color: black;
+}
+
 .vinyl .date {
 	color: hsla(0, 0%, 100%, 0.25);
 	padding-top: 0.7em;
