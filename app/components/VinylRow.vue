@@ -160,12 +160,10 @@ a.inline {
 
 .vinyl {
 	display: flex;
-	flex-direction: column;
 	justify-content: space-between;
 	gap: 15px;
 	background-color: #ffffff10;
 	width: 650px;
-	height: 300px;
 	padding: 25px;
 	border-radius: 25px;
 }
