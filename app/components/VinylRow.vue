@@ -161,6 +161,7 @@ a.inline {
 .vinyl {
 	display: flex;
 	justify-content: space-between;
+	flex-direction: column;
 	gap: 15px;
 	background-color: #ffffff10;
 	width: 650px;

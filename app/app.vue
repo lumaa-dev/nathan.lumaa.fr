@@ -88,9 +88,9 @@ body {
 	overflow: hidden scroll;
 }
 
-span > * {
+/* span > * {
 	display: inline-block;
-}
+} */
 
 a.nostyle {
 	font-weight: inherit !important;
