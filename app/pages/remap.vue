@@ -159,6 +159,18 @@ const vinylHeadliner = {
 	stream: "https://album.link/i/1834233309",
 };
 
+useSeoMeta({
+	title: "Nathan Remap 2025",
+	ogTitle: "Nathan Remap 2025",
+	twitterTitle: "Nathan Remap 2025",
+	description:
+		"2025 is coming to an end, let's go back through all my achievements this year. And let's see what's next...",
+	ogDescription:
+		"2025 is coming to an end, let's go back through all my achievements this year. And let's see what's next...",
+	twitterDescription:
+		"2025 is coming to an end, let's go back through all my achievements this year. And let's see what's next...",
+});
+
 function spring(delay = 0.2, speed = 1) {
 	return {
 		type: "spring",
