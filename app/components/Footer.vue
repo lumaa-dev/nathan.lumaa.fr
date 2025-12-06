@@ -150,6 +150,10 @@ const links = [
 			fr: "/fr/reflexions",
 		},
 	},
+	{
+		title: "Remap 2025",
+		link: "/remap",
+	},
 ];
 
 const lumaa = [
