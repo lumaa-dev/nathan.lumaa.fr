@@ -18,6 +18,24 @@
 		</div>
 		<span class="indicator">&#8595;</span>
 	</div>
+	<div class="cta bg">
+		<span class="txt">
+			<b>Remap 2025</b><br /><p
+				>Revisitons les choses que j'ai accomplis cette année. (Seulement
+				disponible en anglais)</p
+			>
+			<motion.a
+				class="pill"
+				href="/remap"
+				:initial="{ scale: 1.0, boxShadow: '0 0 0px #fff', zIndex: 1 }"
+				:transition="{
+					default: { type: 'spring', duration: 0.85, bounce: 0.5 },
+				}"
+				:whileHover="{ scale: 1.3, boxShadow: '0 0 15px #fff', zIndex: 999 }"
+				>Voir</motion.a
+			>
+		</span>
+	</div>
 	<div class="leftright" id="whois">
 		<span>
 			<p class="big">Qui suis-je ?</p>
@@ -29,8 +47,7 @@
 					stiffness: 567,
 					damping: 132,
 					mass: 3.4,
-				}"
-			>
+				}">
 				Je suis <b>Nathan</b>, un développeur indépendant et amoureux de musique
 				de 18 ans. Je suis français et j'habite à Angers. Je suis passionné par
 				les logiciels Apple, la musique et la création de projets complets comme
@@ -41,8 +58,7 @@
 		<img
 			src="https://upload.wikimedia.org/wikipedia/commons/0/02/Angers_OSM_01.png"
 			alt="Angers sur une carte"
-			draggable="false"
-		/>
+			draggable="false" />
 	</div>
 	<div class="txt" id="projects">
 		<p class="big">Projets préférés</p>
@@ -58,13 +74,11 @@
 					damping: 132,
 					mass: 3.4,
 					delay: 0.3,
-				}"
-			>
+				}">
 				<ProjectBox
 					name="Cider Remote"
 					description="Contrôlez Cider à distance depuis votre iPhone ou iPad. Fait avec SwiftUI et Socket.IO"
-					img="https://cider.sh/og-remote.png"
-				/>
+					img="https://cider.sh/og-remote.png" />
 			</motion.a>
 			<motion.a
 				href="https://d.lumaa.fr/fraca"
@@ -77,13 +91,11 @@
 					damping: 132,
 					mass: 3.4,
 					delay: 0.6,
-				}"
-			>
+				}">
 				<ProjectBox
 					name="Fraca"
 					description="L'application de conversion de toutes les unités françaises et canadiennes, sur tous les appareils Apple."
-					img="/assets/projects/fraca.jpg"
-				/>
+					img="/assets/projects/fraca.jpg" />
 			</motion.a>
 			<motion.a
 				href="https://apps.lumaa.fr/app/bubble"
@@ -96,13 +108,11 @@
 					damping: 132,
 					mass: 3.4,
 					delay: 0.9,
-				}"
-			>
+				}">
 				<ProjectBox
 					name="Bubble for Mastodon"
 					description="Un client Mastodon natif iOS élégant, qui concentre les fonctionnalités principales de Mastodon à portée de main."
-					img="/assets/projects/bubble_v2.png"
-				/>
+					img="/assets/projects/bubble_v2.png" />
 			</motion.a>
 			<motion.a
 				href="https://apps.lumaa.fr/app/recordlink"
@@ -115,13 +125,11 @@
 					damping: 132,
 					mass: 3.4,
 					delay: 1.2,
-				}"
-			>
+				}">
 				<ProjectBox
 					name="Record Link"
 					description="Une plateforme pour partager tout contenu musical sur toutes les plateformes de streaming, gratuitement."
-					img="/assets/projects/rl.jpg"
-				/>
+					img="/assets/projects/rl.jpg" />
 			</motion.a>
 		</div>
 	</div>
@@ -141,8 +149,7 @@
 						filter: blur(10px);
 						user-select: none !important;
 						pointer-events: none !important;
-					"
-				>
+					">
 					Il n'y a rien à découvrir ici.
 					<br />Juste le nom de l'école. <br />Et l'année d'entrée (j'espère)
 				</span>
@@ -155,8 +162,7 @@
 		<motion.p
 			:initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
 			:whileInView="{ filter: 'blur(0px)', translateY: 0, opacity: 1 }"
-			:transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }"
-		>
+			:transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }">
 			En 2021, j'ai commencé à créer des bots Discord en JavaScript avec
 			<a href="https://discord.js.org">discord.js</a>, puis j'ai réalisé
 			quelques sites web en HTML, CSS et JavaScript natifs. Après les sites web,
@@ -174,8 +180,7 @@
 		<motion.p
 			:initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
 			:whileInView="{ filter: 'blur(0px)', translateY: 0, opacity: 1 }"
-			:transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }"
-		>
+			:transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }">
 			Je compare souvent la musique à ma perfusion. J'écoute de nombreux genres
 			musicaux différents depuis 2018, et dernièrement je me concentre surtout
 			sur le rock, la musique alternative et un peu de rap américain.
@@ -185,15 +190,14 @@
 			<a href="https://discogs.com/user/nthnos/collection"
 				>mon compte Discogs</a
 			>
-			et sur l'onglet <a href="/fr/vinyles">vinyles</a> de ce site qui inclut aussi
-			ma liste de souhaits pour de futurs vinyles.
+			et sur l'onglet <a href="/fr/vinyles">vinyles</a> de ce site qui inclut
+			aussi ma liste de souhaits pour de futurs vinyles.
 		</motion.p>
 		<p class="badge" style="margin-top: 3em">Montage</p>
 		<motion.p
 			:initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
 			:whileInView="{ filter: 'blur(0px)', translateY: 0, opacity: 1 }"
-			:transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }"
-		>
+			:transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }">
 			Pour quelques-uns de mes projets, je produis des bande-annonces qui
 			montrent les principales fonctionnalités ou les nouveautés de certains de
 			mes projets. Je les monte avec Adobe After Effects et/ou Final Cut Pro,
@@ -225,14 +229,12 @@
 						damping: 132,
 						mass: 3.4,
 						delay: i * 0.3,
-					}"
-				>
+					}">
 					<span>
 						<img
 							:src="`/assets/vinyl/${v.img}`"
 							:alt="'Pochette de ' + v.name"
-							draggable="false"
-						/>
+							draggable="false" />
 						<span>
 							<p class="name">{{ v.name }}</p>
 							<p class="alt">
@@ -447,6 +449,25 @@ a.pill {
 	height: 200px;
 }
 
+.cta {
+	padding: 2em 0;
+}
+
+.cta .txt {
+	gap: 5px;
+	text-align: center;
+}
+
+.cta .txt b {
+	font-weight: 800;
+	font-size: 72px;
+}
+
+.cta a,
+.cta button {
+	margin: 1em 0;
+}
+
 .leftright {
 	display: flex;
 	flex-direction: row;
@@ -463,7 +484,8 @@ a.pill {
 }
 
 .txt.bg,
-.presentation.bg {
+.presentation.bg,
+.cta.bg {
 	background: #50505050;
 }
 
@@ -593,7 +615,7 @@ a.pill {
 
 	.presentation > p {
 		font-size: 0.7em;
-		padding: 0 1.0em;
+		padding: 0 1em;
 	}
 
 	.presentation .name {
@@ -616,6 +638,15 @@ a.pill {
 
 	.overview {
 		display: none;
+	}
+
+	.cta {
+		padding: 1em 0;
+	}
+
+	.cta .txt b {
+		font-weight: 800;
+		font-size: 42px;
 	}
 
 	.leftright {
