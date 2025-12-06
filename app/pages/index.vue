@@ -18,6 +18,23 @@
 		</div>
 		<span class="indicator">&#8595;</span>
 	</div>
+	<div class="cta bg">
+		<span class="txt">
+			<b>Remap 2025</b><br /><p
+				>Let's revisit the things that I've accomplished this year.</p
+			>
+			<motion.a
+				class="pill"
+				href="/remap"
+				:initial="{ scale: 1.0, boxShadow: '0 0 0px #fff', zIndex: 1 }"
+				:transition="{
+					default: { type: 'spring', duration: 0.85, bounce: 0.5 },
+				}"
+				:whileHover="{ scale: 1.3, boxShadow: '0 0 15px #fff', zIndex: 999 }"
+				>View</motion.a
+			>
+		</span>
+	</div>
 	<div class="leftright" id="whois">
 		<span>
 			<p class="big">Who am I?</p>
@@ -29,8 +46,7 @@
 					stiffness: 567,
 					damping: 132,
 					mass: 3.4,
-				}"
-			>
+				}">
 				I am <b>Nathan</b>, an 18 year old indie developer and music lover. I'm
 				French and live in Angers. I am deeply passionate about Apple software,
 				music and making fully-fleshed projects like
@@ -41,8 +57,7 @@
 		<img
 			src="https://upload.wikimedia.org/wikipedia/commons/0/02/Angers_OSM_01.png"
 			alt="Angers on a map"
-			draggable="false"
-		/>
+			draggable="false" />
 	</div>
 	<div class="txt" id="projects">
 		<p class="big">Best Projects</p>
@@ -58,13 +73,11 @@
 					damping: 132,
 					mass: 3.4,
 					delay: 0.3,
-				}"
-			>
+				}">
 				<ProjectBox
 					name="Cider Remote"
 					description="Control your Cider device away from your computer, using your iPhone or iPad. Built using SwiftUI and Socket.IO"
-					img="https://cider.sh/og-remote.png"
-				/>
+					img="https://cider.sh/og-remote.png" />
 			</motion.a>
 			<motion.a
 				href="https://d.lumaa.fr/fraca"
@@ -77,13 +90,11 @@
 					damping: 132,
 					mass: 3.4,
 					delay: 0.6,
-				}"
-			>
+				}">
 				<ProjectBox
 					name="Fraca"
 					description="The quickest conversion tool from any French unit to any Canadian unit, back and forth, for free on all Apple devices."
-					img="/assets/projects/fraca.jpg"
-				/>
+					img="/assets/projects/fraca.jpg" />
 			</motion.a>
 			<motion.a
 				href="https://apps.lumaa.fr/app/bubble"
@@ -96,13 +107,11 @@
 					damping: 132,
 					mass: 3.4,
 					delay: 0.9,
-				}"
-			>
+				}">
 				<ProjectBox
 					name="Bubble for Mastodon"
 					description="A slick looking native iOS Mastodon client, that concentrates Mastodon's core features at reach."
-					img="/assets/projects/bubble_v2.png"
-				/>
+					img="/assets/projects/bubble_v2.png" />
 			</motion.a>
 			<motion.a
 				href="https://apps.lumaa.fr/app/recordlink"
@@ -115,13 +124,11 @@
 					damping: 132,
 					mass: 3.4,
 					delay: 1.2,
-				}"
-			>
+				}">
 				<ProjectBox
 					name="Record Link"
 					description="A platform to allow sharing any music content to all music streaming platforms, for no cost."
-					img="/assets/projects/rl.jpg"
-				/>
+					img="/assets/projects/rl.jpg" />
 			</motion.a>
 		</div>
 	</div>
@@ -142,8 +149,7 @@
 						filter: blur(10px);
 						user-select: none !important;
 						pointer-events: none !important;
-					"
-				>
+					">
 					There is nothing to discover here.
 					<br />Just the name of the school. <br />And the year I'm entering
 					(hopefully)
@@ -157,8 +163,7 @@
 		<motion.p
 			:initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
 			:whileInView="{ filter: 'blur(0px)', translateY: 0, opacity: 1 }"
-			:transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }"
-		>
+			:transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }">
 			In 2021, I started making Discord bots in JavaScript using
 			<a href="https://discord.js.org">discord.js</a>, then I made a few
 			websites in native HTML, CSS and JavaScript. After making websites, I made
@@ -175,8 +180,7 @@
 		<motion.p
 			:initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
 			:whileInView="{ filter: 'blur(0px)', translateY: 0, opacity: 1 }"
-			:transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }"
-		>
+			:transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }">
 			I often compare music to my day-to-day life support. I've been listening
 			to many different genres of music since 2018, and lately I've been mainly
 			focused on rock and alternative music with a little bit of US rap.
@@ -193,8 +197,7 @@
 		<motion.p
 			:initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
 			:whileInView="{ filter: 'blur(0px)', translateY: 0, opacity: 1 }"
-			:transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }"
-		>
+			:transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }">
 			For a few of my projects, I produce trailer videos which depict main
 			features or newly added features. I make them using Adobe After Effects
 			and/or with Final Cut Pro, while syncing a copyrighted song that are
@@ -225,14 +228,12 @@
 						damping: 132,
 						mass: 3.4,
 						delay: i * 0.3,
-					}"
-				>
+					}">
 					<span>
 						<img
 							:src="`/assets/vinyl/${v.img}`"
 							:alt="v.name + ' album cover'"
-							draggable="false"
-						/>
+							draggable="false" />
 						<span>
 							<p class="name">{{ v.name }}</p>
 							<p class="alt">
@@ -447,6 +448,25 @@ a.pill {
 	height: 200px;
 }
 
+.cta {
+	padding: 2em 0;
+}
+
+.cta .txt {
+	gap: 5px;
+	text-align: center;
+}
+
+.cta .txt b {
+	font-weight: 800;
+	font-size: 72px;
+}
+
+.cta a,
+.cta button {
+	margin: 1em 0;
+}
+
 .leftright {
 	display: flex;
 	flex-direction: row;
@@ -463,7 +483,8 @@ a.pill {
 }
 
 .txt.bg,
-.presentation.bg {
+.presentation.bg,
+.cta.bg {
 	background: #50505050;
 }
 
@@ -593,7 +614,7 @@ a.pill {
 
 	.presentation > p {
 		font-size: 0.7em;
-		padding: 0 1.0em;
+		padding: 0 1em;
 	}
 
 	.presentation .name {
@@ -616,6 +637,15 @@ a.pill {
 
 	.overview {
 		display: none;
+	}
+
+	.cta {
+		padding: 1em 0;
+	}
+
+	.cta .txt b {
+		font-weight: 800;
+		font-size: 42px;
 	}
 
 	.leftright {
