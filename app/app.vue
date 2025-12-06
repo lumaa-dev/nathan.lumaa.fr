@@ -88,6 +88,10 @@ body {
 	overflow: hidden scroll;
 }
 
+span > * {
+	display: inline-block;
+}
+
 a.nostyle {
 	font-weight: inherit !important;
 	color: inherit !important;
