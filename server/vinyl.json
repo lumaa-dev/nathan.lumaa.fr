@@ -19,6 +19,21 @@
 			"stream": "https://album.link/i/1836226516"
 		},
 		{
+			"name": "On s'en rappellera pas (de l'enfance)",
+			"artist": "Disiz",
+			"img": "on_sen_rappellera_pas.jpg",
+			"ownDate": "2025-12-10T00:00:00.000Z",
+			"discogs": "https://www.discogs.com/release/35745226-Disiz-La-Peste-On-Sen-Rappellera-Pas",
+			"discColor": "Black",
+			"available": {
+				"official": "https://casappellelestore.com/store/vinyle-disiz-on-sen-rappellera-pas?variant=delenfance",
+				"fnac": "https://www.fnac.com/a22185296/Disiz-on-s-en-rappellera-pas-Vinyle-album",
+				"cultura": "https://www.cultura.com/p-on-s-en-rappellera-pas-edition-silhouette-edition-de-l-enfance-12721938.html",
+				"amazon": "https://www.amazon.fr/sen-rappellera-pas-disiz/dp/B0FWDB3629"
+			},
+			"stream": "https://album.link/i/1846293544"
+		},
+		{
 			"name": "Scum Fuck Flower Boy",
 			"artist": "Tyler, The Creator",
 			"img": "flowerboy.png",
