@@ -17,7 +17,7 @@ export namespace VinylSelector {
 		VinylSelector.wish,
 		VinylSelector.color,
 		VinylSelector.black,
-		VinylSelector.available,
+		VinylSelector.available
 	];
 
 	export const allCasesString: string[] = [
@@ -35,10 +35,12 @@ export default defineEventHandler(async (event) => {
 
 	let ql: number = Number(query.limit);
 	const limit: number = !isNaN(ql) ? Math.max(ql, 1) : 999;
+	const hideFuture: boolean = (query.hideFuture || "false") == "true";
 
 	var o = owned.sort(
 		(a, b) => new Date(b.ownDate).getTime() - new Date(a.ownDate).getTime()
 	);
+	o = o.filter((v) => new Date(v.ownDate).getTime() <= (hideFuture ? new Date().getTime() : Number.MAX_SAFE_INTEGER));
 	var w = wish.sort((a, b) => a.priority - b.priority);
 	var all = [...o, ...w];
 

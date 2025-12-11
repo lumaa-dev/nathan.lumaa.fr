@@ -290,7 +290,7 @@ import Timeline from "~/components/Timeline.vue";
 import ProjectBox from "~/components/ProjectBox.vue";
 
 const { data: vinyl } = await useAsyncData("vinyl", () =>
-	$fetch(`/api/vinyl?filter=${VinylSelector.owned}&limit=4`)
+	$fetch(`/api/vinyl?filter=${VinylSelector.owned}&limit=4&hideFuture=true`)
 );
 
 onMounted(() => {
