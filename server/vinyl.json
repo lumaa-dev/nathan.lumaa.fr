@@ -1,6 +1,19 @@
 {
 	"owned": [
 		{
+			"name": "Comedown Machine",
+			"artist": "The Strokes",
+			"img": "comedown_machine.jpg",
+			"ownDate": "2025-12-29T00:00:00.000Z",
+			"stream": "https://album.link/i/601140186",
+			"discogs": "https://www.discogs.com/release/24608528-The-Strokes-Comedown-Machine",
+			"discColor": "Black",
+			"available": {
+				"fnac": "https://www.fnac.com/a5536734/The-Strokes-Comedown-Machine-Vinyle-album",
+				"amazon": "https://www.amazon.com/Comedown-Machine-Strokes/dp/B00BCR353E"
+			}
+		},
+		{
 			"name": "Deadbeat",
 			"artist": "Tame Impala",
 			"img": "deadbeat.jpg",
@@ -369,19 +382,6 @@
 			"available": {
 				"official": "https://panchiko.bandcamp.com/album/ginkgo",
 				"amazon": "https://www.amazon.fr/Ginkgo-Clear-Baby-Blue-Vinyl/dp/B0DPR5RH1D"
-			}
-		},
-		{
-			"name": "Comedown Machine",
-			"artist": "The Strokes",
-			"img": "comedown_machine.jpg",
-			"wishDate": "2025-12-02T00:00:00.000Z",
-			"stream": "https://album.link/i/601140186",
-			"discogs": "https://www.discogs.com/master/537613-The-Strokes-Comedown-Machine?format=Vinyl",
-			"priority": 2,
-			"available": {
-				"fnac": "https://www.fnac.com/a5536734/The-Strokes-Comedown-Machine-Vinyle-album",
-				"amazon": "https://www.amazon.com/Comedown-Machine-Strokes/dp/B00BCR353E"
 			}
 		},
 		{
