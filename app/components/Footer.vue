@@ -11,7 +11,7 @@
 				</a>
 				<span class="inline">
 					<img src="/assets/hero.svg" draggable="false" />
-					© Nathan 2025
+					© Nathan 2025-{{ new Date().getFullYear() }}
 				</span>
 			</div>
 			<div class="row">
