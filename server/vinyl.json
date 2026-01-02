@@ -1,6 +1,34 @@
 {
 	"owned": [
 		{
+			"name": "Requiem for a Dream Soundtrack",
+			"artist": "Clint Mansell, Kronos Quartet",
+			"img": "requiem.jpg",
+			"ownDate": "2026-01-02T00:00:00.000Z",
+			"discogs": "https://www.discogs.com/release/16328433-Clint-Mansell-Featuring-Kronos-Quartet-Requiem-For-A-Dream",
+			"discColor": "Black",
+			"available": {
+				"amazon": "https://www.amazon.fr/Requiem-Dream-allemand-Clint-Mansell/dp/B01D5I3AW8",
+				"fnac": "https://www.fnac.com/a15159367/Clint-Mansell-Requiem-For-A-Dream-Vinyle-album",
+				"cultura": "https://www.cultura.com/p-requiem-for-a-dream-0075597947298.html"
+			},
+			"stream": "https://album.link/i/41228773"
+		},
+		{
+			"name": "Spider-Man: Across the Spider-Verse Soundtrack",
+			"artist": "Daniel Pemberton",
+			"img": "spiderverse_2.jpg",
+			"ownDate": "2026-01-02T00:00:00.000Z",
+			"discogs": "https://www.discogs.com/release/28941067-Daniel-Pemberton-Spider-Man-Across-the-Spider-Verse-Original-Score",
+			"discColor": "White & Purple",
+			"available": {
+				"amazon": "https://www.amazon.fr/Man-Across-Spider-Verse-Original-Highlights/dp/B0C7YHGJ9H",
+				"fnac": "https://www.fnac.com/a18447454/Daniel-Pemberton-Spider-Man-Across-The-Spider-Verse-Vinyle-Blanc-et-Violet-Fonce-Marbre-Vinyle-album",
+				"cultura": "https://www.cultura.com/p-spider-man-across-the-spider-verse-original-score-10158298.html"
+			},
+			"stream": "https://album.link/i/1690389672"
+		},
+		{
 			"name": "Comedown Machine",
 			"artist": "The Strokes",
 			"img": "comedown_machine.jpg",
@@ -412,20 +440,6 @@
 			},
 			"stream": "https://album.link/i/1581679496",
 			"priority": 4
-		},
-		{
-			"name": "Requiem for a Dream Soundtrack",
-			"artist": "Clint Mansell, Kronos Quartet",
-			"img": "requiem.jpg",
-			"wishDate": "2025-10-07T00:00:00.000Z",
-			"discogs": "https://www.discogs.com/master/503-Clint-Mansell-Featuring-Kronos-Quartet-Requiem-For-A-Dream?format=Vinyl",
-			"priority": 6,
-			"available": {
-				"amazon": "https://www.amazon.fr/Requiem-Dream-allemand-Clint-Mansell/dp/B01D5I3AW8",
-				"fnac": "https://www.fnac.com/a15159367/Clint-Mansell-Requiem-For-A-Dream-Vinyle-album",
-				"cultura": "https://www.cultura.com/p-requiem-for-a-dream-0075597947298.html"
-			},
-			"stream": "https://album.link/i/41228773"
 		},
 		{
 			"name": "Pablo Honey",
