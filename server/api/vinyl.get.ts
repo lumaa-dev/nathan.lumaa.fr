@@ -34,7 +34,7 @@ export default defineEventHandler(async (event) => {
 	const query = getQuery(event);
 
 	let ql: number = Number(query.limit);
-	const limit: number = !isNaN(ql) ? Math.max(ql, 1) : 999;
+	const limit: number = !isNaN(ql) ? Math.max(ql, 1) : Number.MAX_SAFE_INTEGER;
 	const hideFuture: boolean = (query.hideFuture || "false") == "true";
 
 	var o = owned.sort(
