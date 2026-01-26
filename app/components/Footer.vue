@@ -183,16 +183,16 @@ const socials = [
 		link: "https://x.com/lumaa_dev",
 	},
 	{
+		title: "YouTube",
+		link: "https://youtube.com/@nthn_dev",
+	},
+	{
 		title: "Mastodon",
 		link: "https://techhub.social/lumaa_dev",
 	},
 	{
 		title: "Bluesky",
 		link: "https://bsky.app/profile/lumaa.fr",
-	},
-	{
-		title: "YouTube",
-		link: "https://youtube.com/@Lumaa_PRO",
 	},
 ];
 </script>
