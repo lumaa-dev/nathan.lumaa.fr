@@ -446,12 +446,27 @@
 			"priority": 4
 		},
 		{
+			"name": "The New Abnormal",
+			"artist": "The Strokes",
+			"img": "new_abnormal.jpg",
+			"wishDate": "2026-02-01T00:00:00.000Z",
+			"discogs": "https://www.discogs.com/master/1712601-The-Strokes-The-New-Abnormal?format=Vinyl",
+			"priority": 5,
+			"available": {
+				"amazon": "https://www.amazon.fr/New-Abnormal-Strokes/dp/B084G2YBG6",
+				"fnac": "https://www.fnac.com/a13455860/The-Strokes-The-New-Abnormal-Vinyle-album",
+				"official": "https://store.sonymusic.fr/products/the-strokes-the-new-abnormal-lp",
+				"cultura": "https://www.cultura.com/p-the-new-abnormal-0194397058819.html"
+			},
+			"stream": "https://album.link/i/1498121188"
+		},
+		{
 			"name": "Pablo Honey",
 			"artist": "Radiohead",
 			"img": "pablo_honey.jpg",
 			"wishDate": "2025-07-20T00:00:00.000Z",
 			"discogs": "https://www.discogs.com/master/13344-Radiohead-Pablo-Honey?format=Vinyl",
-			"priority": 5,
+			"priority": 6,
 			"available": {
 				"amazon": "https://amazon.fr/Pablo-Honey-Radiohead/dp/B01F0XPBG4/261-4873903-6957845",
 				"fnac": "https://www.fnac.com/a9716447/Radiohead-Pablo-Honey-Vinyle-album",
