@@ -207,7 +207,7 @@
 			>.
 			<br />
 			<br />They always end up on
-			<a href="https://youtube.com/@Lumaa_PRO">YouTube</a>, sometimes on
+			<a href="https://youtube.com/@lumaa_dev">YouTube</a>, sometimes on
 			<a href="https://x.com/lumaa_dev">&#120143; (Twitter)</a>, sometimes they
 			end up as <a href="https://instagram.com/@lumaa_dev">Instagram Reels</a>.
 			But they're always available.
