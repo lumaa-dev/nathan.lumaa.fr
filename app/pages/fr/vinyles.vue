@@ -126,6 +126,20 @@ namespace VinylFilter {
 		VinylFilter.color,
 		VinylFilter.black,
 	];
+
+	// mobile feature cases
+	export const mobileFCases: VinylFilter[] = [
+		VinylFilter.all,
+		VinylFilter.owned,
+		VinylFilter.wish,
+	]
+
+	// mobile unfeature cases
+	export const mobileUCases: VinylFilter[] = [
+		VinylFilter.available,
+		VinylFilter.color,
+		VinylFilter.black,
+	]
 }
 </script>
 
