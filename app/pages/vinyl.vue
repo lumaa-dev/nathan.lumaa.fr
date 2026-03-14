@@ -8,7 +8,7 @@
 		</div>
 	</span>
 	<span class="c">
-		<div class="picker small">
+		<div class="picker no-mobile">
 			<button
 				v-for="item in VinylFilter.allCases"
 				:key="item"
@@ -16,6 +16,17 @@
 				@click="filter(item)">
 				{{ item }}
 			</button>
+		</div>
+		<div class="picker no-pc">
+			<select>
+				<option
+					v-for="item in VinylFilter.allCases"
+					:key="item"
+					:class="selFilter == item ? 'selected' : ''"
+					@click="filter(item)">
+					{{ item }}
+				</option>	
+			</select>
 		</div>
 	</span>
 	<span class="c">
@@ -121,6 +132,20 @@ namespace VinylFilter {
 		VinylFilter.color,
 		VinylFilter.black,
 	];
+
+	// mobile feature cases
+	export const mobileFCases: VinylFilter[] = [
+		VinylFilter.all,
+		VinylFilter.owned,
+		VinylFilter.wish,
+	]
+
+	// mobile unfeature cases
+	export const mobileUCases: VinylFilter[] = [
+		VinylFilter.available,
+		VinylFilter.color,
+		VinylFilter.black,
+	]
 }
 </script>
 

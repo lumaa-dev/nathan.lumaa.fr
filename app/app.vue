@@ -98,6 +98,15 @@ a.nostyle {
 	text-decoration: none !important;
 }
 
+select {
+	color: #fff;
+	outline: none;
+	border: none;
+	appearance: none;
+	width: fit-content;
+	text-align: center;
+}
+
 .picker.dark {
 	background: #1e1e1e;
 }
@@ -112,7 +121,8 @@ a.nostyle {
 }
 
 .picker a,
-.picker button {
+.picker button,
+.picker select {
 	padding: 0.6em 1.2em;
 	border-radius: 100px;
 	text-decoration: none !important;
@@ -125,7 +135,8 @@ a.nostyle {
 }
 
 .picker a.selected,
-.picker button.selected {
+.picker button.selected,
+.picker select {
 	background: #505050ab;
 }
 
@@ -134,18 +145,33 @@ a.nostyle {
 	background: #50505050;
 }
 
+.no-pc {
+	display: none;
+}
+
 @media screen and (max-width: 1000px) {
+	.picker {
+		font-size: 0.8em;
+	}
+
 	.picker.small {
 		flex-direction: column;
 		align-items: center;
 		border-radius: 25px;
 		padding: 0.6em 1em;
-		font-size: 0.8em;
 	}
 
 	.picker.small a,
 	.picker.small button {
 		width: fit-content;
+	}
+	
+	.no-pc {
+		display: inherit;
+	}
+
+	.no-mobile {
+		display: none;
 	}
 }
 </style>
