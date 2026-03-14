@@ -1,6 +1,20 @@
 {
 	"owned": [
 		{
+			"name": "DeBÍ TiRAR MáS FOToS",
+			"artist": "Bad Bunny",
+			"img": "dtmf.jpg",
+			"ownDate": "2026-03-10T00:00:00.000Z",
+			"discogs": "https://www.discogs.com/release/36352420-Bad-Bunny-Deb%C3%AD-Tirar-M%C3%A1s-Fotos",
+			"discColor": "White",
+			"available": {
+				"fnac": "https://www.fnac.com/a22587020/Bad-Bunny-DeBI-TiRAR-MaS-FOToS-Vinyle-Colore-Vinyle-album",
+				"amazon": "https://www.amazon.fr/Deb%C3%AD-Tirar-M%C3%A1s-Fotos-Bunny/dp/B0FYQLMLLQ",
+				"official": "https://rimasmusic.io/dtmfvinyl"
+			},
+			"stream": "https://album.link/i/1787022393"
+		},
+		{
 			"name": "Requiem for a Dream Soundtrack",
 			"artist": "Clint Mansell, Kronos Quartet",
 			"img": "requiem.jpg",
@@ -437,10 +451,6 @@
 			"wishDate": "2025-08-24T00:00:00.000Z",
 			"available": {
 				"official": "https://www.omocat-shop.com/collections/omori/products/omori-original-sountrack-vinyl-2-lp"
-			},
-			"badge": {
-				"text": "Sold out",
-				"color": "red"
 			},
 			"stream": "https://album.link/i/1581679496",
 			"priority": 4
