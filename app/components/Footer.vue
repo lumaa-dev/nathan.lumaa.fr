@@ -188,7 +188,7 @@ const socials = [
 	},
 	{
 		title: "Mastodon",
-		link: "https://techhub.social/lumaa_dev",
+		link: "https://techhub.social/@lumaa",
 	},
 	{
 		title: "Bluesky",
