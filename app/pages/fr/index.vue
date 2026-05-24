@@ -64,6 +64,23 @@
 		<p class="big">Projets préférés</p>
 		<div class="grid">
 			<motion.a
+				href="https://apps.lumaa.fr/app/amber"
+				class="nostyle"
+				:initial="{ translateY: -50, opacity: 0 }"
+				:whileInView="{ translateY: 0, opacity: 1 }"
+				:transition="{
+					type: 'spring',
+					stiffness: 567,
+					damping: 132,
+					mass: 3.4,
+					delay: 0.9,
+				}">
+				<ProjectBox
+					name="Amber"
+					description="Un client Apple Music à venir qui va redéfinir votre manière d'interagir avec votre musique."
+					img="/assets/projects/amber.png" />
+			</motion.a>
+			<motion.a
 				href="https://cider.sh/remote"
 				class="nostyle"
 				:initial="{ translateY: -50, opacity: 0 }"
@@ -79,6 +96,23 @@
 					name="Cider Remote"
 					description="Contrôlez Cider à distance depuis votre iPhone ou iPad. Fait avec SwiftUI et Socket.IO"
 					img="https://cider.sh/og-remote.png" />
+			</motion.a>
+			<motion.a
+				href="https://apps.lumaa.fr/app/swiftseerr"
+				class="nostyle"
+				:initial="{ translateY: -50, opacity: 0 }"
+				:whileInView="{ translateY: 0, opacity: 1 }"
+				:transition="{
+					type: 'spring',
+					stiffness: 567,
+					damping: 132,
+					mass: 3.4,
+					delay: 1.2,
+				}">
+				<ProjectBox
+					name="Swiftseerr"
+					description="Une application Seerr, boosté avec SwiftUI et des notifications push, dispo sur iPhone, iPad, Mac, et Apple TV."
+					img="/assets/projects/swiftseerr.png" />
 			</motion.a>
 			<motion.a
 				href="https://d.lumaa.fr/fraca"
@@ -97,40 +131,6 @@
 					description="L'application de conversion de toutes les unités françaises et canadiennes, sur tous les appareils Apple."
 					img="/assets/projects/fraca.jpg" />
 			</motion.a>
-			<motion.a
-				href="https://apps.lumaa.fr/app/bubble"
-				class="nostyle"
-				:initial="{ translateY: -50, opacity: 0 }"
-				:whileInView="{ translateY: 0, opacity: 1 }"
-				:transition="{
-					type: 'spring',
-					stiffness: 567,
-					damping: 132,
-					mass: 3.4,
-					delay: 0.9,
-				}">
-				<ProjectBox
-					name="Bubble for Mastodon"
-					description="Un client Mastodon natif iOS élégant, qui concentre les fonctionnalités principales de Mastodon à portée de main."
-					img="/assets/projects/bubble_v2.png" />
-			</motion.a>
-			<motion.a
-				href="https://apps.lumaa.fr/app/recordlink"
-				class="nostyle"
-				:initial="{ translateY: -50, opacity: 0 }"
-				:whileInView="{ translateY: 0, opacity: 1 }"
-				:transition="{
-					type: 'spring',
-					stiffness: 567,
-					damping: 132,
-					mass: 3.4,
-					delay: 1.2,
-				}">
-				<ProjectBox
-					name="Record Link"
-					description="Une plateforme pour partager tout contenu musical sur toutes les plateformes de streaming, gratuitement."
-					img="/assets/projects/rl.jpg" />
-			</motion.a>
 		</div>
 	</div>
 	<div class="txt bg" id="schools">
@@ -139,7 +139,7 @@
 			<Timeline name="Lycée privé Saint-Benoît" date="2022-2023">
 				Seconde Générale (Section européenne)
 			</Timeline>
-			<Timeline name="Lycée Chevrollier" date="2023-2026" :completion="0.7">
+			<Timeline name="Lycée Chevrollier" date="2023-2026" :completion="0.95">
 				Sciences et Technologies de l'Industrie et du Développement Durable
 				(Système d'Information et Numérique)
 			</Timeline>
