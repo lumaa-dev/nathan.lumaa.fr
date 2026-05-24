@@ -11,7 +11,7 @@ export default defineNuxtConfig({
         {
           rel: "icon",
           type: "image/png",
-          href: "/hero_dark.png"
+          href: "/assets/hero_dark.png"
         }
       ]
     }
