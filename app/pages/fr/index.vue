@@ -284,7 +284,7 @@
 <script setup>
 import { motion } from "motion-v";
 import { onMounted } from "vue";
-import { VinylSelector } from "~~/server/api/vinyl.get";
+import { VinylSelector } from "~~/shared/vinyl-selector";
 
 import Timeline from "~/components/Timeline.vue";
 import ProjectBox from "~/components/ProjectBox.vue";

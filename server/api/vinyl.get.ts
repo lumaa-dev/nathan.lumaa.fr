@@ -1,34 +1,6 @@
 import { defineEventHandler } from "h3";
 import { owned, wish } from "../vinyl.json";
-
-export enum VinylSelector {
-	all = "a",
-	owned = "o",
-	wish = "w",
-	color = "colored",
-	black = "black",
-	available = "av",
-}
-
-export namespace VinylSelector {
-	export const allCases: VinylSelector[] = [
-		VinylSelector.all,
-		VinylSelector.owned,
-		VinylSelector.wish,
-		VinylSelector.color,
-		VinylSelector.black,
-		VinylSelector.available
-	];
-
-	export const allCasesString: string[] = [
-		"a",
-		"o",
-		"w",
-		"colored",
-		"black",
-		"av",
-	];
-}
+import { VinylSelector } from "~~/shared/vinyl-selector"
 
 export default defineEventHandler(async (event) => {
 	const query = getQuery(event);
