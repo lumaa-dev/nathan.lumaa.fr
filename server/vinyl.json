@@ -1,6 +1,21 @@
 {
 	"owned": [
 		{
+			"name": "The New Abnormal",
+			"artist": "The Strokes",
+			"img": "new_abnormal.jpg",
+			"ownDate": "2026-05-18T00:00:00.000Z",
+			"discogs": "https://www.discogs.com/release/15249054-The-Strokes-The-New-Abnormal",
+			"discColor": "Black",
+			"available": {
+				"amazon": "https://www.amazon.fr/New-Abnormal-Strokes/dp/B084G2YBG6",
+				"fnac": "https://www.fnac.com/a13455860/The-Strokes-The-New-Abnormal-Vinyle-album",
+				"official": "https://store.sonymusic.fr/products/the-strokes-the-new-abnormal-lp",
+				"cultura": "https://www.cultura.com/p-the-new-abnormal-0194397058819.html"
+			},
+			"stream": "https://album.link/i/1498121188"
+		},
+		{
 			"name": "DeBÍ TiRAR MáS FOToS",
 			"artist": "Bad Bunny",
 			"img": "dtmf.jpg",
@@ -455,21 +470,6 @@
 			"discogs": "https://www.discogs.com/master/2022343-Pedro-Silva-8-Jami-Lynne-and-bo-en-OMORI-OST?format=Vinyl",
 			"stream": "https://album.link/i/1581679496",
 			"priority": 4
-		},
-		{
-			"name": "The New Abnormal",
-			"artist": "The Strokes",
-			"img": "new_abnormal.jpg",
-			"wishDate": "2026-02-01T00:00:00.000Z",
-			"discogs": "https://www.discogs.com/master/1712601-The-Strokes-The-New-Abnormal?format=Vinyl",
-			"priority": 5,
-			"available": {
-				"amazon": "https://www.amazon.fr/New-Abnormal-Strokes/dp/B084G2YBG6",
-				"fnac": "https://www.fnac.com/a13455860/The-Strokes-The-New-Abnormal-Vinyle-album",
-				"official": "https://store.sonymusic.fr/products/the-strokes-the-new-abnormal-lp",
-				"cultura": "https://www.cultura.com/p-the-new-abnormal-0194397058819.html"
-			},
-			"stream": "https://album.link/i/1498121188"
 		},
 		{
 			"name": "Pablo Honey",
