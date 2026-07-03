@@ -2,8 +2,8 @@
 	<div class="paged">
 		<div class="presentation bg">
 			<span class="pill">
-				<div class="badge busy"></div>
-				Occupé par les études</span
+				<div class="badge active"></div>
+				En vacance d'été</span
 			>
 			<span class="name">
 				<img src="/assets/hero.svg" draggable="false" />
