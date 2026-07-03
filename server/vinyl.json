@@ -1,6 +1,15 @@
 {
 	"owned": [
 		{
+			"name": "Towards Happiness",
+			"artist": "Feldup",
+			"img": "towards_happiness.jpg",
+			"ownDate": "2026-05-18T00:00:00.000Z",
+			"available": {
+				"official": "https://shop.talitres.com/products/876474-towards-happiness"
+			}
+		},
+		{
 			"name": "The New Abnormal",
 			"artist": "The Strokes",
 			"img": "new_abnormal.jpg",
