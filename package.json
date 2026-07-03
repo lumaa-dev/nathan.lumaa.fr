@@ -4,14 +4,15 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --host",
+    "bump": "nuxt upgrade && nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "motion-v": "^1.6.1",
-    "nuxt": "^4.0.1",
+    "nuxt": "^4.4.8",
     "nuxt-countdown": "^1.2.1",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1"
