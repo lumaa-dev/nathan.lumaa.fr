@@ -2,8 +2,8 @@
 	<div class="paged">
 		<div class="presentation bg">
 			<span class="pill">
-				<div class="badge busy"></div>
-				Currently busy with school</span
+				<div class="badge active"></div>
+				Summer break</span
 			>
 			<span class="name">
 				<img src="/assets/hero.svg" draggable="false" />
