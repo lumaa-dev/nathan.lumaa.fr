@@ -18,7 +18,7 @@
 		</div>
 		<span class="indicator">&#8595;</span>
 	</div>
-	<div class="cta bg">
+	<!-- <div class="cta bg">
 		<span class="txt">
 			<b>Remap 2025</b><br /><p
 				>Let's revisit the things that I've accomplished this year.</p
@@ -34,7 +34,7 @@
 				>View</motion.a
 			>
 		</span>
-	</div>
+	</div> -->
 	<div class="leftright" id="whois">
 		<span>
 			<p class="big">Who am I?</p>
