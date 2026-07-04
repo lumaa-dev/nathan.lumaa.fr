@@ -1,10 +1,8 @@
 <template>
   <div>
-    <span v-if="hasLoaded">
-      <Header :is-compact="isCompact" :lang="lang" />
-      <slot />
-      <Footer :lang="lang" />
-    </span>
+	<Header :is-compact="isCompact" :lang="lang" />
+	<slot />
+	<Footer :lang="lang" />
   </div>
 </template>
 
