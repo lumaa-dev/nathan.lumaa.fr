@@ -187,7 +187,7 @@
 			<br />
 			<br />Also, recently, I started buying vinyl of albums while listing them
 			on
-			<a href="https://discogs.com/user/nthnos/collection"
+			<a href="https://discogs.com/user/nthn.ost/collection"
 				>my Discogs account</a
 			>
 			and on the <a href="/vinyl">vinyl tab</a> of this site which also includes
@@ -209,7 +209,7 @@
 			<br />They always end up on
 			<a href="https://youtube.com/@lumaa_dev">YouTube</a>, sometimes on
 			<a href="https://x.com/lumaa_dev">&#120143; (Twitter)</a>, sometimes they
-			end up as <a href="https://instagram.com/@lumaa_dev">Instagram Reels</a>.
+			end up as <a href="https://tiktok.com/@lumaa_dev">TikToks</a>.
 			But they're always available.
 		</motion.p>
 	</div>
