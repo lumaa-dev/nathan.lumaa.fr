@@ -60,7 +60,7 @@ header {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	backdrop-filter: blur(0.7em);
+	backdrop-filter: blur(0.7em) brightness(0.3);
 	background: #50505050;
 	border: #ffffff15 solid 1px;
 	border-radius: 100px;
