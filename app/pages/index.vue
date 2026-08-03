@@ -231,7 +231,7 @@
 					}">
 					<span>
 						<img
-							:src="`/assets/vinyl/${v.img}`"
+							:src="v.img.startsWith('http') ? v.img : `/assets/vinyl/${v.img}`"
 							:alt="v.name + ' album cover'"
 							draggable="false" />
 						<span>
@@ -283,7 +283,7 @@
 <script setup>
 import { motion } from "motion-v";
 import { onMounted } from "vue";
-import { VinylSelector } from "~~/shared/vinyl-selector";
+import { VinylSelector } from "~~/server/utils/vinyl.ts";
 
 import Timeline from "~/components/Timeline.vue";
 import ProjectBox from "~/components/ProjectBox.vue";

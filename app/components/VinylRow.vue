@@ -1,7 +1,7 @@
 <template>
 	<div class="vinyl">
 		<span class="general">
-			<img :src="`/assets/vinyl/${vinyl.img}`" draggable="false" />
+			<img :src="vinyl.img.startsWith('http') ? vinyl.img : `/assets/vinyl/${vinyl.img}`" draggable="false" />
 			<div class="section">
 				<div class="txt">
 					<motion.a
@@ -16,7 +16,7 @@
 						}"
 						>{{ vinyl.name }}</motion.a
 					>
-					<p class="artist">{{ vinyl.artist }}</p>
+					<p class="artist">{{ vinyl.artist.replace(/\(\d+\)/g, '') }}</p>
 					<p class="badge" v-if="vinyl.badge" :class="vinyl.badge.color">{{
 						vinyl.badge.text
 					}}</p>
@@ -255,7 +255,7 @@ a.inline {
 	gap: 10px;
 }
 
-@media screen and (max-width: 1630px) {
+@media screen and (max-width: 1000px) {
 	.vinyl {
 		width: 90vw;
 		height: unset;

@@ -1,6 +1,5 @@
-import { defineEventHandler } from "h3";
-import { owned, wish } from "../vinyl.json";
-import { VinylSelector } from "~~/shared/vinyl-selector"
+import { wish } from "~~/shared/vinyl.json";
+import { getOwnedVinyl, VinylSelector } from "../utils/vinyl.ts";
 
 export default defineEventHandler(async (event) => {
 	const query = getQuery(event);
@@ -9,11 +8,15 @@ export default defineEventHandler(async (event) => {
 	const limit: number = !isNaN(ql) ? Math.max(ql, 1) : Number.MAX_SAFE_INTEGER;
 	const hideFuture: boolean = (query.hideFuture || "false") == "true";
 
-	var o = owned.sort(
+	// getOwnedVinyl() is cached (see server/utils/vinyl-owned.ts), so this
+	// resolves instantly on a cache hit rather than hitting Discogs again.
+	// Clone before sorting/filtering since the cached array is shared
+	// across requests.
+	var o = [...(await getOwnedVinyl())].sort(
 		(a, b) => new Date(b.ownDate).getTime() - new Date(a.ownDate).getTime()
 	);
 	o = o.filter((v) => new Date(v.ownDate).getTime() <= (hideFuture ? new Date().getTime() : Number.MAX_SAFE_INTEGER));
-	var w = wish.sort((a, b) => a.priority - b.priority);
+	var w = [...wish].sort((a, b) => a.priority - b.priority);
 	var all = [...o, ...w];
 
 	all = all.slice(0, limit);
