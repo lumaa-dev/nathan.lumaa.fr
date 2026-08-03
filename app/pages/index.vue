@@ -144,16 +144,7 @@
 				(Système d'Information et Numérique)
 			</Timeline>
 			<Timeline name="Université d'Angers" date="2026-2029" :completion="0.0">
-				<span
-					style="
-						filter: blur(10px);
-						user-select: none !important;
-						pointer-events: none !important;
-					">
-					There is nothing to discover here.
-					<br />Just the name of the school. <br />And the year I'm entering
-					(hopefully)
-				</span>
+				Génie Électrique et Informatique Industrielle
 			</Timeline>
 		</span>
 	</div>

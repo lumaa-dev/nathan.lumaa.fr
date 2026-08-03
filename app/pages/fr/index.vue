@@ -139,20 +139,12 @@
 			<Timeline name="Lycée privé Saint-Benoît" date="2022-2023">
 				Seconde Générale (Section européenne)
 			</Timeline>
-			<Timeline name="Lycée Chevrollier" date="2023-2026" :completion="0.95">
+			<Timeline name="Lycée Chevrollier" date="2023-2026">
 				Sciences et Technologies de l'Industrie et du Développement Durable
 				(Système d'Information et Numérique)
 			</Timeline>
 			<Timeline name="Université d'Angers" date="2026-20??" :completion="0.0">
-				<span
-					style="
-						filter: blur(10px);
-						user-select: none !important;
-						pointer-events: none !important;
-					">
-					Il n'y a rien à découvrir ici.
-					<br />Juste le nom de l'école. <br />Et l'année d'entrée (j'espère)
-				</span>
+				Génie Électrique et Informatique Industrielle
 			</Timeline>
 		</span>
 	</div>
