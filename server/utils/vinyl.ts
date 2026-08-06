@@ -1,4 +1,4 @@
-import { getPhysicalFolderId, getAllFolderRelease } from "./discogs.ts";
+import { getPhysicalFolderId } from "./discogs.ts";
 import overridesData from "~~/shared/vinyl.json";
 
 const CACHE_KEY = "discogs-owned-vinyl";
@@ -85,7 +85,15 @@ const overrides = overridesData as VinylOverridesFile;
 
 function mergeWithOverride(base: OwnedVinyl, releaseId: number): OwnedVinyl {
 	const extra = overrides.byReleaseId[String(releaseId)];
-	if (!extra) return base;
+	if (!extra) {
+		return {
+			...base,
+			badge: {
+				color: "red",
+				text: "Missing annotation!"
+			}
+		}
+	};
 
 	return {
 		...base,
@@ -132,9 +140,9 @@ export async function getOwnedVinyl(): Promise<OwnedVinyl[]> {
 	const storage = useStorage("cache");
 	const cached = await storage.getItem<CacheEntry>(CACHE_KEY);
  
-	// if (cached && cached.expiresAt > Date.now()) {
-	// 	return cached.data;
-	// }
+	if (cached && cached.expiresAt > Date.now()) {
+		return cached.data;
+	}
  
 	if (!inFlight) {
 		inFlight = fetchOwnedFromDiscogs()
