@@ -104,8 +104,6 @@ export async function getPhysicalFolderId(): Promise<number> {
     `/users/${username}/collection/folders`
   )
 
-  console.log(folders);
-
   const physical = folders.find(
     (f) => f.name.toLowerCase() === PHYSICAL_FOLDER_NAME.toLowerCase()
   )
