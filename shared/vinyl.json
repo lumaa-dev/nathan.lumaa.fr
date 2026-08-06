@@ -159,6 +159,16 @@
       },
       "stream": "https://album.link/i/1498121188"
     },
+    "29446156": {
+      "discColor": "Red",
+      "available": {
+        "official": "https://store.sonymusic.fr/products/the-strokes-is-this-it-lp",
+        "amazon": "https://www.amazon.com/This-Vinyl-Strokes/dp/B00005NIE1",
+        "fnac": "https://www.fnac.com/a14857380/The-Strokes-Is-This-It-Vinyle-album",
+        "cultura": "https://www.cultura.com/p-is-this-it-10342689.html"
+      },
+      "stream": "https://album.link/i/269080434"
+    },
     "16328433": {
       "discColor": "Black",
       "available": {
@@ -272,7 +282,7 @@
         "color": "pink"
       }
     },
-    "33316476": {
+    "34047058": {
       "discColor": "Blue & Pink Splatter",
       "available": {
         "amazon": "https://www.amazon.fr/Who-Really-Cares-LP-Vinyl/dp/B0DYZ2XQFD",
