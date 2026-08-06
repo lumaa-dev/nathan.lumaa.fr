@@ -11,6 +11,20 @@
     }
   ],
   "byReleaseId": {
+    "38016261": {
+      "discColor": "Clear",
+      "badge": {
+        "color": "red",
+        "text": "Canada"
+      },
+      "available": {
+        "official": "https://golfwang.com/products/1-yr-dont-tap-the-glass-vinyl",
+        "fnac": "https://www.fnac.com/a22774100/Tyler-The-Creator-Don-t-Tap-The-Glass-Vinyle-Transparent-Translucide-Vinyle-album",
+        "cultura": "cultura.com/p-don-t-tap-the-glass-edition-coloree-gatefold-13285686.html",
+        "amazon": "https://www.amazon.com/DONT-TAP-GLASS-Creator-Tyler/dp/B0H4NLNLVJ"
+      },
+      "stream": "https://album.link/i/1827715784"
+    },
     "37162968": {
       "discColor": "Red",
       "badge": {
@@ -358,14 +372,6 @@
     }
   },
 	"wish": [
-		{
-			"name": "Don't Tap The Glass",
-			"artist": "Tyler, The Creator",
-			"img": "dttg.png",
-			"wishDate": "2025-07-21T00:00:00.000Z",
-			"priority": 1,
-			"stream": "https://album.link/i/1827715784"
-		},
 		{
 			"name": "Ginkgo",
 			"artist": "Panchiko",
