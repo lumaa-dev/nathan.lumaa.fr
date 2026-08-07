@@ -10,7 +10,7 @@
 				<p class="word">Nathan</p>
 			</span>
 			<p>
-				🇫🇷 Étudiant de 18 ans au
+				🇫🇷 Étudiant de 19 ans au
 				<a href="#schools">Lycée Chevrollier</a> (Angers) en Terminale STI2D
 				SIN, aussi développeur iOS et web indépendant passionné de musique et de
 				<a href="#vinyl">vinyles</a>
@@ -49,7 +49,7 @@
 					mass: 3.4,
 				}">
 				Je suis <b>Nathan</b>, un développeur indépendant et amoureux de musique
-				de 18 ans. Je suis français et j'habite à Angers. Je suis passionné par
+				de 19 ans. Je suis français et j'habite à Angers. Je suis passionné par
 				les logiciels Apple, la musique et la création de projets complets comme
 				<a href="https://apps.apple.com/app/fraca/id6480592078">Fraca</a> ou
 				<a href="https://apps.lumaa.fr/app/recordlink">Record Link</a>.
@@ -324,11 +324,11 @@ useSeoMeta({
 	ogTitle: "Je suis Nathan",
 	twitterTitle: "Je suis Nathan",
 	description:
-		"Je suis Nathan, un développeur indépendant et amoureux de musique de 18 ans. Je suis français et j'habite à Angers. Je suis passionné par les logiciels Apple, la musique et la création de projets complets comme Fraca ou Record Link.",
+		"Je suis Nathan, un développeur indépendant et amoureux de musique de 19 ans. Je suis français et j'habite à Angers. Je suis passionné par les logiciels Apple, la musique et la création de projets complets comme Fraca ou Record Link.",
 	ogDescription:
-		"Je suis Nathan, un développeur indépendant et amoureux de musique de 18 ans. Je suis français et j'habite à Angers. Je suis passionné par les logiciels Apple, la musique et la création de projets complets comme Fraca ou Record Link.",
+		"Je suis Nathan, un développeur indépendant et amoureux de musique de 19 ans. Je suis français et j'habite à Angers. Je suis passionné par les logiciels Apple, la musique et la création de projets complets comme Fraca ou Record Link.",
 	twitterDescription:
-		"Je suis Nathan, un développeur indépendant et amoureux de musique de 18 ans. Je suis français et j'habite à Angers. Je suis passionné par les logiciels Apple, la musique et la création de projets complets comme Fraca ou Record Link.",
+		"Je suis Nathan, un développeur indépendant et amoureux de musique de 19 ans. Je suis français et j'habite à Angers. Je suis passionné par les logiciels Apple, la musique et la création de projets complets comme Fraca ou Record Link.",
 });
 </script>
 

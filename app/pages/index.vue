@@ -10,7 +10,7 @@
 				<p class="word">Nathan</p>
 			</span>
 			<p>
-				🇫🇷 18 year old French student at
+				🇫🇷 19 year old French student at
 				<a href="#schools">Lycée Chevrollier</a> (Angers) in Terminale STI2D
 				SIN, also an indie iOS and web developer passionate about music and
 				<a href="#vinyl">vinyl</a>
@@ -47,7 +47,7 @@
 					damping: 132,
 					mass: 3.4,
 				}">
-				I am <b>Nathan</b>, an 18 year old indie developer and music lover. I'm
+				I am <b>Nathan</b>, an 19 year old indie developer and music lover. I'm
 				French and live in Angers. I am deeply passionate about Apple software,
 				music and making fully-fleshed projects like
 				<a href="https://apps.apple.com/us/app/fraca/id6480592078">Fraca</a> or
