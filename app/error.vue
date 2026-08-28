@@ -1,13 +1,13 @@
 <template>
     <div class="error">
-        <h1>Error {{ props.error?.statusCode ?? -1 }}</h1>
+        <h1>{{ $t("error.title", { code: props.error?.statusCode ?? -1 }) }}</h1>
         <p>{{ props.error?.statusMessage }}</p>
 
-        <motion.a href="/"
+        <motion.a :href="localePath('index')"
             :initial="{ scale: 1.0, boxShadow: '0 0 0px #fff', zIndex: 1 }"
             :transition="{ default: { type: 'spring', duration: 0.85, bounce: 0.5 } }"
             :whileHover="{ scale: 1.3, boxShadow: '0 0 15px #fff', zIndex: 999 }" 
-        >Return home</motion.a>
+        >{{ $t("error.home") }}</motion.a>
     </div>
 </template>
 
@@ -59,4 +59,6 @@ import type { NuxtError } from '#app'
 const props = defineProps({
   error: Object as () => NuxtError
 })
+
+const localePath = useLocalePath()
 </script>

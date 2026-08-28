@@ -1,10 +1,7 @@
 <template>
 	<span class="intro">
-		<h1>Project Insights</h1>
-		<p
-			>Discover my creative process through screenshots. Select a project below
-			and scroll downwards to see</p
-		>
+		<h1>{{ $t("insights.title") }}</h1>
+		<p>{{ $t("insights.subtitle") }}</p>
 	</span>
 	<span class="c">
 		<div class="picker">
@@ -36,20 +33,21 @@
 						rx="8.84061"
 						transform="rotate(45 145.497 51.4975)" />
 				</svg>
-				<p class="title">Select a project</p>
+				<p class="title">{{ $t("insights.select") }}</p>
 			</span>
 		</template>
 		<template v-if="projects.map((p) => p._src).includes(selectedProject)">
 			<h1>{{
 				projects.filter((p) => p._src == selectedProject)[0]?.name ??
-				"See the insights..."
+				$t("insights.fallback")
 			}}</h1>
 			<div class="scroll">
 				<div
 					class="txt-img"
 					v-for="screenshot in projects.filter(
 						(p) => p._src == selectedProject
-					)[0]?.screenshots ?? []">
+					)[0]?.screenshots ?? []"
+					:key="screenshot.key">
 					<img
 						:src="`/assets/insights/${selectedProject}/${screenshot.img}`"
 						v-if="screenshot.img.endsWith('png')"
@@ -64,8 +62,14 @@
 							:src="`/assets/insights/${selectedProject}/${screenshot.img}`" />
 					</video>
 					<span class="txt">
-						<p class="title">{{ screenshot.title }}</p>
-						<p>{{ screenshot.description }}</p>
+						<p class="title">{{
+							$t(`insights.shots.${selectedProject}.${screenshot.key}.title`)
+						}}</p>
+						<p>{{
+							$t(
+								`insights.shots.${selectedProject}.${screenshot.key}.description`
+							)
+						}}</p>
 					</span>
 				</div>
 			</div>
@@ -77,69 +81,40 @@
 import { ref } from "vue";
 import { animate, scroll } from "motion-v";
 
+const { t } = useI18n();
+
 const selectedProject = ref("");
 const projects = [
 	{
 		name: "Cider Remote",
 		_src: "remote",
 		screenshots: [
-			{
-				img: "del_queue.mp4",
-				title: "Queue Management",
-				description:
-					"(May 15th, 2025) For Remote v3.0.0, major overhauls were made to queues like moving and deleting songs off the queue",
-			},
-			{
-				img: "lyrics.png",
-				title: "Side-to-side lyrics",
-				description:
-					"(October 15th, 2025) Added side-to-side lyrics, also known as Duo Lyrics in Remote. With an early design of the Library Browser button",
-			},
-			{
-				img: "anim_lib.png",
-				title: "Animated Library",
-				description:
-					"(October 17th, 2025) Added animated covers in the Library Browser",
-			},
-			{
-				img: "anim_player_v1.png",
-				title: "Animated Player v1",
-				description:
-					"(October 17th, 2025) An early design of the look an feel of animated album covers in the media player",
-			},
-			{
-				img: "anim_player_vFinal.mov",
-				title: "Animated Player",
-				description:
-					'(October 17th, 2025) 15 hours later the "v1", the design has been polished to make it the best',
-			},
+			{ key: "del_queue", img: "del_queue.mp4" },
+			{ key: "lyrics", img: "lyrics.png" },
+			{ key: "anim_lib", img: "anim_lib.png" },
+			{ key: "anim_player_v1", img: "anim_player_v1.png" },
+			{ key: "anim_player_final", img: "anim_player_vFinal.mov" },
 		],
 	},
 	{
 		name: "Fraca",
 		_src: "fraca",
 		screenshots: [
-			{
-				img: "di_early.mp4",
-				title: "Dynamic Island",
-				description:
-					"(April 11th, 2024) The earliest media I have of Fraca, showing a different name, no icon, and the early design of the Dynamic Island under iOS 17",
-			},
-			{
-				img: "frosted_money.png",
-				title: "iOS 18 release",
-				description:
-					"(September 20th, 2024) Fraca releases with full Toronto-only money conversions and tax calculator, as well as the old exchange rate graph, which goes out of its bounds",
-			},
-			{
-				img: "liquid_money.png",
-				title: "Liquid Glass",
-				description:
-					"(September 14th, 2025) Liquid Glass revamps Fraca's design, and allows new feature to live with a stunning look. Fixes to the graph were made in between",
-			},
+			{ key: "di_early", img: "di_early.mp4" },
+			{ key: "frosted_money", img: "frosted_money.png" },
+			{ key: "liquid_money", img: "liquid_money.png" },
 		],
 	},
 ];
+
+useSeoMeta({
+	title: () => t("insights.meta.title"),
+	ogTitle: () => t("insights.meta.title"),
+	twitterTitle: () => t("insights.meta.title"),
+	description: () => t("insights.meta.description"),
+	ogDescription: () => t("insights.meta.description"),
+	twitterDescription: () => t("insights.meta.description"),
+});
 
 onMounted(() => {
 	if (window.innerWidth >= 1000 && selectedProject.value !== "") {

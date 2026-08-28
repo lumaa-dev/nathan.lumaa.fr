@@ -1,0 +1,127 @@
+{
+	"nav": {
+		"home": "Home",
+		"vinyl": "Vinyl",
+		"insights": "Insights"
+	},
+	"footer": {
+		"socials": "Socials",
+		"build": "Build",
+		"version": "Version {commit}",
+		"nuxt": "Built with Nuxt",
+		"about": "About",
+		"apps": "Apps"
+	},
+	"error": {
+		"title": "Error {code}",
+		"home": "Return home"
+	},
+	"home": {
+		"meta": {
+			"title": "I'm Nathan",
+			"description": "I am Nathan, indie developer and music lover. I'm French and live in Angers. I am deeply passionate about Apple software, music and making fully-fleshed projects like Fraca or Record Link."
+		},
+		"status": "Summer break",
+		"intro": "🇫🇷 18 year old French student at <a href=\"#schools\">Université d'Angers</a> in GEII, also an indie iOS and web developer passionate about music and <a href=\"#vinyl\">vinyl</a>",
+		"whois": {
+			"title": "Who am I?",
+			"body": "I am <b>Nathan</b>, an 18 year old indie developer and music lover. I'm French and live in Angers. I am deeply passionate about Apple software, music and making fully-fleshed projects like <a href=\"https://apps.apple.com/us/app/fraca/id6480592078\">Fraca</a> or <a href=\"https://apps.lumaa.fr/app/recordlink\">Record Link</a>.",
+			"mapAlt": "Angers on a map"
+		},
+		"projects": {
+			"title": "Best Projects",
+			"amber": "An upcoming Apple Music client that will change the way you view and interact with music.",
+			"remote": "Control your Cider device away from your computer, using your iPhone or iPad. Built using SwiftUI and Socket.IO",
+			"swiftseerr": "A Seerr app, boosted with SwiftUI and Apple Push Notifications, available on iPhones, iPads, Macs, and Apple TVs.",
+			"fraca": "The quickest conversion tool from any French unit to any Canadian unit, back and forth, for free on all Apple devices."
+		},
+		"schools": {
+			"title": "Schools",
+			"subtitle": "Enjoy the pleasure of 🇫🇷 French schools",
+			"benoit": "Seconde Générale (European section)"
+		},
+		"interests": {
+			"title": "Interests",
+			"coding": "Coding",
+			"codingBody": "In 2021, I started making Discord bots in JavaScript using <a href=\"https://discord.js.org\">discord.js</a>, then I made a few websites in native HTML, CSS and JavaScript. After making websites, I made a few <a href=\"https://fabricmc.net/\">Minecraft Fabric</a> mods in Java and I started making iOS apps using <a href=\"https://developer.apple.com/documentation/SwiftUI\">SwiftUI</a> in 2022. I am heavily interested in iOS development & web dev... Most of these projects can be found on <a href=\"https://github.com/lumaa-dev?tab=repositories\">my GitHub profile</a>.",
+			"music": "Music",
+			"musicBody": "I often compare music to my day-to-day life support. I've been listening to many different genres of music since 2018, and lately I've been mainly focused on rock and alternative music with a little bit of US rap.<br /><br />Also, recently, I started buying vinyl of albums while listing them on <a href=\"https://discogs.com/user/nthn.ost/collection\">my Discogs account</a> and on the <a href=\"{vinylPath}\">vinyl tab</a> of this site which also includes my wish list for future vinyl.",
+			"editing": "Editing",
+			"editingBody": "For a few of my projects, I produce trailer videos which depict main features or newly added features. I make them using Adobe After Effects and/or with Final Cut Pro, while syncing a copyrighted song that are available in <a href=\"https://music.apple.com/playlist/ad-aptable/pl.u-yZyVE3XIdW3rXm2\">this playlist</a>.<br /><br />They always end up on <a href=\"https://youtube.com/{'@'}lumaa_dev\">YouTube</a>, sometimes on <a href=\"https://x.com/lumaa_dev\">𝕏 (Twitter)</a>, sometimes they end up as <a href=\"https://tiktok.com/{'@'}lumaa_dev\">TikToks</a>. But they're always available."
+		},
+		"vinyl": {
+			"title": "Recent Vinyl",
+			"cover": "{name} album cover",
+			"all": "All vinyl"
+		},
+		"contact": {
+			"title": "Contact"
+		}
+	},
+	"vinyl": {
+		"meta": {
+			"title": "Nathan's Vinyl Collection",
+			"description": "Vinyls I own, and vinyl I want... Deeply."
+		},
+		"caution": "Click/Tap on any album's name to listen to it on Spotify®, Apple Music®, or any other music streaming platform.",
+		"credits": "Images found online except: <b>Are We There Yet?</b>, <b>Don't Tell The Dog</b> and <b>Minecraft Volume Alpha</b> taken by Nathan",
+		"owned": "💿 Owned Vinyl",
+		"wishlist": "✨ Wish List",
+		"filters": {
+			"all": "All Vinyl",
+			"owned": "Owned",
+			"wish": "Wished",
+			"color": "Colored Discs",
+			"black": "Black Discs",
+			"available": "Available"
+		}
+	},
+	"insights": {
+		"meta": {
+			"title": "Project Insights",
+			"description": "Discover Nathan's creative process through screenshots of his projects."
+		},
+		"title": "Project Insights",
+		"subtitle": "Discover my creative process through screenshots. Select a project below and scroll downwards to see",
+		"select": "Select a project",
+		"fallback": "See the insights...",
+		"shots": {
+			"remote": {
+				"del_queue": {
+					"title": "Queue Management",
+					"description": "(May 15th, 2025) For Remote v3.0.0, major overhauls were made to queues like moving and deleting songs off the queue"
+				},
+				"lyrics": {
+					"title": "Side-to-side lyrics",
+					"description": "(October 15th, 2025) Added side-to-side lyrics, also known as Duo Lyrics in Remote. With an early design of the Library Browser button"
+				},
+				"anim_lib": {
+					"title": "Animated Library",
+					"description": "(October 17th, 2025) Added animated covers in the Library Browser"
+				},
+				"anim_player_v1": {
+					"title": "Animated Player v1",
+					"description": "(October 17th, 2025) An early design of the look an feel of animated album covers in the media player"
+				},
+				"anim_player_final": {
+					"title": "Animated Player",
+					"description": "(October 17th, 2025) 15 hours later the \"v1\", the design has been polished to make it the best"
+				}
+			},
+			"fraca": {
+				"di_early": {
+					"title": "Dynamic Island",
+					"description": "(April 11th, 2024) The earliest media I have of Fraca, showing a different name, no icon, and the early design of the Dynamic Island under iOS 17"
+				},
+				"frosted_money": {
+					"title": "iOS 18 release",
+					"description": "(September 20th, 2024) Fraca releases with full Toronto-only money conversions and tax calculator, as well as the old exchange rate graph, which goes out of its bounds"
+				},
+				"liquid_money": {
+					"title": "Liquid Glass",
+					"description": "(September 14th, 2025) Liquid Glass revamps Fraca's design, and allows new feature to live with a stunning look. Fixes to the graph were made in between"
+				}
+			}
+		}
+	}
+}

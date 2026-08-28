@@ -1,8 +1,8 @@
 <template>
   <div>
-	<Header :is-compact="isCompact" :lang="lang" />
+	<Header :is-compact="isCompact" />
 	<slot />
-	<Footer :lang="lang" />
+	<Footer />
   </div>
 </template>
 
@@ -11,13 +11,12 @@ import { onMounted } from "vue";
 import { useScroll, useMotionValueEvent, animate } from "motion-v";
 
 const scroll = useScroll();
+const head = useLocaleHead();
 
 var lastScroll = 0.0;
 var lastCompact = false;
 
 var isCompact = false;
-var lang = ref("en");
-var hasLoaded = ref(false);
 
 useMotionValueEvent(scroll.scrollY, "change", (latest) => {
 	isCompact = latest > lastScroll;
@@ -38,25 +37,15 @@ useMotionValueEvent(scroll.scrollY, "change", (latest) => {
 });
 
 onMounted(() => {
-	console.log("onMounted triggered");
-	try {
-		const route = useRoute();
-		window.scroll(0, 0);
-
-		if (route.path.startsWith("/fr")) {
-			document.documentElement.setAttribute("lang", "fr");
-			lang.value = "fr";
-		} else {
-			document.documentElement.setAttribute("lang", "en");
-			lang.value = "en";
-		}
-		console.log(`LANG: ${lang.value}`);
-		hasLoaded.value = true; // This should trigger the template to render
-		console.log(`hasLoaded set to: ${hasLoaded.value}`);
-	} catch (error) {
-		console.error("Error in onMounted:", error);
-	}
+	window.scroll(0, 0);
 });
+
+// <html lang="..."> + hreflang alternates, driven by the active locale
+useHead(() => ({
+	htmlAttrs: head.value.htmlAttrs ?? {},
+	link: head.value.link ?? [],
+	meta: head.value.meta ?? [],
+}));
 
 useSeoMeta({
 	ogImage: "/assets/og/banner.png",

@@ -1,55 +1,44 @@
 <template>
 	<span class="c">
 		<div class="caution">
-			<p
-				>Click/Tap on any album's name to listen to it on Spotify®, Apple
-				Music®, or any other music streaming platform.</p
-			>
+			<p>{{ $t("vinyl.caution") }}</p>
 		</div>
 	</span>
 	<span class="c">
 		<div class="picker no-mobile">
 			<button
-				v-for="item in VinylFilter.allCases"
+				v-for="item in allCases"
 				:key="item"
 				:class="selFilter == item ? 'selected' : ''"
 				@click="filter(item)">
-				{{ item }}
+				{{ $t(`vinyl.filters.${item}`) }}
 			</button>
 		</div>
 		<div class="picker no-pc">
-			<select>
-				<option
-					v-for="item in VinylFilter.allCases"
-					:key="item"
-					:class="selFilter == item ? 'selected' : ''"
-					@click="filter(item)">
-					{{ item }}
-				</option>	
+			<select v-model="selFilter" @change="filter(selFilter)">
+				<option v-for="item in allCases" :key="item" :value="item">
+					{{ $t(`vinyl.filters.${item}`) }}
+				</option>
 			</select>
 		</div>
 	</span>
 	<span class="c">
 		<template v-if="owned.length > 0">
-			<h1>💿 Owned Vinyl</h1>
+			<h1>{{ $t("vinyl.owned") }}</h1>
 			<div class="list" v-if="owned">
-				<VinylRow v-for="vinyl in owned" :vinyl="vinyl" />
+				<VinylRow v-for="vinyl in owned" :key="vinyl.name" :vinyl="vinyl" />
 			</div>
 		</template>
 		<template v-if="wishes.length > 0">
-			<h1>✨ Wish List</h1>
+			<h1>{{ $t("vinyl.wishlist") }}</h1>
 			<div class="list" v-if="wishes">
-				<VinylRow v-for="vinyl in wishes" :vinyl="vinyl" />
+				<VinylRow v-for="vinyl in wishes" :key="vinyl.name" :vinyl="vinyl" />
 			</div>
 		</template>
 	</span>
 	<span class="c">
 		<div class="caution">
-			<p
-				>Images found online except: <b>Are We There Yet?</b>,
-				<b>Don't Tell The Dog</b> and <b>Minecraft Volume Alpha</b> taken by
-				Nathan</p
-			>
+			<p v-html="$t('vinyl.credits')"></p>
 		</div>
 	</span>
 </template>
@@ -57,14 +46,24 @@
 <script setup lang="ts">
 import VinylRow from "~/components/VinylRow.vue";
 
-enum VinylFilter {
-	all = "All Vinyl",
-	owned = "Owned",
-	wish = "Wished",
-	color = "Colored Discs",
-	black = "Black Discs",
-	available = "Available",
-}
+type VinylFilter =
+	| "all"
+	| "owned"
+	| "wish"
+	| "color"
+	| "black"
+	| "available";
+
+const allCases: VinylFilter[] = [
+	"all",
+	"owned",
+	"wish",
+	"available",
+	"color",
+	"black",
+];
+
+const { t } = useI18n();
 
 const { data } = await useAsyncData("vinyl", () => $fetch("/api/vinyl"));
 
@@ -73,45 +72,45 @@ const defWishes = (data.value as any).wish;
 
 var owned = ref((data.value as any).owned);
 var wishes = ref((data.value as any).wish);
-var selFilter = ref(VinylFilter.all);
+var selFilter = ref<VinylFilter>("all");
 
 useSeoMeta({
-	title: "Nathan's Vinyl Collection",
-	ogTitle: "Nathan's Vinyl Collection",
-	twitterTitle: "Nathan's Vinyl Collection",
-	description: "Vinyls I own, and vinyl I want... Deeply.",
-	ogDescription: "Vinyls I own, and vinyl I want... Deeply.",
-	twitterDescription: "Vinyls I own, and vinyl I want... Deeply.",
+	title: () => t("vinyl.meta.title"),
+	ogTitle: () => t("vinyl.meta.title"),
+	twitterTitle: () => t("vinyl.meta.title"),
+	description: () => t("vinyl.meta.description"),
+	ogDescription: () => t("vinyl.meta.description"),
+	twitterDescription: () => t("vinyl.meta.description"),
 });
 
 function filter(type: VinylFilter) {
 	selFilter.value = type;
 
-	if (type === VinylFilter.all) {
+	if (type === "all") {
 		owned.value = defOwned;
 		wishes.value = defWishes;
 		return;
-	} else if (type === VinylFilter.owned) {
+	} else if (type === "owned") {
 		owned.value = defOwned;
 		wishes.value = [];
 		return;
-	} else if (type === VinylFilter.wish) {
+	} else if (type === "wish") {
 		owned.value = [];
 		wishes.value = defWishes;
 		return;
-	} else if (type === VinylFilter.color) {
+	} else if (type === "color") {
 		owned.value = defOwned.filter(
 			(v: any) => (v.discColor || "").toLowerCase() !== "black"
 		);
 		wishes.value = [];
 		return;
-	} else if (type === VinylFilter.black) {
+	} else if (type === "black") {
 		owned.value = defOwned.filter(
 			(v: any) => (v.discColor || "").toLowerCase() === "black"
 		);
 		wishes.value = [];
 		return;
-	} else if (type == VinylFilter.available) {
+	} else if (type == "available") {
 		owned.value = defOwned.filter(
 			(v: any) =>
 				Object.keys((v.available as object) ?? {}).length > 0 && v.discogs
@@ -121,31 +120,6 @@ function filter(type: VinylFilter) {
 				Object.keys((v.available as object) ?? {}).length > 0 && v.discogs
 		);
 	}
-}
-
-namespace VinylFilter {
-	export const allCases: VinylFilter[] = [
-		VinylFilter.all,
-		VinylFilter.owned,
-		VinylFilter.wish,
-		VinylFilter.available,
-		VinylFilter.color,
-		VinylFilter.black,
-	];
-
-	// mobile feature cases
-	export const mobileFCases: VinylFilter[] = [
-		VinylFilter.all,
-		VinylFilter.owned,
-		VinylFilter.wish,
-	]
-
-	// mobile unfeature cases
-	export const mobileUCases: VinylFilter[] = [
-		VinylFilter.available,
-		VinylFilter.color,
-		VinylFilter.black,
-	]
 }
 </script>
 

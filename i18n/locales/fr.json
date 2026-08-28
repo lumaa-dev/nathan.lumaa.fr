@@ -1,0 +1,127 @@
+{
+	"nav": {
+		"home": "Accueil",
+		"vinyl": "Vinyles",
+		"insights": "Réflexions"
+	},
+	"footer": {
+		"socials": "Réseaux",
+		"build": "Info",
+		"version": "Version {commit}",
+		"nuxt": "Fait avec Nuxt",
+		"about": "À propos",
+		"apps": "Applis"
+	},
+	"error": {
+		"title": "Erreur {code}",
+		"home": "Retour à l'accueil"
+	},
+	"home": {
+		"meta": {
+			"title": "Je suis Nathan",
+			"description": "Je suis Nathan, un développeur indépendant et amoureux de musique de 18 ans. Je suis français et j'habite à Angers. Je suis passionné par les logiciels Apple, la musique et la création de projets complets comme Fraca ou Record Link."
+		},
+		"status": "En vacances d'été",
+		"intro": "🇫🇷 Étudiant de 18 ans à l'<a href=\"#schools\">Université d'Angers</a> en GEII, aussi développeur iOS et web indépendant passionné de musique et de <a href=\"#vinyl\">vinyles</a>",
+		"whois": {
+			"title": "Qui suis-je ?",
+			"body": "Je suis <b>Nathan</b>, un développeur indépendant et amoureux de musique de 18 ans. Je suis français et j'habite à Angers. Je suis passionné par les logiciels Apple, la musique et la création de projets complets comme <a href=\"https://apps.apple.com/us/app/fraca/id6480592078\">Fraca</a> ou <a href=\"https://apps.lumaa.fr/app/recordlink\">Record Link</a>.",
+			"mapAlt": "Angers sur une carte"
+		},
+		"projects": {
+			"title": "Projets préférés",
+			"amber": "Un client Apple Music à venir qui va redéfinir votre manière d'interagir avec votre musique.",
+			"remote": "Contrôlez Cider à distance depuis votre iPhone ou iPad. Fait avec SwiftUI et Socket.IO",
+			"swiftseerr": "Une application Seerr, boostée avec SwiftUI et des notifications push, dispo sur iPhone, iPad, Mac, et Apple TV.",
+			"fraca": "L'application de conversion de toutes les unités françaises et canadiennes, sur tous les appareils Apple."
+		},
+		"schools": {
+			"title": "Écoles",
+			"subtitle": "Profitez du plaisir des écoles 🇫🇷 françaises",
+			"benoit": "Seconde Générale (Section européenne)"
+		},
+		"interests": {
+			"title": "Passions",
+			"coding": "Programmation",
+			"codingBody": "En 2021, j'ai commencé à créer des bots Discord en JavaScript avec <a href=\"https://discord.js.org\">discord.js</a>, puis j'ai réalisé quelques sites web en HTML, CSS et JavaScript natifs. Après les sites web, j'ai créé quelques mods <a href=\"https://fabricmc.net/\">Minecraft Fabric</a> en Java et j'ai commencé à créer des applications iOS avec <a href=\"https://developer.apple.com/documentation/SwiftUI\">SwiftUI</a> en 2022. Je m'intéresse beaucoup au développement iOS et web... La plupart de ces projets sont disponibles sur <a href=\"https://github.com/lumaa-dev?tab=repositories\">mon profil GitHub</a>.",
+			"music": "Musique",
+			"musicBody": "Je compare souvent la musique à ma perfusion. J'écoute de nombreux genres musicaux différents depuis 2018, et dernièrement je me concentre surtout sur le rock, la musique alternative et un peu de rap américain.<br /><br />Aussi, récemment, j'ai commencé à acheter des vinyles d'albums tout en les listant sur <a href=\"https://discogs.com/user/nthn.ost/collection\">mon compte Discogs</a> et sur l'onglet <a href=\"{vinylPath}\">vinyles</a> de ce site qui inclut aussi ma liste de souhaits pour de futurs vinyles.",
+			"editing": "Montage",
+			"editingBody": "Pour quelques-uns de mes projets, je produis des bande-annonces qui montrent les principales fonctionnalités ou les nouveautés de certains de mes projets. Je les monte avec Adobe After Effects et/ou Final Cut Pro, sur le rythme d'une musique sous copyright disponible dans <a href=\"https://music.apple.com/playlist/ad-aptable/pl.u-yZyVE3XIdW3rXm2\">cette playlist</a>.<br /><br />Elles finissent toujours sur <a href=\"https://youtube.com/{'@'}lumaa_dev\">YouTube</a>, parfois sur <a href=\"https://x.com/lumaa_dev\">𝕏 (Twitter)</a>, parfois elles finissent en tant que <a href=\"https://tiktok.com/{'@'}lumaa_dev\">TikToks</a>. Mais elles sont toujours disponibles."
+		},
+		"vinyl": {
+			"title": "Derniers vinyles",
+			"cover": "Pochette de {name}",
+			"all": "Tous les vinyles"
+		},
+		"contact": {
+			"title": "Contact"
+		}
+	},
+	"vinyl": {
+		"meta": {
+			"title": "Collection de vinyles de Nathan",
+			"description": "Vinyles que je possède, et vinyles que je veux... Vraiment beaucoup."
+		},
+		"caution": "Cliquez/Touchez le nom d'un album pour l'écouter sur Spotify®, Apple Music®, ou toute autre plateforme de streaming musical.",
+		"credits": "Images trouvées en ligne sauf : <b>Are We There Yet?</b>, <b>Don't Tell The Dog</b> et <b>Minecraft Volume Alpha</b> prises par Nathan",
+		"owned": "💿 Vinyles possédés",
+		"wishlist": "✨ Liste de souhaits",
+		"filters": {
+			"all": "Tous",
+			"owned": "Possédés",
+			"wish": "Souhaités",
+			"color": "Disques colorés",
+			"black": "Disques noirs",
+			"available": "Disponibles"
+		}
+	},
+	"insights": {
+		"meta": {
+			"title": "Réflexions sur les projets",
+			"description": "Découvrez le processus créatif de Nathan à travers des captures d'écran de ses projets."
+		},
+		"title": "Réflexions sur les projets",
+		"subtitle": "Découvrez mon processus créatif à travers des captures d'écran. Sélectionnez un projet ci-dessous et faites défiler vers le bas pour voir",
+		"select": "Sélectionnez un projet",
+		"fallback": "Voir les réflexions...",
+		"shots": {
+			"remote": {
+				"del_queue": {
+					"title": "Gestion de la file d'attente",
+					"description": "(15 mai 2025) Pour Remote v3.0.0, des changements majeurs ont été effectués sur les files d'attente, comme le déplacement et la suppression de morceaux."
+				},
+				"lyrics": {
+					"title": "Paroles côte à côte",
+					"description": "(15 octobre 2025) Ajout des paroles côte à côte, également connues sous le nom de Duo Lyrics dans Remote. Avec un design précoce du bouton du navigateur de bibliothèque."
+				},
+				"anim_lib": {
+					"title": "Bibliothèque animée",
+					"description": "(17 octobre 2025) Ajout de pochettes animées dans le navigateur de bibliothèque."
+				},
+				"anim_player_v1": {
+					"title": "Lecteur animé v1",
+					"description": "(17 octobre 2025) Un design précoce de l'apparence et du ressenti des pochettes d'albums animées dans le lecteur multimédia."
+				},
+				"anim_player_final": {
+					"title": "Lecteur animé",
+					"description": "(17 octobre 2025) 15 heures après la version \"v1\", le design a été peaufiné pour en faire le meilleur possible."
+				}
+			},
+			"fraca": {
+				"di_early": {
+					"title": "Dynamic Island",
+					"description": "(11 avril 2024) Le premier aperçu de Fraca, montrant un nom différent, aucune icône et le design initial de la Dynamic Island sous iOS 17."
+				},
+				"frosted_money": {
+					"title": "Sortie iOS 18",
+					"description": "(20 septembre 2024) Fraca sort avec les conversions de devises limitées à Toronto et une calculatrice de taxes, ainsi que l'ancien graphique des taux de change, qui dépasse ses limites."
+				},
+				"liquid_money": {
+					"title": "Liquid Glass",
+					"description": "(14 septembre 2025) Le Liquid Glass renouvelle le design de Fraca et permet de nouvelles fonctionnalités avec un aspect époustouflant. Des corrections ont été apportées au graphique entre-temps."
+				}
+			}
+		}
+	}
+}

@@ -3,41 +3,19 @@
 		<div class="presentation bg">
 			<span class="pill">
 				<div class="badge active"></div>
-				Summer break</span
+				{{ $t("home.status") }}</span
 			>
 			<span class="name">
 				<img src="/assets/hero.svg" draggable="false" />
 				<p class="word">Nathan</p>
 			</span>
-			<p>
-				🇫🇷 18 year old French student at
-				<a href="#schools">Lycée Chevrollier</a> (Angers) in Terminale STI2D
-				SIN, also an indie iOS and web developer passionate about music and
-				<a href="#vinyl">vinyl</a>
-			</p>
+			<p v-html="$t('home.intro')"></p>
 		</div>
 		<span class="indicator">&#8595;</span>
 	</div>
-	<!-- <div class="cta bg">
-		<span class="txt">
-			<b>Remap 2025</b><br /><p
-				>Let's revisit the things that I've accomplished this year.</p
-			>
-			<motion.a
-				class="pill"
-				href="/remap"
-				:initial="{ scale: 1.0, boxShadow: '0 0 0px #fff', zIndex: 1 }"
-				:transition="{
-					default: { type: 'spring', duration: 0.85, bounce: 0.5 },
-				}"
-				:whileHover="{ scale: 1.3, boxShadow: '0 0 15px #fff', zIndex: 999 }"
-				>View</motion.a
-			>
-		</span>
-	</div> -->
 	<div class="leftright" id="whois">
 		<span>
-			<p class="big">Who am I?</p>
+			<p class="big">{{ $t("home.whois.title") }}</p>
 			<motion.p
 				:initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
 				:whileInView="{ filter: 'blur(0px)', translateY: 0, opacity: 1 }"
@@ -47,23 +25,21 @@
 					damping: 132,
 					mass: 3.4,
 				}">
-				I am <b>Nathan</b>, an 18 year old indie developer and music lover. I'm
-				French and live in Angers. I am deeply passionate about Apple software,
-				music and making fully-fleshed projects like
-				<a href="https://apps.apple.com/us/app/fraca/id6480592078">Fraca</a> or
-				<a href="https://apps.lumaa.fr/app/recordlink">Record Link</a>.
+				<span v-html="$t('home.whois.body')" />
 			</motion.p>
 		</span>
 		<img
 			src="https://upload.wikimedia.org/wikipedia/commons/0/02/Angers_OSM_01.png"
-			alt="Angers on a map"
+			:alt="$t('home.whois.mapAlt')"
 			draggable="false" />
 	</div>
 	<div class="txt" id="projects">
-		<p class="big">Best Projects</p>
+		<p class="big">{{ $t("home.projects.title") }}</p>
 		<div class="grid">
 			<motion.a
-				href="https://apps.lumaa.fr/app/amber"
+				v-for="project in projects"
+				:key="project.key"
+				:href="project.href"
 				class="nostyle"
 				:initial="{ translateY: -50, opacity: 0 }"
 				:whileInView="{ translateY: 0, opacity: 1 }"
@@ -72,149 +48,58 @@
 					stiffness: 567,
 					damping: 132,
 					mass: 3.4,
-					delay: 0.9,
+					delay: project.delay,
 				}">
 				<ProjectBox
-					name="Amber"
-					description="An upcoming Apple Music client that will change the way you view and interact with music."
-					img="/assets/projects/amber.png" />
-			</motion.a>
-			<motion.a
-				href="https://cider.sh/remote"
-				class="nostyle"
-				:initial="{ translateY: -50, opacity: 0 }"
-				:whileInView="{ translateY: 0, opacity: 1 }"
-				:transition="{
-					type: 'spring',
-					stiffness: 567,
-					damping: 132,
-					mass: 3.4,
-					delay: 0.3,
-				}">
-				<ProjectBox
-					name="Cider Remote"
-					description="Control your Cider device away from your computer, using your iPhone or iPad. Built using SwiftUI and Socket.IO"
-					img="https://cider.sh/og-remote.png" />
-			</motion.a>
-			<motion.a
-				href="https://apps.lumaa.fr/app/swiftseerr"
-				class="nostyle"
-				:initial="{ translateY: -50, opacity: 0 }"
-				:whileInView="{ translateY: 0, opacity: 1 }"
-				:transition="{
-					type: 'spring',
-					stiffness: 567,
-					damping: 132,
-					mass: 3.4,
-					delay: 1.2,
-				}">
-				<ProjectBox
-					name="Swiftseerr"
-					description="A Seerr app, boosted with SwiftUI and Apple Push Notifications, available on iPhones, iPads, Macs, and Apple TVs."
-					img="/assets/projects/swiftseerr.png" />
-			</motion.a>
-			<motion.a
-				href="https://d.lumaa.fr/fraca"
-				class="nostyle"
-				:initial="{ translateY: -50, opacity: 0 }"
-				:whileInView="{ translateY: 0, opacity: 1 }"
-				:transition="{
-					type: 'spring',
-					stiffness: 567,
-					damping: 132,
-					mass: 3.4,
-					delay: 0.6,
-				}">
-				<ProjectBox
-					name="Fraca"
-					description="The quickest conversion tool from any French unit to any Canadian unit, back and forth, for free on all Apple devices."
-					img="/assets/projects/fraca.jpg" />
+					:name="project.name"
+					:description="$t(`home.projects.${project.key}`)"
+					:img="project.img" />
 			</motion.a>
 		</div>
 	</div>
 	<div class="txt bg" id="schools">
-		<p class="big">Schools</p>
-		<p style="text-align: center">Enjoy the pleasure of 🇫🇷 French schools</p>
+		<p class="big">{{ $t("home.schools.title") }}</p>
+		<p style="text-align: center">{{ $t("home.schools.subtitle") }}</p>
 		<span class="schools">
 			<Timeline name="Lycée privé Saint-Benoît" date="2022-2023">
-				Seconde Générale (Section européenne)
+				{{ $t("home.schools.benoit") }}
 			</Timeline>
 			<Timeline name="Lycée Chevrollier" date="2023-2026">
-				Sciences et Technologies de l'Industrie et du Développement Durable
-				(Système d'Information et Numérique)
+				Sciences et Technologies de l'Industrie et du Développement Durable (Système d'Information et Numérique) 
 			</Timeline>
 			<Timeline name="Université d'Angers" date="2026-2029" :completion="0.0">
-				<span
-					style="
-						filter: blur(10px);
-						user-select: none !important;
-						pointer-events: none !important;
-					">
-					There is nothing to discover here.
-					<br />Just the name of the school. <br />And the year I'm entering
-					(hopefully)
-				</span>
+				Génie Électrique et Informatique Industrielle
 			</Timeline>
 		</span>
 	</div>
 	<div class="txt" id="interests">
-		<p class="big">Interests</p>
-		<p class="badge">Coding</p>
+		<p class="big">{{ $t("home.interests.title") }}</p>
+		<p class="badge">{{ $t("home.interests.coding") }}</p>
 		<motion.p
 			:initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
 			:whileInView="{ filter: 'blur(0px)', translateY: 0, opacity: 1 }"
 			:transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }">
-			In 2021, I started making Discord bots in JavaScript using
-			<a href="https://discord.js.org">discord.js</a>, then I made a few
-			websites in native HTML, CSS and JavaScript. After making websites, I made
-			a few <a href="https://fabricmc.net/">Minecraft Fabric</a> mods in Java
-			and I started making iOS apps using
-			<a href="https://developer.apple.com/documentation/SwiftUI">SwiftUI</a> in
-			2022. I am heavily interested in iOS development & web dev... Most of
-			these projects can be found on
-			<a href="https://github.com/lumaa-dev?tab=repositories"
-				>my GitHub profile</a
-			>.
+			<span v-html="$t('home.interests.codingBody')" />
 		</motion.p>
-		<p class="badge" style="margin-top: 3em">Music</p>
+		<p class="badge" style="margin-top: 3em">{{ $t("home.interests.music") }}</p>
 		<motion.p
 			:initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
 			:whileInView="{ filter: 'blur(0px)', translateY: 0, opacity: 1 }"
 			:transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }">
-			I often compare music to my day-to-day life support. I've been listening
-			to many different genres of music since 2018, and lately I've been mainly
-			focused on rock and alternative music with a little bit of US rap.
-			<br />
-			<br />Also, recently, I started buying vinyl of albums while listing them
-			on
-			<a href="https://discogs.com/user/nthn.ost/collection"
-				>my Discogs account</a
-			>
-			and on the <a href="/vinyl">vinyl tab</a> of this site which also includes
-			my wish list for future vinyl.
+			<span v-html="$t('home.interests.musicBody', { vinylPath })" />
 		</motion.p>
-		<p class="badge" style="margin-top: 3em">Editing</p>
+		<p class="badge" style="margin-top: 3em">{{
+			$t("home.interests.editing")
+		}}</p>
 		<motion.p
 			:initial="{ filter: 'blur(15px)', translateY: -50, opacity: 0 }"
 			:whileInView="{ filter: 'blur(0px)', translateY: 0, opacity: 1 }"
 			:transition="{ type: 'spring', stiffness: 567, damping: 132, mass: 3.4 }">
-			For a few of my projects, I produce trailer videos which depict main
-			features or newly added features. I make them using Adobe After Effects
-			and/or with Final Cut Pro, while syncing a copyrighted song that are
-			available in
-			<a href="https://music.apple.com/playlist/ad-aptable/pl.u-yZyVE3XIdW3rXm2"
-				>this playlist</a
-			>.
-			<br />
-			<br />They always end up on
-			<a href="https://youtube.com/@lumaa_dev">YouTube</a>, sometimes on
-			<a href="https://x.com/lumaa_dev">&#120143; (Twitter)</a>, sometimes they
-			end up as <a href="https://tiktok.com/@lumaa_dev">TikToks</a>.
-			But they're always available.
+			<span v-html="$t('home.interests.editingBody')" />
 		</motion.p>
 	</div>
 	<div class="txt" id="vinyl">
-		<p class="big">Recent Vinyl</p>
+		<p class="big">{{ $t("home.vinyl.title") }}</p>
 		<div class="vgrid">
 			<template v-for="(v, i) in vinyl.owned" :key="v.name">
 				<motion.a
@@ -232,13 +117,13 @@
 					<span>
 						<img
 							:src="`/assets/vinyl/${v.img}`"
-							:alt="v.name + ' album cover'"
+							:alt="$t('home.vinyl.cover', { name: v.name })"
 							draggable="false" />
 						<span>
 							<p class="name">{{ v.name }}</p>
 							<p class="alt">
 								{{ v.artist }}<br />{{
-									new Date(v.ownDate).toLocaleDateString("fr")
+									new Date(v.ownDate).toLocaleDateString(locale)
 								}}
 							</p>
 						</span>
@@ -248,15 +133,15 @@
 		</div>
 		<motion.a
 			class="pill"
-			href="/vinyl"
+			:href="vinylPath"
 			:initial="{ scale: 1.0, boxShadow: '0 0 0px #fff', zIndex: 1 }"
 			:transition="{ default: { type: 'spring', duration: 0.85, bounce: 0.5 } }"
 			:whileHover="{ scale: 1.3, boxShadow: '0 0 15px #fff', zIndex: 999 }"
-			>All vinyl</motion.a
+			>{{ $t("home.vinyl.all") }}</motion.a
 		>
 	</div>
 	<div class="txt" id="contact">
-		<p class="big">Contact</p>
+		<p class="big">{{ $t("home.contact.title") }}</p>
 		<div class="platforms">
 			<a href="https://discordapp.com/users/474231265059405845">
 				<span class="discord">
@@ -282,14 +167,49 @@
 
 <script setup>
 import { motion } from "motion-v";
-import { onMounted } from "vue";
+import { computed, onMounted } from "vue";
 import { VinylSelector } from "~~/shared/vinyl-selector";
 
 import Timeline from "~/components/Timeline.vue";
 import ProjectBox from "~/components/ProjectBox.vue";
 
+const { t, locale } = useI18n();
+const localePath = useLocalePath();
+const vinylPath = computed(() => localePath("vinyl"));
+
+const projects = [
+	{
+		key: "amber",
+		name: "Amber",
+		href: "https://apps.lumaa.fr/app/amber",
+		img: "/assets/projects/amber.png",
+		delay: 0.9,
+	},
+	{
+		key: "remote",
+		name: "Cider Remote",
+		href: "https://cider.sh/remote",
+		img: "https://cider.sh/og-remote.png",
+		delay: 0.3,
+	},
+	{
+		key: "swiftseerr",
+		name: "Swiftseerr",
+		href: "https://apps.lumaa.fr/app/swiftseerr",
+		img: "/assets/projects/swiftseerr.png",
+		delay: 1.2,
+	},
+	{
+		key: "fraca",
+		name: "Fraca",
+		href: "https://d.lumaa.fr/fraca",
+		img: "/assets/projects/fraca.jpg",
+		delay: 0.6,
+	},
+];
+
 const { data: vinyl } = await useAsyncData("vinyl", () =>
-	$fetch(`/api/vinyl?filter=${VinylSelector.current}&limit=4&hideFuture=true`)
+	$fetch(`/api/vinyl?filter=${VinylSelector.owned}&limit=4&hideFuture=true`)
 );
 
 onMounted(() => {
@@ -327,25 +247,23 @@ onMounted(() => {
 });
 
 useSeoMeta({
-	title: "I'm Nathan",
-	ogTitle: "I'm Nathan",
-	twitterTitle: "I'm Nathan",
-	description:
-		"I am Nathan, indie developer and music lover. I'm French and live in Angers. I am deeply passionate about Apple software, music and making fully-fleshed projects like Fraca or Record Link.",
-	ogDescription:
-		"I am Nathan, indie developer and music lover. I'm French and live in Angers. I am deeply passionate about Apple software, music and making fully-fleshed projects like Fraca or Record Link.",
-	twitterDescription:
-		"I am Nathan, indie developer and music lover. I'm French and live in Angers. I am deeply passionate about Apple software, music and making fully-fleshed projects like Fraca or Record Link.",
+	title: () => t("home.meta.title"),
+	ogTitle: () => t("home.meta.title"),
+	twitterTitle: () => t("home.meta.title"),
+	description: () => t("home.meta.description"),
+	ogDescription: () => t("home.meta.description"),
+	twitterDescription: () => t("home.meta.description"),
 });
 </script>
 
 <style scoped>
-a {
+/* anchors inside translated strings are injected with v-html, so they need :deep() */
+:deep(a) {
 	color: var(--brand);
 	text-decoration: none;
 }
 
-a:hover {
+:deep(a:hover) {
 	text-decoration: underline;
 }
 

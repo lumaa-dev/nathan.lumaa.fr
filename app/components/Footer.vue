@@ -3,11 +3,8 @@
 		<div class="footer">
 			<div class="row">
 				<p class="title">Nathan</p>
-				<a
-					:href="url.link[lang] ?? url.link"
-					v-for="url in links"
-					:key="url.link">
-					{{ url.title[lang] ?? url.title }}
+				<a v-for="url in links" :key="url.route" :href="localePath(url.route)">
+					{{ url.label ? $t(url.label) : url.title }}
 				</a>
 				<span class="inline">
 					<img src="/assets/hero.svg" draggable="false" />
@@ -17,36 +14,41 @@
 			<div class="row">
 				<p class="title">Lumaa</p>
 				<a :href="url.link" v-for="url in lumaa" :key="url.link">
-					<span class="inline" v-if="url.title == 'Cider Collective'">
-						<img src="/assets/cc.svg" />
-						{{ url.title[lang] ?? url.title }}
+					<span class="inline" v-if="url.icon">
+						<img :src="url.icon" />
+						{{ url.label ? $t(url.label) : url.title }}
 					</span>
-					<p v-else>{{ url.title[lang] ?? url.title }}</p>
+					<p v-else>{{ url.label ? $t(url.label) : url.title }}</p>
 				</a>
 			</div>
 			<div class="row">
-				<p class="title">{{ lang == "fr" ? "Réseaux" : "Socials" }}</p>
+				<p class="title">{{ $t("footer.socials") }}</p>
 				<a :href="url.link" v-for="url in socials" :key="url.link">
-					{{ url.title[lang] ?? url.title }}
+					{{ url.title }}
 				</a>
 			</div>
 			<div class="row">
-				<p class="title">{{ lang == "fr" ? "Info" : "Build" }}</p>
+				<p class="title">{{ $t("footer.build") }}</p>
 				<a
 					:href="`https://github.com/lumaa-dev/nathan.lumaa.fr/tree/${APP_COMMIT}`"
-					>Version {{ APP_COMMIT }}</a
+					>{{ $t("footer.version", { commit: APP_COMMIT }) }}</a
 				>
 				<a href="https://nuxt.com/">
 					<span class="inline">
 						<img src="/assets/nuxt.svg" />
-						{{ lang == "fr" ? "Fait avec Nuxt" : "Built with Nuxt" }}
+						{{ $t("footer.nuxt") }}
 					</span>
 				</a>
 			</div>
 		</div>
 		<div class="langs picker dark">
-			<a href="/" :class="lang == 'en' ? 'selected' : ''">English</a>
-			<a href="/fr" :class="lang == 'fr' ? 'selected' : ''">Français</a>
+			<a
+				v-for="l in locales"
+				:key="l.code"
+				:href="switchLocalePath(l.code) || '/'"
+				:class="locale === l.code ? 'selected' : ''">
+				{{ l.name }}
+			</a>
 		</div>
 	</footer>
 </template>
@@ -111,68 +113,29 @@ a:hover {
 </style>
 
 <script setup>
-const props = defineProps({
-	lang: {
-		type: String,
-		default: "en",
-		required: false,
-	},
-});
+const { locale, locales } = useI18n();
+const localePath = useLocalePath();
+const switchLocalePath = useSwitchLocalePath();
 
 const links = [
-	{
-		title: {
-			en: "Home",
-			fr: "Accueil",
-		},
-		link: {
-			en: "/",
-			fr: "/fr",
-		},
-	},
-	{
-		title: {
-			en: "Vinyl",
-			fr: "Vinyles",
-		},
-		link: {
-			en: "/vinyl",
-			fr: "/fr/vinyles",
-		},
-	},
-	{
-		title: {
-			en: "Insights",
-			fr: "Réflexions",
-		},
-		link: {
-			en: "/insights",
-			fr: "/fr/reflexions",
-		},
-	},
-	{
-		title: "Remap 2025",
-		link: "/remap",
-	},
+	{ label: "nav.home", route: "index" },
+	{ label: "nav.vinyl", route: "vinyl" },
+	{ label: "nav.insights", route: "insights" },
+	{ label: null, title: "Remap 2025", route: "remap" },
 ];
 
 const lumaa = [
 	{
-		title: {
-			en: "About",
-			fr: "À propos",
-		},
+		label: "footer.about",
 		link: "https://lumaa.fr/",
 	},
 	{
-		title: {
-			en: "Apps",
-			fr: "Applis",
-		},
+		label: "footer.apps",
 		link: "https://apps.lumaa.fr/",
 	},
 	{
 		title: "Cider Collective",
+		icon: "/assets/cc.svg",
 		link: "https://cider.sh/about",
 	},
 ];

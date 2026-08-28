@@ -20,7 +20,7 @@
 			width: { type: 'spring', stiffness: 567, damping: 132, mass: 3.4 },
 		}">
 		<span class="keeper">
-			<motion.a class="img" :href="lang == 'fr' ? '/fr' : '/'">
+			<motion.a class="img" :href="localePath('index')">
 				<motion.img
 					src="/assets/hero.svg"
 					draggable="false"
@@ -37,15 +37,15 @@
 
 		<span class="central">
 			<motion.a
-				v-for="link in links.reverse()"
-				:href="link.path"
-				:key="link.path"
+				v-for="link in links"
+				:href="localePath(link.route)"
+				:key="link.route"
 				:initial="{ scale: 1.0, boxShadow: '0 0 0px #fff', zIndex: 1 }"
 				:transition="{
 					default: { type: 'spring', duration: 0.85, bounce: 0.5 },
 				}"
 				:whileHover="{ scale: 1.3, boxShadow: '0 0 15px #fff', zIndex: 999 }">
-				{{ link.title[lang as "en" | "fr"] }}
+				{{ $t(link.label) }}
 			</motion.a>
 		</span>
 	</motion.header>
@@ -119,31 +119,17 @@ header a:not(a.img) {
 <script lang="ts" setup>
 import { motion } from "motion-v";
 
-const props = defineProps({
+defineProps({
 	isCompact: {
 		type: Boolean,
 		required: true,
 	},
-	lang: {
-		type: String,
-		required: true,
-	},
 });
 
+const localePath = useLocalePath();
+
 const links = [
-	{
-		title: {
-			en: "Vinyl",
-			fr: "Vinyles",
-		},
-		path: props.lang == "fr" ? "/fr/vinyles" : "/vinyl",
-	},
-	{
-		title: {
-			en: "Insights",
-			fr: "Réflexions",
-		},
-		path: props.lang == "fr" ? "/fr/reflexions" : "/insights",
-	},
+	{ label: "nav.insights", route: "insights" },
+	{ label: "nav.vinyl", route: "vinyl" },
 ];
 </script>
