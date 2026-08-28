@@ -155,7 +155,7 @@ h1 {
 	grid-auto-rows: 300px;
 }
 
-@media screen and (max-width: 1630px) {
+@media screen and (max-width: 1000px) {
 	h1 {
 		width: 90%;
 	}
