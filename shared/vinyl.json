@@ -1,16 +1,12 @@
 {
-  "manual": [
-    {
-      "name": "Towards Happiness",
-      "artist": "Feldup",
-      "img": "towards_happiness.jpg",
-      "ownDate": "2026-09-18T00:00:00.000Z",
+  "byReleaseId": {
+    "38446449": {
+      "discColor": "Red",
+      "stream": "https://bfan.link/towards-happiness",
       "available": {
         "official": "https://shop.talitres.com/products/876474-towards-happiness"
       }
-    }
-  ],
-  "byReleaseId": {
+    },
     "37971234": {
       "discColor": "Clear",
       "badge": {
@@ -50,7 +46,8 @@
         "official": "https://store.goodkidofficial.com/en-ca/products/good-kid-can-we-hang-out-sometime-vinyl",
         "amazon": "https://www.amazon.fr/Can-We-Hang-Out-Sometime/dp/B0G4MYQWR5",
         "cultura": "https://www.cultura.com/p-can-we-hang-out-sometime-13006056.html"
-      }
+      },
+      "stream": "https://album.link/i/1856278625"
     },
     "33106872": {
       "discColor": "Lava Splatter",
@@ -63,7 +60,8 @@
         "amazon": "https://www.amazon.fr/Minecraft-Beta-Color-Vinyl-C418/dp/B086L88DKH",
         "fnac": "https://www.fnac.com/a14908521/C418-Minecraft-Volume-Beta-Vinyle-album",
         "cultura": "https://www.cultura.com/p-minecraft-volume-beta-0804297836010.html"
-      }
+      },
+      "stream": "https://album.link/i/1867890087"
     },
     "28614913": {
       "discColor": "Pink",
@@ -75,7 +73,8 @@
         "fnac": "https://www.fnac.com/a18604634/Tyler-The-Creator-Wolf-Vinyle-Rose-Vinyle-album",
         "amazon": "https://www.amazon.fr/Wolf-Vinyl-Creator-Tyler/dp/B0CCQ9SC1C",
         "cultura": "https://www.cultura.com/p-wolf-10206897.html"
-      }
+      },
+      "stream": "https://album.link/i/600946351"
     },
     "37959000": {
       "discColor": "Black",
