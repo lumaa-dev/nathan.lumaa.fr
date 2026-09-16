@@ -124,7 +124,7 @@ async function fetchOwnedFromDiscogs(): Promise<OwnedVinyl[]> {
 		return mergeWithOverride(base, info.id);
 	});
 
-	return [...fromDiscogs, ...overrides.manual];
+	return [...fromDiscogs, ...(overrides.manual ?? [])];
 }
 
 /**
